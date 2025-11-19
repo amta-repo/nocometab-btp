@@ -3,8 +3,6 @@ import { Link, NavLink } from 'react-router-dom';
 import { Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import logo from '@/assets/logo.png';
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
@@ -27,10 +25,12 @@ const Header = () => {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <img src={logo} alt="Cabinet Ozone Conseil Logo" className="h-12 w-12" />
+            <div className="h-12 w-12 rounded-lg bg-gradient-hero flex items-center justify-center text-white font-bold text-sm">
+              NB
+            </div>
             <div className="hidden md:block">
-              <div className="font-bold text-lg text-foreground">Cabinet Ozone Conseil</div>
-              <div className="text-xs text-muted-foreground">Géomètre-Expert</div>
+              <div className="font-bold text-lg text-foreground">NOCOMETAB BTP</div>
+              <div className="text-xs text-muted-foreground">{t('footer.description')}</div>
             </div>
           </Link>
 

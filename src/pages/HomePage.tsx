@@ -25,46 +25,46 @@ const HomePage = () => {
 
   const services = [
     {
-      icon: Ruler,
+      icon: Building2,
       title: t('service.topo.title'),
       description: t('service.topo.desc'),
-      path: '/services/topographie',
+      path: '/services/structures',
     },
     {
-      icon: MapPin,
+      icon: Construction,
       title: t('service.bornage.title'),
       description: t('service.bornage.desc'),
-      path: '/services/bornage',
+      path: '/services/charpentes',
     },
     {
-      icon: Plane,
+      icon: Ruler,
       title: t('service.drone.title'),
       description: t('service.drone.desc'),
-      path: '/services/drone',
+      path: '/services/menuiserie',
     },
     {
       icon: Building2,
       title: t('service.urbanisme.title'),
       description: t('service.urbanisme.desc'),
-      path: '/services/urbanisme',
+      path: '/services/hangars',
     },
     {
       icon: Construction,
       title: t('service.vrd.title'),
       description: t('service.vrd.desc'),
-      path: '/services/vrd',
+      path: '/services/toiture',
     },
     {
       icon: Scale,
       title: t('service.conseil.title'),
       description: t('service.conseil.desc'),
-      path: '/services/conseil',
+      path: '/services/renovation',
     },
   ];
 
   const achievements = [
-    { icon: Ruler, value: '+500', label: t('achievements.hectares') },
-    { icon: Building2, value: '20', label: t('achievements.communes') },
+    { icon: Building2, value: '+50000m²', label: t('achievements.hectares') },
+    { icon: MapPin, value: '15', label: t('achievements.communes') },
     { icon: Users, value: '100+', label: t('achievements.clients') },
     { icon: TrendingUp, value: '99.9%', label: t('achievements.accuracy') },
   ];
@@ -87,7 +87,7 @@ const HomePage = () => {
         />
         <div className="container relative z-10 mx-auto px-4 text-center text-white animate-fade-in-up">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Cabinet Ozone Conseil
+            NOCOMETAB BTP
           </h1>
           <p className="text-xl md:text-3xl mb-4 font-semibold">
             {t('hero.title')}
@@ -105,7 +105,7 @@ const HomePage = () => {
               variant="outline"
               size="lg"
               className="bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm"
-              onClick={() => window.open('https://wa.me/+22997889001', '_blank')}
+              onClick={() => window.open('https://wa.me/+22995954663', '_blank')}
             >
               <Phone className="h-5 w-5 mr-2" />
               {t('hero.cta.chat')}

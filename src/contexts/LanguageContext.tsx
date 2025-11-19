@@ -18,20 +18,20 @@ export const translations: Translations = {
   'nav.contact': { fr: 'Contact', en: 'Contact' },
   
   // Hero
-  'hero.title': { fr: "L'Expertise Géomatique au Service du Territoire", en: 'Geomatics Expertise Serving Your Land' },
-  'hero.subtitle': { fr: 'Précision, Fiabilité, et Innovation pour vos projets fonciers et topographiques.', en: 'Precision, Reliability, and Innovation for your land and surveying projects.' },
+  'hero.title': { fr: "Excellence en Construction Métallique", en: 'Excellence in Metal Construction' },
+  'hero.subtitle': { fr: 'Qualité, Durabilité, et Innovation pour tous vos projets de construction métallique.', en: 'Quality, Durability, and Innovation for all your metal construction projects.' },
   'hero.cta.quote': { fr: 'Demandez un devis', en: 'Request a Quote' },
   'hero.cta.chat': { fr: 'Chattez avec un Expert Maintenant', en: 'Chat with an Expert Now' },
   
   // Trust badges
-  'trust.member': { fr: "Membre de l'Ordre des Géomètres-Experts", en: 'Member of the Order of Expert Surveyors' },
+  'trust.member': { fr: "Expert en Construction Métallique", en: 'Metal Construction Expert' },
   'trust.experience': { fr: "+10 ans d'expérience", en: '+10 Years Experience' },
   'trust.projects': { fr: '100+ projets réussis', en: '100+ Successful Projects' },
   
   // About
   'about.title': { fr: 'À Propos de Nous', en: 'About Us' },
-  'about.mission': { fr: 'Notre mission : garantir la précision qui bâtit la confiance.', en: 'Our mission: ensuring precision that builds trust.' },
-  'about.description': { fr: "Cabinet Ozone Conseil est un Cabinet Géomètre-Expert basé à Godomey, Bénin. Avec plus de 10 ans d'expertise en géomatique, nous offrons des solutions complètes en topographie, cartographie, bornage et aménagement du territoire.", en: 'Cabinet Ozone Conseil is an Expert Surveying firm based in Godomey, Benin. With over 10 years of expertise in geomatics, we offer comprehensive solutions in surveying, mapping, land delimitation, and spatial planning.' },
+  'about.mission': { fr: 'Notre mission : construire avec excellence et durabilité.', en: 'Our mission: building with excellence and sustainability.' },
+  'about.description': { fr: "NOCOMETAB BTP est une entreprise spécialisée en construction métallique basée à Kindonou, Cotonou, Bénin. Avec plus de 10 ans d'expérience, nous offrons des solutions complètes en structures métalliques, charpentes, et aménagements industriels.", en: 'NOCOMETAB BTP is a metal construction company based in Kindonou, Cotonou, Benin. With over 10 years of experience, we offer comprehensive solutions in metal structures, frameworks, and industrial installations.' },
   'about.values': { fr: 'Nos Valeurs', en: 'Our Values' },
   'about.value.integrity': { fr: 'Intégrité', en: 'Integrity' },
   'about.value.accuracy': { fr: 'Précision', en: 'Accuracy' },
@@ -40,33 +40,33 @@ export const translations: Translations = {
   
   // Services
   'services.title': { fr: 'Nos Services', en: 'Our Services' },
-  'services.subtitle': { fr: 'Des solutions géomatiques complètes adaptées à vos besoins', en: 'Comprehensive geomatics solutions tailored to your needs' },
+  'services.subtitle': { fr: 'Des solutions de construction métallique adaptées à tous vos besoins', en: 'Metal construction solutions tailored to all your needs' },
   'services.learnmore': { fr: 'En savoir plus', en: 'Learn More' },
   
-  'service.topo.title': { fr: 'Topographie & Cartographie', en: 'Surveying & Mapping' },
-  'service.topo.desc': { fr: 'Relevés précis, cartographie numérique et modélisation de terrain.', en: 'Precise surveys, digital mapping and terrain modeling.' },
+  'service.topo.title': { fr: 'Structures Métalliques', en: 'Metal Structures' },
+  'service.topo.desc': { fr: 'Conception et fabrication de structures métalliques sur mesure pour bâtiments industriels et commerciaux.', en: 'Design and fabrication of custom metal structures for industrial and commercial buildings.' },
   
-  'service.bornage.title': { fr: 'Bornage et Délimitation Foncière', en: 'Land Delimitation' },
-  'service.bornage.desc': { fr: 'Délimitation légale des propriétés et mesures foncières certifiées.', en: 'Legal property boundaries and certified land measurements.' },
+  'service.bornage.title': { fr: 'Charpentes Métalliques', en: 'Metal Frameworks' },
+  'service.bornage.desc': { fr: 'Charpentes robustes et durables pour tous types de constructions.', en: 'Robust and durable frameworks for all types of constructions.' },
   
-  'service.drone.title': { fr: 'Levés par Drone & Photogrammétrie', en: 'Drone Surveys & Photogrammetry' },
-  'service.drone.desc': { fr: 'Solutions de cartographie aérienne modernes et précises.', en: 'Modern and accurate aerial mapping solutions.' },
+  'service.drone.title': { fr: 'Menuiserie Métallique', en: 'Metal Joinery' },
+  'service.drone.desc': { fr: 'Portes, fenêtres, garde-corps et tous travaux de menuiserie métallique.', en: 'Doors, windows, railings and all metal joinery works.' },
   
-  'service.urbanisme.title': { fr: 'Aménagement du Territoire & Urbanisme', en: 'Spatial Planning & Urbanism' },
-  'service.urbanisme.desc': { fr: "Planification spatiale et études d'aménagement.", en: 'Spatial planning and development studies.' },
+  'service.urbanisme.title': { fr: 'Hangars & Entrepôts', en: 'Warehouses & Storage' },
+  'service.urbanisme.desc': { fr: "Construction de hangars industriels et entrepôts métalliques.", en: 'Construction of industrial warehouses and metal storage facilities.' },
   
-  'service.vrd.title': { fr: 'Études Techniques & VRD', en: 'Technical Studies & Civil Works' },
-  'service.vrd.desc': { fr: "Infrastructures routières et réseaux divers.", en: 'Road infrastructure and utility networks.' },
+  'service.vrd.title': { fr: 'Toiture & Couverture', en: 'Roofing & Coverage' },
+  'service.vrd.desc': { fr: "Installation de toitures métalliques et systèmes de couverture.", en: 'Installation of metal roofing and coverage systems.' },
   
-  'service.conseil.title': { fr: 'Conseil & Expertise Foncière', en: 'Land Advisory & Expertise' },
-  'service.conseil.desc': { fr: 'Conseil juridique, technique et stratégique en matière foncière.', en: 'Legal, technical and strategic land advisory services.' },
+  'service.conseil.title': { fr: 'Aménagement & Rénovation', en: 'Renovation & Refurbishment' },
+  'service.conseil.desc': { fr: 'Rénovation et aménagement de structures métalliques existantes.', en: 'Renovation and refurbishment of existing metal structures.' },
   
   // Achievements
   'achievements.title': { fr: 'Nos Réalisations', en: 'Our Achievements' },
-  'achievements.hectares': { fr: '+500 hectares mesurés', en: '+500 Hectares Surveyed' },
-  'achievements.communes': { fr: '20 communes desservies', en: '20 Municipalities Served' },
+  'achievements.hectares': { fr: '+50000m² construits', en: '+50000m² Built' },
+  'achievements.communes': { fr: '15 villes desservies', en: '15 Cities Served' },
   'achievements.clients': { fr: '100+ clients satisfaits', en: '100+ Satisfied Clients' },
-  'achievements.accuracy': { fr: '99.9% de précision', en: '99.9% Accuracy' },
+  'achievements.accuracy': { fr: '99.9% de satisfaction', en: '99.9% Satisfaction' },
   
   // Partners
   'partners.title': { fr: 'Nos Partenaires', en: 'Our Partners' },
@@ -92,7 +92,7 @@ export const translations: Translations = {
   
   // Footer
   'footer.about': { fr: 'À Propos', en: 'About' },
-  'footer.description': { fr: 'Experts en géomatique et topographie au Bénin', en: 'Geomatics and surveying experts in Benin' },
+  'footer.description': { fr: 'Expert en Construction Métallique', en: 'Metal Construction Expert' },
   'footer.quicklinks': { fr: 'Liens Rapides', en: 'Quick Links' },
   'footer.rights': { fr: 'Tous droits réservés', en: 'All rights reserved' },
   

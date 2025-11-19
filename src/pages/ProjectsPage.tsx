@@ -7,70 +7,70 @@ const ProjectsPage = () => {
   const { t } = useLanguage();
 
   const achievements = [
-    { icon: Ruler, value: '+500', label: t('achievements.hectares'), color: 'text-blue-600' },
-    { icon: Building2, value: '20', label: t('achievements.communes'), color: 'text-green-600' },
+    { icon: Building2, value: '+50000m²', label: t('achievements.hectares'), color: 'text-blue-600' },
+    { icon: MapPin, value: '15', label: t('achievements.communes'), color: 'text-green-600' },
     { icon: Users, value: '100+', label: t('achievements.clients'), color: 'text-purple-600' },
     { icon: TrendingUp, value: '99.9%', label: t('achievements.accuracy'), color: 'text-amber-600' },
   ];
 
   const projects = [
     {
-      title: t('language') === 'fr' ? 'Lotissement Résidentiel Akpakpa' : 'Akpakpa Residential Subdivision',
+      title: t('language') === 'fr' ? 'Hangar Industriel - Zone Portuaire' : 'Industrial Warehouse - Port Area',
+      location: 'Port de Cotonou',
+      date: '2024',
+      type: t('language') === 'fr' ? 'Structure Métallique' : 'Metal Structure',
+      description:
+        t('language') === 'fr'
+          ? "Construction d'un hangar industriel de 2000m² pour stockage de marchandises avec structure métallique complète."
+          : 'Construction of a 2000m² industrial warehouse for goods storage with complete metal structure.',
+      stats: [
+        { label: t('language') === 'fr' ? 'Surface' : 'Area', value: '2000 m²' },
+        { label: t('language') === 'fr' ? 'Hauteur' : 'Height', value: '12 mètres' },
+      ],
+    },
+    {
+      title: t('language') === 'fr' ? 'Charpente Métallique - Centre Commercial' : 'Metal Framework - Shopping Center',
       location: 'Akpakpa, Cotonou',
       date: '2024',
-      type: t('language') === 'fr' ? 'Bornage & Urbanisme' : 'Delimitation & Urbanism',
+      type: t('language') === 'fr' ? 'Charpente' : 'Framework',
       description:
         t('language') === 'fr'
-          ? "Aménagement et bornage d'un lotissement de 150 parcelles résidentielles avec études VRD complètes."
-          : 'Development and delimitation of a 150-plot residential subdivision with complete civil works studies.',
+          ? "Installation d'une charpente métallique moderne pour un centre commercial avec toiture en bac acier."
+          : 'Installation of a modern metal framework for a shopping center with steel deck roofing.',
       stats: [
-        { label: t('language') === 'fr' ? 'Surface' : 'Area', value: '75 hectares' },
-        { label: t('language') === 'fr' ? 'Parcelles' : 'Plots', value: '150' },
+        { label: t('language') === 'fr' ? 'Surface' : 'Area', value: '1500 m²' },
+        { label: t('language') === 'fr' ? 'Portée' : 'Span', value: '25 mètres' },
       ],
     },
     {
-      title: t('language') === 'fr' ? 'Cartographie Drone - Zone Agricole' : 'Drone Mapping - Agricultural Zone',
+      title: t('language') === 'fr' ? 'Menuiserie Métallique - Immeuble Résidentiel' : 'Metal Joinery - Residential Building',
       location: 'Abomey-Calavi',
-      date: '2024',
-      type: t('language') === 'fr' ? 'Levé par Drone' : 'Drone Survey',
-      description:
-        t('language') === 'fr'
-          ? "Cartographie aérienne par drone d'une vaste zone agricole pour optimisation de l'irrigation."
-          : 'Aerial drone mapping of a large agricultural area for irrigation optimization.',
-      stats: [
-        { label: t('language') === 'fr' ? 'Surface' : 'Area', value: '200 hectares' },
-        { label: t('language') === 'fr' ? 'Résolution' : 'Resolution', value: '2 cm/pixel' },
-      ],
-    },
-    {
-      title: t('language') === 'fr' ? 'Infrastructure Routière - RN2' : 'Road Infrastructure - RN2',
-      location: 'Porto-Novo - Cotonou',
       date: '2023',
-      type: t('language') === 'fr' ? 'Topographie & VRD' : 'Surveying & Civil Works',
+      type: t('language') === 'fr' ? 'Menuiserie' : 'Joinery',
       description:
         t('language') === 'fr'
-          ? "Levés topographiques et études techniques pour la réhabilitation d'un tronçon routier de 25 km."
-          : 'Topographic surveys and technical studies for the rehabilitation of a 25 km road section.',
+          ? "Fourniture et installation de portes, fenêtres et garde-corps métalliques pour un immeuble de 5 étages."
+          : 'Supply and installation of metal doors, windows and railings for a 5-story building.',
       stats: [
-        { label: t('language') === 'fr' ? 'Longueur' : 'Length', value: '25 km' },
-        { label: t('language') === 'fr' ? 'Points levés' : 'Survey Points', value: '5000+' },
+        { label: t('language') === 'fr' ? 'Portes' : 'Doors', value: '60' },
+        { label: t('language') === 'fr' ? 'Fenêtres' : 'Windows', value: '120' },
       ],
     },
     {
       title:
         t('language') === 'fr'
-          ? 'Plan Directeur Urbanistique - Commune'
-          : 'Urban Master Plan - Municipality',
+          ? 'Toiture Métallique - Complexe Scolaire'
+          : 'Metal Roofing - School Complex',
       location: 'Sèmè-Kpodji',
       date: '2023',
-      type: t('language') === 'fr' ? 'Aménagement du Territoire' : 'Spatial Planning',
+      type: t('language') === 'fr' ? 'Couverture' : 'Roofing',
       description:
         t('language') === 'fr'
-          ? "Élaboration du plan directeur d'urbanisme avec zonage et schéma d'aménagement complet."
-          : 'Development of the urban master plan with complete zoning and planning scheme.',
+          ? "Réalisation de la toiture métallique complète d'un complexe scolaire avec système d'étanchéité."
+          : 'Complete metal roofing of a school complex with waterproofing system.',
       stats: [
-        { label: t('language') === 'fr' ? 'Zone couverte' : 'Covered Area', value: '120 km²' },
-        { label: t('language') === 'fr' ? 'Durée' : 'Duration', value: '18 mois' },
+        { label: t('language') === 'fr' ? 'Surface couverte' : 'Covered Area', value: '3000 m²' },
+        { label: t('language') === 'fr' ? 'Durée' : 'Duration', value: '3 mois' },
       ],
     },
   ];
