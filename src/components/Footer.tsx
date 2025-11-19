@@ -21,10 +21,10 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <div className="h-10 w-10 rounded-lg bg-gradient-hero flex items-center justify-center text-white font-bold">
-                OC
+                NB
               </div>
               <div>
-                <div className="font-bold text-foreground">Cabinet Ozone Conseil</div>
+                <div className="font-bold text-foreground">NOCOMETAB BTP</div>
                 <div className="text-xs text-muted-foreground">{t('footer.description')}</div>
               </div>
             </div>
@@ -56,18 +56,18 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary flex-shrink-0" />
-                <span>BP 113, Godomey, Benin</span>
+                <span>Kindonou, Cotonou, Benin</span>
               </li>
               <li className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                <a href="tel:01978890901" className="hover:text-primary transition-colors">
-                  01 97 88 90 01
+                <a href="tel:+2290195954663" className="hover:text-primary transition-colors">
+                  +229 01 95 95 46 63
                 </a>
               </li>
               <li className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 text-primary flex-shrink-0" />
-                <a href="mailto:contact@ozoneconseil.bj" className="hover:text-primary transition-colors">
-                  contact@ozoneconseil.bj
+                <a href="mailto:contact@nocometab.com" className="hover:text-primary transition-colors">
+                  contact@nocometab.com
                 </a>
               </li>
             </ul>
@@ -105,7 +105,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Cabinet Ozone Conseil. {t('footer.rights')}.</p>
+          <p>© {new Date().getFullYear()} NOCOMETAB BTP. {t('footer.rights')}.</p>
         </div>
       </div>
     </footer>

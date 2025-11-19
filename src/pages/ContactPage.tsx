@@ -22,7 +22,7 @@ const ContactPage = () => {
     
     // Create WhatsApp message
     const message = `Bonjour,\n\nNom: ${formData.name}\nEmail: ${formData.email}\nTéléphone: ${formData.phone}\nType de projet: ${formData.project}\n\nMessage:\n${formData.message}`;
-    const whatsappUrl = `https://wa.me/+22997889001?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/+22995954663?text=${encodeURIComponent(message)}`;
     
     window.open(whatsappUrl, '_blank');
     toast.success('Redirection vers WhatsApp...');
@@ -35,19 +35,19 @@ const ContactPage = () => {
     {
       icon: MapPin,
       title: t('contact.address'),
-      content: 'BP 113, Godomey, Benin',
+      content: 'Kindonou, Cotonou, Benin',
     },
     {
       icon: Phone,
       title: 'Téléphone',
-      content: '01 97 88 90 01',
-      link: 'tel:01978890901',
+      content: '+229 01 95 95 46 63',
+      link: 'tel:+2290195954663',
     },
     {
       icon: Mail,
       title: 'Email',
-      content: 'contact@ozoneconseil.bj',
-      link: 'mailto:contact@ozoneconseil.bj',
+      content: 'contact@nocometab.com',
+      link: 'mailto:contact@nocometab.com',
     },
     {
       icon: Clock,
@@ -185,14 +185,14 @@ const ContactPage = () => {
             <Card className="shadow-elevated animate-scale-in overflow-hidden">
               <CardContent className="p-0">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.6157842087676!2d2.3204866!3d6.3879182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023572f1edab29b%3A0x60492195bef8c676!2sCabinet%20OZONE%20CONSEILS!5e0!3m2!1sen!2s!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.7254773896654!2d2.3379877!3d6.4019294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102357fb7c4804bf%3A0xcf7e390728d7509e!2sNOCOMETAB%20BTP!5e0!3m2!1sen!2s!4v1234567890"
                   width="100%"
                   height="400"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Cabinet Ozone Conseil Location"
+                  title="NOCOMETAB BTP Location"
                   className="w-full"
                 />
               </CardContent>

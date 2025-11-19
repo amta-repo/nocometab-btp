@@ -4,8 +4,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 const WhatsAppButton = () => {
   const { t } = useLanguage();
-  const whatsappNumber = '+22997889001';
-  const defaultMessage = encodeURIComponent('Bonjour, je souhaite obtenir plus d\'informations sur vos services.');
+  const whatsappNumber = '+22995954663';
+  const defaultMessage = encodeURIComponent('Bonjour, je souhaite obtenir plus d\'informations sur vos services de construction métallique.');
 
   const handleWhatsAppClick = () => {
     window.open(`https://wa.me/${whatsappNumber}?text=${defaultMessage}`, '_blank');

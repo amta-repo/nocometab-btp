@@ -34,8 +34,8 @@ const AboutPage = () => {
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 {t('language') === 'fr'
-                  ? "Forts de notre expérience et de nos équipements de pointe, nous accompagnons les particuliers, les entreprises et les institutions dans la réalisation de leurs projets fonciers, d'aménagement et d'infrastructure."
-                  : 'With our experience and state-of-the-art equipment, we support individuals, companies and institutions in carrying out their land, development and infrastructure projects.'}
+                  ? "Experts en construction métallique, nous accompagnons les particuliers, les entreprises et les institutions dans la réalisation de leurs projets de bâtiments industriels, commerciaux et résidentiels."
+                  : 'Metal construction experts, we support individuals, companies and institutions in carrying out their industrial, commercial and residential building projects.'}
               </p>
             </div>
           </CardContent>
@@ -62,22 +62,22 @@ const AboutPage = () => {
                     {t(`about.value.${value.key}`)}
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    {value.key === 'integrity' &&
+                   {value.key === 'integrity' &&
                       (t('language') === 'fr'
-                        ? "Nous agissons avec transparence et éthique dans tous nos projets."
-                        : 'We act with transparency and ethics in all our projects.')}
+                        ? "Nous agissons avec transparence et professionnalisme dans tous nos projets."
+                        : 'We act with transparency and professionalism in all our projects.')}
                     {value.key === 'accuracy' &&
                       (t('language') === 'fr'
-                        ? 'La précision est au cœur de notre métier et de nos engagements.'
-                        : 'Precision is at the heart of our profession and commitments.')}
+                        ? 'La qualité et la précision sont au cœur de nos réalisations.'
+                        : 'Quality and precision are at the heart of our achievements.')}
                     {value.key === 'innovation' &&
                       (t('language') === 'fr'
-                        ? "Nous utilisons les technologies les plus avancées du secteur."
-                        : 'We use the most advanced technologies in the sector.')}
+                        ? "Nous utilisons les techniques les plus modernes de construction métallique."
+                        : 'We use the most modern metal construction techniques.')}
                     {value.key === 'sustainability' &&
                       (t('language') === 'fr'
-                        ? 'Nous intégrons la durabilité dans nos solutions et conseils.'
-                        : 'We integrate sustainability into our solutions and advice.')}
+                        ? 'Nous construisons des structures durables et résistantes.'
+                        : 'We build durable and resistant structures.')}
                   </p>
                 </CardContent>
               </Card>
@@ -98,24 +98,24 @@ const AboutPage = () => {
                 title: t('language') === 'fr' ? 'Expertise Certifiée' : 'Certified Expertise',
                 desc:
                   t('language') === 'fr'
-                    ? "Géomètres-experts qualifiés et membres de l'Ordre professionnel."
-                    : 'Qualified expert surveyors and members of the professional Order.',
+                    ? "Constructeurs qualifiés avec plus de 10 ans d'expérience en métallurgie."
+                    : 'Qualified builders with over 10 years of experience in metalwork.',
               },
               {
                 icon: Target,
                 title: t('language') === 'fr' ? 'Solutions Sur-Mesure' : 'Tailored Solutions',
                 desc:
                   t('language') === 'fr'
-                    ? 'Approche personnalisée adaptée à chaque projet et client.'
-                    : 'Personalized approach adapted to each project and client.',
+                    ? 'Approche personnalisée adaptée à chaque projet de construction.'
+                    : 'Personalized approach adapted to each construction project.',
               },
               {
                 icon: Users,
                 title: t('language') === 'fr' ? 'Service Client' : 'Customer Service',
                 desc:
                   t('language') === 'fr'
-                    ? 'Accompagnement continu et conseil expert tout au long du projet.'
-                    : 'Ongoing support and expert advice throughout the project.',
+                    ? 'Accompagnement continu du devis à la livraison.'
+                    : 'Ongoing support from quote to delivery.',
               },
             ].map((item, index) => (
               <Card
