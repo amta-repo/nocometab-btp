@@ -57,6 +57,12 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        construction: {
+          yellow: "hsl(45 100% 50%)",
+          black: "hsl(0 0% 10%)",
+          gray: "hsl(0 0% 45%)",
+          "light-gray": "hsl(0 0% 96%)",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -66,6 +72,7 @@ export default {
       backgroundImage: {
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-accent': 'var(--gradient-accent)',
+        'gradient-warm': 'var(--gradient-warm)',
       },
       boxShadow: {
         'soft': 'var(--shadow-soft)',
@@ -96,6 +103,15 @@ export default {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(0)" },
         },
+        "slide-left": {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        "hero-crossfade": {
+          "0%, 25%": { opacity: "1" },
+          "30%, 95%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -104,6 +120,7 @@ export default {
         "fade-in-up": "fade-in-up 0.8s ease-out",
         "scale-in": "scale-in 0.5s ease-out",
         "slide-in-right": "slide-in-right 0.4s ease-out",
+        "slide-left": "slide-left 40s linear infinite",
       },
     },
   },
