@@ -212,7 +212,7 @@ const HomePage = () => {
             <Button
               size="lg"
               className="rounded-full w-14 h-14 md:w-auto md:h-auto md:rounded-lg md:px-6 md:py-6 bg-accent hover:bg-accent/90 text-accent-foreground"
-              onClick={() => window.open('https://wa.me/+22995954663', '_blank')}
+              onClick={() => window.open('https://wa.me/+22995954763', '_blank')}
             >
               <Phone className="h-5 w-5 md:mr-2" />
               <span className="hidden md:inline">{t('hero.cta.chat')}</span>
@@ -457,7 +457,7 @@ const HomePage = () => {
                 size="lg"
                 variant="outline"
                 className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-                onClick={() => window.open('https://wa.me/+22995954663', '_blank')}
+                onClick={() => window.open('https://wa.me/+22995954763', '_blank')}
               >
                 <Phone className="h-5 w-5 mr-2" />
                 {t('cta.whatsapp')}
@@ -487,10 +487,10 @@ const HomePage = () => {
                       {language === 'fr' ? 'Téléphone' : 'Phone'}
                     </p>
                     <a
-                      href="tel:+2290195954663"
+                      href="tel:+2290195954763"
                       className="font-semibold text-foreground hover:text-primary transition-colors"
                     >
-                      +229 01 95 95 46 63
+                      +229 01 95 95 47 63
                     </a>
                   </div>
                   <div className="flex flex-col items-center p-4 rounded-lg bg-secondary/50">
@@ -521,7 +521,7 @@ const HomePage = () => {
                   <Button
                     size="lg"
                     variant="outline"
-                    onClick={() => window.open('https://wa.me/+22995954663', '_blank')}
+                    onClick={() => window.open('https://wa.me/+22995954763', '_blank')}
                   >
                     {t('cta.whatsapp')}
                   </Button>

@@ -22,7 +22,7 @@ const ContactPage = () => {
     
     // Create WhatsApp message
     const message = `Bonjour,\n\nNom: ${formData.name}\nEmail: ${formData.email}\nTéléphone: ${formData.phone}\nType de projet: ${formData.project}\n\nMessage:\n${formData.message}`;
-    const whatsappUrl = `https://wa.me/+22995954663?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/+22995954763?text=${encodeURIComponent(message)}`;
     
     window.open(whatsappUrl, '_blank');
     toast.success('Redirection vers WhatsApp...');
@@ -40,8 +40,8 @@ const ContactPage = () => {
     {
       icon: Phone,
       title: 'Téléphone',
-      content: '+229 01 95 95 46 63',
-      link: 'tel:+2290195954663',
+      content: '+229 01 95 95 47 63',
+      link: 'tel:+2290195954763',
     },
     {
       icon: Mail,
