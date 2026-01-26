@@ -3,13 +3,14 @@ import { Phone, Mail, MapPin, Facebook, Linkedin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const quickLinks = [
     { path: '/', label: t('nav.home') },
     { path: '/about', label: t('nav.about') },
     { path: '/services', label: t('nav.services') },
     { path: '/projects', label: t('nav.projects') },
+    { path: '/gallery', label: language === 'fr' ? 'Galerie' : 'Gallery' },
     { path: '/contact', label: t('nav.contact') },
   ];
 
@@ -66,8 +67,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 text-primary flex-shrink-0" />
-                <a href="mailto:contact@nocometab.com" className="hover:text-primary transition-colors">
-                  contact@nocometab.com
+                <a href="mailto:nocometabbtp@gmail.com" className="hover:text-primary transition-colors">
+                  nocometabbtp@gmail.com
                 </a>
               </li>
             </ul>

@@ -8,7 +8,7 @@ import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { toast } from 'sonner';
 
 const ContactPage = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -46,8 +46,8 @@ const ContactPage = () => {
     {
       icon: Mail,
       title: 'Email',
-      content: 'contact@nocometab.com',
-      link: 'mailto:contact@nocometab.com',
+      content: 'nocometabbtp@gmail.com',
+      link: 'mailto:nocometabbtp@gmail.com',
     },
     {
       icon: Clock,
@@ -57,9 +57,14 @@ const ContactPage = () => {
   ];
 
   return (
-    <div className="min-h-screen py-20 bg-secondary/30">
+    <div className="min-h-screen py-20 bg-secondary/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
+          <div className="inline-block px-4 py-2 mb-6 bg-primary/10 rounded-full">
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider">
+              {language === 'fr' ? 'Contactez-nous' : 'Contact Us'}
+            </span>
+          </div>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             {t('contact.title')}
           </h1>
@@ -122,7 +127,7 @@ const ContactPage = () => {
                     required
                     value={formData.project}
                     onChange={(e) => setFormData({ ...formData, project: e.target.value })}
-                    placeholder="Topographie, Bornage, etc."
+                    placeholder={language === 'fr' ? 'Structures métalliques, Charpentes, Hangars, etc.' : 'Metal structures, Frameworks, Warehouses, etc.'}
                     className="w-full"
                   />
                 </div>
@@ -140,7 +145,7 @@ const ContactPage = () => {
                   />
                 </div>
 
-                <Button type="submit" variant="hero" className="w-full" size="lg">
+                <Button type="submit" className="w-full bg-primary hover:bg-primary/90" size="lg">
                   <Send className="h-5 w-5 mr-2" />
                   {t('contact.form.submit')}
                 </Button>
