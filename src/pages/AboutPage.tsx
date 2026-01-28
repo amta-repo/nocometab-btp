@@ -1,7 +1,10 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Award, Target, Users, TrendingUp, CheckCircle2, Building2, Shield } from 'lucide-react';
+import PageHeader from '@/components/PageHeader';
+
 import organogram from '@/assets/nocometab-organogram-1.jpg';
+import heroImage4 from '@/assets/nocometab-hero-4.jpg';
 
 const AboutPage = () => {
   const { t, language } = useLanguage();
@@ -14,17 +17,20 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="min-h-screen py-20 bg-background">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <div className="inline-block px-4 py-2 mb-6 bg-primary/10 rounded-full">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-              {language === 'fr' ? 'Qui Sommes-Nous' : 'Who We Are'}
-            </span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">{t('about.title')}</h1>
-          <p className="text-2xl text-primary font-semibold mb-6 italic max-w-3xl mx-auto">{t('about.mission')}</p>
+    <div className="min-h-screen bg-background">
+      {/* Page Header */}
+      <PageHeader
+        titleFr="À Propos de Nous"
+        titleEn="About Us"
+        subtitleFr="Experts en construction métallique depuis plus de 10 ans"
+        subtitleEn="Metal construction experts for over 10 years"
+        backgroundImage={heroImage4}
+      />
+
+      <div className="container mx-auto px-4 py-16">
+        {/* Mission Statement */}
+        <div className="text-center mb-12 animate-fade-in">
+          <p className="text-2xl text-primary font-semibold italic max-w-3xl mx-auto">{t('about.mission')}</p>
         </div>
 
         {/* Company Description */}

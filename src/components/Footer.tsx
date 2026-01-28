@@ -11,6 +11,7 @@ const Footer = () => {
     { path: '/services', label: t('nav.services') },
     { path: '/projects', label: t('nav.projects') },
     { path: '/gallery', label: language === 'fr' ? 'Galerie' : 'Gallery' },
+    { path: '/news', label: language === 'fr' ? 'Actualités' : 'News' },
     { path: '/contact', label: t('nav.contact') },
   ];
 
@@ -61,8 +62,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                <a href="tel:+2290195954663" className="hover:text-primary transition-colors">
-                  +229 01 95 95 46 63
+                <a href="tel:+2290195954763" className="hover:text-primary transition-colors">
+                  +229 01 95 95 47 63
                 </a>
               </li>
               <li className="flex items-center space-x-2 text-sm text-muted-foreground">

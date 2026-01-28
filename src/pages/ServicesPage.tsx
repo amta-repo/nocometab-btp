@@ -2,10 +2,13 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Ruler, MapPin, Plane, Building2, Construction, Scale, ArrowRight } from 'lucide-react';
+import { Ruler, Building2, Construction, Scale, ArrowRight, Hammer, Wrench } from 'lucide-react';
+import PageHeader from '@/components/PageHeader';
+
+import heroImage3 from '@/assets/nocometab-hero-3.jpg';
 
 const ServicesPage = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const services = [
     {
@@ -14,9 +17,9 @@ const ServicesPage = () => {
       description: t('service.topo.desc'),
       path: '/services/structures',
       features: [
-        t('language') === 'fr' ? 'Bâtiments industriels sur mesure' : 'Custom industrial buildings',
-        t('language') === 'fr' ? 'Structures commerciales' : 'Commercial structures',
-        t('language') === 'fr' ? 'Conception et fabrication' : 'Design and fabrication',
+        language === 'fr' ? 'Bâtiments industriels sur mesure' : 'Custom industrial buildings',
+        language === 'fr' ? 'Structures commerciales' : 'Commercial structures',
+        language === 'fr' ? 'Conception et fabrication' : 'Design and fabrication',
       ],
     },
     {
@@ -25,9 +28,9 @@ const ServicesPage = () => {
       description: t('service.bornage.desc'),
       path: '/services/charpentes',
       features: [
-        t('language') === 'fr' ? 'Charpentes métalliques robustes' : 'Robust metal frameworks',
-        t('language') === 'fr' ? 'Installation professionnelle' : 'Professional installation',
-        t('language') === 'fr' ? 'Solutions durables' : 'Durable solutions',
+        language === 'fr' ? 'Charpentes métalliques robustes' : 'Robust metal frameworks',
+        language === 'fr' ? 'Installation professionnelle' : 'Professional installation',
+        language === 'fr' ? 'Solutions durables' : 'Durable solutions',
       ],
     },
     {
@@ -36,9 +39,9 @@ const ServicesPage = () => {
       description: t('service.drone.desc'),
       path: '/services/menuiserie',
       features: [
-        t('language') === 'fr' ? 'Portes et fenêtres métalliques' : 'Metal doors and windows',
-        t('language') === 'fr' ? 'Garde-corps et balustrades' : 'Railings and balustrades',
-        t('language') === 'fr' ? 'Travaux sur mesure' : 'Custom works',
+        language === 'fr' ? 'Portes et fenêtres métalliques' : 'Metal doors and windows',
+        language === 'fr' ? 'Garde-corps et balustrades' : 'Railings and balustrades',
+        language === 'fr' ? 'Travaux sur mesure' : 'Custom works',
       ],
     },
     {
@@ -47,54 +50,53 @@ const ServicesPage = () => {
       description: t('service.urbanisme.desc'),
       path: '/services/hangars',
       features: [
-        t('language') === 'fr' ? 'Hangars industriels' : 'Industrial warehouses',
-        t('language') === 'fr' ? 'Entrepôts de stockage' : 'Storage facilities',
-        t('language') === 'fr' ? 'Solutions clé en main' : 'Turnkey solutions',
+        language === 'fr' ? 'Hangars industriels' : 'Industrial warehouses',
+        language === 'fr' ? 'Entrepôts de stockage' : 'Storage facilities',
+        language === 'fr' ? 'Solutions clé en main' : 'Turnkey solutions',
       ],
     },
     {
-      icon: Construction,
+      icon: Hammer,
       title: t('service.vrd.title'),
       description: t('service.vrd.desc'),
       path: '/services/toiture',
       features: [
-        t('language') === 'fr' ? 'Toitures métalliques' : 'Metal roofing',
-        t('language') === 'fr' ? 'Systèmes de couverture' : 'Coverage systems',
-        t('language') === 'fr' ? 'Étanchéité garantie' : 'Guaranteed waterproofing',
+        language === 'fr' ? 'Toitures métalliques' : 'Metal roofing',
+        language === 'fr' ? 'Systèmes de couverture' : 'Coverage systems',
+        language === 'fr' ? 'Étanchéité garantie' : 'Guaranteed waterproofing',
       ],
     },
     {
-      icon: Scale,
+      icon: Wrench,
       title: t('service.conseil.title'),
       description: t('service.conseil.desc'),
       path: '/services/renovation',
       features: [
-        t('language') === 'fr' ? 'Rénovation de structures' : 'Structure renovation',
-        t('language') === 'fr' ? 'Modernisation' : 'Modernization',
-        t('language') === 'fr' ? 'Renforcement métallique' : 'Metal reinforcement',
+        language === 'fr' ? 'Rénovation de structures' : 'Structure renovation',
+        language === 'fr' ? 'Modernisation' : 'Modernization',
+        language === 'fr' ? 'Renforcement métallique' : 'Metal reinforcement',
       ],
     },
   ];
 
   return (
-    <div className="min-h-screen py-20 bg-secondary/30">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            {t('services.title')}
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t('services.subtitle')}
-          </p>
-        </div>
+    <div className="min-h-screen bg-secondary/30">
+      {/* Page Header */}
+      <PageHeader
+        titleFr="Nos Services"
+        titleEn="Our Services"
+        subtitleFr="Des solutions complètes en construction métallique pour tous vos projets"
+        subtitleEn="Complete metal construction solutions for all your projects"
+        backgroundImage={heroImage3}
+      />
 
+      <div className="container mx-auto px-4 py-16">
         {/* Services Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <Card
               key={index}
-              className="hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 animate-scale-in"
+              className="hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 animate-scale-in border-2 hover:border-primary/50"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardContent className="pt-8 pb-8">

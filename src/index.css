@@ -140,4 +140,17 @@ All colors MUST be HSL.
       opacity: 1;
     }
   }
+  
+  .animate-news-scroll {
+    animation: news-scroll 25s linear infinite;
+  }
+  
+  @keyframes news-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
 }
