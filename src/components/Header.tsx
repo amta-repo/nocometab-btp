@@ -17,6 +17,7 @@ const Header = () => {
     { path: '/services', label: t('nav.services') },
     { path: '/projects', label: t('nav.projects') },
     { path: '/gallery', label: language === 'fr' ? 'Galerie' : 'Gallery' },
+    { path: '/news', label: language === 'fr' ? 'Actualités' : 'News' },
     { path: '/contact', label: t('nav.contact') },
   ];
 

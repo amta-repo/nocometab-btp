@@ -3,17 +3,19 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { MapPin, Calendar, Building2, Users, TrendingUp, Award, Shield, FileCheck } from 'lucide-react';
+import PageHeader from '@/components/PageHeader';
 
 import attestation1 from '@/assets/attestation-bonne-fin-1.jpg';
 import attestation2 from '@/assets/attestation-bonne-fin-2.jpg';
 import attestation4 from '@/assets/attestation-bonne-fin-4.jpg';
+import heroImage1 from '@/assets/nocometab-hero-1.jpg';
 
 const ProjectsPage = () => {
   const { t, language } = useLanguage();
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const achievements = [
-    { icon: Building2, value: '+50000m²', label: t('achievements.hectares'), color: 'text-primary' },
+    { icon: Building2, value: '+50K m²', label: t('achievements.hectares'), color: 'text-primary' },
     { icon: MapPin, value: '15', label: t('achievements.communes'), color: 'text-primary' },
     { icon: Users, value: '100+', label: t('achievements.clients'), color: 'text-primary' },
     { icon: TrendingUp, value: '99.9%', label: t('achievements.accuracy'), color: 'text-primary' },
@@ -53,12 +55,12 @@ const ProjectsPage = () => {
       date: '2024',
       type: language === 'fr' ? 'Structure Métallique' : 'Metal Structure',
       description: language === 'fr'
-        ? "Construction d'un hangar industriel de 2000m² pour stockage de marchandises avec structure métallique complète. Ce projet comprend la conception, la fabrication et le montage d'une structure autoportante permettant un espace de stockage optimisé sans poteaux intermédiaires."
-        : 'Construction of a 2000m² industrial warehouse for goods storage with complete metal structure. This project includes design, fabrication and assembly of a self-supporting structure allowing optimized storage space without intermediate columns.',
+        ? "Construction d'un hangar industriel de 2000m² pour stockage de marchandises avec structure métallique complète."
+        : 'Construction of a 2000m² industrial warehouse for goods storage with complete metal structure.',
       stats: [
         { label: language === 'fr' ? 'Surface' : 'Area', value: '2000 m²' },
-        { label: language === 'fr' ? 'Hauteur' : 'Height', value: '12 mètres' },
-        { label: language === 'fr' ? 'Portée' : 'Span', value: '30 mètres' },
+        { label: language === 'fr' ? 'Hauteur' : 'Height', value: '12 m' },
+        { label: language === 'fr' ? 'Portée' : 'Span', value: '30 m' },
       ],
       highlights: [
         language === 'fr' ? 'Structure autoportante' : 'Self-supporting structure',
@@ -72,11 +74,11 @@ const ProjectsPage = () => {
       date: '2024',
       type: language === 'fr' ? 'Charpente' : 'Framework',
       description: language === 'fr'
-        ? "Installation d'une charpente métallique moderne pour un centre commercial avec toiture en bac acier. La structure a été conçue pour supporter les équipements de climatisation et d'éclairage tout en offrant une esthétique contemporaine."
-        : 'Installation of a modern metal framework for a shopping center with steel deck roofing. The structure was designed to support air conditioning and lighting equipment while offering a contemporary aesthetic.',
+        ? "Installation d'une charpente métallique moderne pour un centre commercial avec toiture en bac acier."
+        : 'Installation of a modern metal framework for a shopping center with steel deck roofing.',
       stats: [
         { label: language === 'fr' ? 'Surface' : 'Area', value: '1500 m²' },
-        { label: language === 'fr' ? 'Portée' : 'Span', value: '25 mètres' },
+        { label: language === 'fr' ? 'Portée' : 'Span', value: '25 m' },
         { label: language === 'fr' ? 'Charge' : 'Load', value: '150 kg/m²' },
       ],
       highlights: [
@@ -91,8 +93,8 @@ const ProjectsPage = () => {
       date: '2023',
       type: language === 'fr' ? 'Menuiserie' : 'Joinery',
       description: language === 'fr'
-        ? "Fourniture et installation de portes, fenêtres et garde-corps métalliques pour un immeuble de 5 étages. Chaque élément a été fabriqué sur mesure pour s'adapter parfaitement à l'architecture du bâtiment."
-        : 'Supply and installation of metal doors, windows and railings for a 5-story building. Each element was custom-made to fit the building architecture perfectly.',
+        ? "Fourniture et installation de portes, fenêtres et garde-corps métalliques pour un immeuble de 5 étages."
+        : 'Supply and installation of metal doors, windows and railings for a 5-story building.',
       stats: [
         { label: language === 'fr' ? 'Portes' : 'Doors', value: '60' },
         { label: language === 'fr' ? 'Fenêtres' : 'Windows', value: '120' },
@@ -110,8 +112,8 @@ const ProjectsPage = () => {
       date: '2023',
       type: language === 'fr' ? 'Couverture' : 'Roofing',
       description: language === 'fr'
-        ? "Réalisation de la toiture métallique complète d'un complexe scolaire avec système d'étanchéité et isolation thermique. Le projet incluait également l'installation de gouttières et descentes d'eaux pluviales."
-        : 'Complete metal roofing of a school complex with waterproofing system and thermal insulation. The project also included installation of gutters and rainwater downspouts.',
+        ? "Réalisation de la toiture métallique complète d'un complexe scolaire avec système d'étanchéité et isolation."
+        : 'Complete metal roofing of a school complex with waterproofing system and insulation.',
       stats: [
         { label: language === 'fr' ? 'Surface couverte' : 'Covered Area', value: '3000 m²' },
         { label: language === 'fr' ? 'Durée' : 'Duration', value: '3 mois' },
@@ -126,41 +128,33 @@ const ProjectsPage = () => {
   ];
 
   return (
-    <div className="min-h-screen py-20 bg-background">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <div className="inline-block px-4 py-2 mb-6 bg-primary/10 rounded-full">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-              {language === 'fr' ? 'Nos Réalisations' : 'Our Achievements'}
-            </span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            {t('achievements.title')}
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {language === 'fr'
-              ? 'Découvrez nos projets réalisés avec succès à travers le Bénin. Chaque réalisation témoigne de notre expertise en construction métallique.'
-              : 'Discover our successfully completed projects across Benin. Each achievement reflects our expertise in metal construction.'}
-          </p>
-        </div>
+    <div className="min-h-screen bg-background">
+      {/* Page Header */}
+      <PageHeader
+        titleFr="Nos Réalisations"
+        titleEn="Our Achievements"
+        subtitleFr="Découvrez nos projets réalisés avec succès à travers le Bénin"
+        subtitleEn="Discover our successfully completed projects across Benin"
+        backgroundImage={heroImage1}
+      />
 
+      <div className="container mx-auto px-4 py-16">
         {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto mb-20">
           {achievements.map((achievement, index) => (
             <Card
               key={index}
               className="text-center hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 animate-scale-in border-2 hover:border-primary/50"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <CardContent className="pt-8 pb-8">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                  <achievement.icon className={`h-8 w-8 ${achievement.color}`} />
+              <CardContent className="pt-6 pb-6 md:pt-8 md:pb-8">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                  <achievement.icon className={`h-6 w-6 md:h-8 md:w-8 ${achievement.color}`} />
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+                <div className="text-xl md:text-3xl lg:text-4xl font-bold text-primary mb-1 md:mb-2 break-words">
                   {achievement.value}
                 </div>
-                <p className="text-sm text-muted-foreground">{achievement.label}</p>
+                <p className="text-xs md:text-sm text-muted-foreground">{achievement.label}</p>
               </CardContent>
             </Card>
           ))}
@@ -192,14 +186,14 @@ const ProjectsPage = () => {
               {attestations.map((attestation, index) => (
                 <div
                   key={`first-${index}`}
-                  className="flex-shrink-0 w-[400px] mx-4"
+                  className="flex-shrink-0 w-[350px] md:w-[400px] mx-4"
                 >
                   <Card className="overflow-hidden border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-elevated h-full">
                     <div className="relative">
                       <img
                         src={attestation.src}
                         alt={attestation.title}
-                        className="w-full h-[500px] object-contain bg-secondary/20"
+                        className="w-full h-[400px] md:h-[500px] object-contain bg-secondary/20"
                       />
                       <div className="absolute top-4 right-4">
                         <Badge className="bg-primary text-primary-foreground">
@@ -220,14 +214,14 @@ const ProjectsPage = () => {
               {attestations.map((attestation, index) => (
                 <div
                   key={`second-${index}`}
-                  className="flex-shrink-0 w-[400px] mx-4"
+                  className="flex-shrink-0 w-[350px] md:w-[400px] mx-4"
                 >
                   <Card className="overflow-hidden border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-elevated h-full">
                     <div className="relative">
                       <img
                         src={attestation.src}
                         alt={attestation.title}
-                        className="w-full h-[500px] object-contain bg-secondary/20"
+                        className="w-full h-[400px] md:h-[500px] object-contain bg-secondary/20"
                       />
                       <div className="absolute top-4 right-4">
                         <Badge className="bg-primary text-primary-foreground">
@@ -261,7 +255,7 @@ const ProjectsPage = () => {
                 className="hover:shadow-elevated transition-all duration-300 animate-fade-in-up border-2 hover:border-primary/50"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <CardContent className="pt-8 pb-8">
+                <CardContent className="pt-6 pb-6 md:pt-8 md:pb-8">
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <div className="lg:col-span-2">
                       <div className="flex flex-wrap items-center gap-2 mb-3">
@@ -272,7 +266,7 @@ const ProjectsPage = () => {
                         </Badge>
                       </div>
 
-                      <h3 className="text-2xl font-bold text-foreground mb-2">{project.title}</h3>
+                      <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">{project.title}</h3>
 
                       <div className="flex items-center text-muted-foreground mb-4">
                         <MapPin className="h-4 w-4 mr-1 text-primary" />
@@ -302,7 +296,7 @@ const ProjectsPage = () => {
                         {project.stats.map((stat, idx) => (
                           <div key={idx} className="bg-secondary/50 rounded-lg p-3">
                             <div className="text-sm text-muted-foreground mb-1">{stat.label}</div>
-                            <div className="text-xl font-bold text-primary">{stat.value}</div>
+                            <div className="text-lg md:text-xl font-bold text-primary">{stat.value}</div>
                           </div>
                         ))}
                       </div>

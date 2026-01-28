@@ -6,6 +6,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { toast } from 'sonner';
+import PageHeader from '@/components/PageHeader';
+
+import heroImage2 from '@/assets/nocometab-hero-2.jpg';
 
 const ContactPage = () => {
   const { t, language } = useLanguage();
@@ -22,7 +25,7 @@ const ContactPage = () => {
     
     // Create WhatsApp message
     const message = `Bonjour,\n\nNom: ${formData.name}\nEmail: ${formData.email}\nTéléphone: ${formData.phone}\nType de projet: ${formData.project}\n\nMessage:\n${formData.message}`;
-    const whatsappUrl = `https://wa.me/+22995954763?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/+22995954663?text=${encodeURIComponent(message)}`;
     
     window.open(whatsappUrl, '_blank');
     toast.success('Redirection vers WhatsApp...');
@@ -39,7 +42,7 @@ const ContactPage = () => {
     },
     {
       icon: Phone,
-      title: 'Téléphone',
+      title: language === 'fr' ? 'Téléphone' : 'Phone',
       content: '+229 01 95 95 47 63',
       link: 'tel:+2290195954763',
     },
@@ -57,22 +60,17 @@ const ContactPage = () => {
   ];
 
   return (
-    <div className="min-h-screen py-20 bg-secondary/50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12 animate-fade-in">
-          <div className="inline-block px-4 py-2 mb-6 bg-primary/10 rounded-full">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-              {language === 'fr' ? 'Contactez-nous' : 'Contact Us'}
-            </span>
-          </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            {t('contact.title')}
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            {t('contact.subtitle')}
-          </p>
-        </div>
+    <div className="min-h-screen bg-secondary/50">
+      {/* Page Header */}
+      <PageHeader
+        titleFr="Contactez-Nous"
+        titleEn="Contact Us"
+        subtitleFr="Nous sommes là pour répondre à toutes vos questions"
+        subtitleEn="We're here to answer all your questions"
+        backgroundImage={heroImage2}
+      />
 
+      <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Contact Form */}
           <Card className="shadow-elevated animate-scale-in">

@@ -28,9 +28,12 @@ import heroImage1 from '@/assets/nocometab-hero-1.jpg';
 import heroImage2 from '@/assets/nocometab-hero-2.jpg';
 import heroImage3 from '@/assets/nocometab-hero-3.jpg';
 import heroImage4 from '@/assets/nocometab-hero-4.jpg';
+import galleryCrane1 from '@/assets/gallery-crane-1.jpg';
+import galleryWelding1 from '@/assets/gallery-welding-1.jpg';
+import galleryIndustrial1 from '@/assets/gallery-industrial-1.jpg';
 import servicesImage from '@/assets/services-aerial.jpg';
 
-const heroImages = [heroImage1, heroImage2, heroImage3, heroImage4];
+const heroImages = [heroImage1, heroImage2, heroImage3, heroImage4, galleryCrane1, galleryWelding1, galleryIndustrial1];
 
 const HomePage = () => {
   const { t, language } = useLanguage();
@@ -120,7 +123,7 @@ const HomePage = () => {
   ];
 
   const achievements = [
-    { icon: Building2, value: '+50000m²', label: t('achievements.hectares') },
+    { icon: Building2, value: '+50K', label: t('achievements.hectares') },
     { icon: MapPin, value: '15', label: t('achievements.communes') },
     { icon: Users, value: '100+', label: t('achievements.clients') },
     { icon: TrendingUp, value: '99.9%', label: t('achievements.accuracy') },
@@ -211,11 +214,10 @@ const HomePage = () => {
             </Link>
             <Button
               size="lg"
-              className="rounded-full w-14 h-14 md:w-auto md:h-auto md:rounded-lg md:px-6 md:py-6 bg-accent hover:bg-accent/90 text-accent-foreground"
-              onClick={() => window.open('https://wa.me/+22995954763', '_blank')}
+              className="rounded-full w-14 h-14 p-0 bg-accent hover:bg-accent/90 text-accent-foreground"
+              onClick={() => window.open('https://wa.me/+22995954663', '_blank')}
             >
-              <Phone className="h-5 w-5 md:mr-2" />
-              <span className="hidden md:inline">{t('hero.cta.chat')}</span>
+              <Phone className="h-6 w-6" />
             </Button>
           </div>
 
@@ -415,20 +417,20 @@ const HomePage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-5xl mx-auto">
             {achievements.map((achievement, index) => (
               <div
                 key={index}
                 className="text-center text-white animate-scale-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center">
-                  <achievement.icon className="h-10 w-10 text-primary" />
+                <div className="w-14 h-14 md:w-20 md:h-20 mx-auto mb-3 md:mb-4 rounded-full bg-primary/20 flex items-center justify-center">
+                  <achievement.icon className="h-7 w-7 md:h-10 md:w-10 text-primary" />
                 </div>
-                <div className="text-4xl md:text-5xl font-bold mb-2 text-primary">
+                <div className="text-2xl md:text-4xl font-bold mb-1 md:mb-2 text-primary">
                   {achievement.value}
                 </div>
-                <p className="text-sm md:text-base text-gray-300">{achievement.label}</p>
+                <p className="text-xs md:text-base text-gray-300">{achievement.label}</p>
               </div>
             ))}
           </div>
@@ -457,7 +459,7 @@ const HomePage = () => {
                 size="lg"
                 variant="outline"
                 className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-                onClick={() => window.open('https://wa.me/+22995954763', '_blank')}
+                onClick={() => window.open('https://wa.me/+22995954663', '_blank')}
               >
                 <Phone className="h-5 w-5 mr-2" />
                 {t('cta.whatsapp')}
@@ -521,7 +523,7 @@ const HomePage = () => {
                   <Button
                     size="lg"
                     variant="outline"
-                    onClick={() => window.open('https://wa.me/+22995954763', '_blank')}
+                    onClick={() => window.open('https://wa.me/+22995954663', '_blank')}
                   >
                     {t('cta.whatsapp')}
                   </Button>
