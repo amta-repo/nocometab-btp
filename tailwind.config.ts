@@ -58,10 +58,15 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         construction: {
-          yellow: "hsl(45 100% 50%)",
-          black: "hsl(0 0% 10%)",
-          gray: "hsl(0 0% 45%)",
-          "light-gray": "hsl(0 0% 96%)",
+          yellow: "hsl(42 85% 48%)",
+          black: "hsl(220 30% 12%)",
+          gray: "hsl(220 10% 45%)",
+          "light-gray": "hsl(210 15% 95%)",
+        },
+        navy: {
+          DEFAULT: "hsl(220 55% 28%)",
+          light: "hsl(220 55% 45%)",
+          dark: "hsl(220 55% 18%)",
         },
       },
       borderRadius: {
@@ -73,6 +78,7 @@ export default {
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-accent': 'var(--gradient-accent)',
         'gradient-warm': 'var(--gradient-warm)',
+        'gradient-navy': 'var(--gradient-navy)',
       },
       boxShadow: {
         'soft': 'var(--shadow-soft)',

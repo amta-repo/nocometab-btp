@@ -6,12 +6,21 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { ZoomIn, MapPin, Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 
+// Finished projects
 import finishedProject1 from '@/assets/finished-projects-1.jpg';
+import finishedProject2 from '@/assets/finished-projects-2.jpg';
+import finishedProject3 from '@/assets/finished-projects-3.jpg';
 import finishedProject6 from '@/assets/finished-projects-6.jpg';
+import finishedProject8 from '@/assets/finished-projects-8.jpg';
+import finishedProject9 from '@/assets/finished-projects-9.jpg';
+
+// Hero images
 import heroImage1 from '@/assets/nocometab-hero-1.jpg';
 import heroImage2 from '@/assets/nocometab-hero-2.jpg';
 import heroImage3 from '@/assets/nocometab-hero-3.jpg';
 import heroImage4 from '@/assets/nocometab-hero-4.jpg';
+
+// Equipment and team
 import galleryEquipment1 from '@/assets/gallery-equipment-1.jpg';
 import galleryEquipment2 from '@/assets/gallery-equipment-2.jpg';
 import galleryEquipment3 from '@/assets/gallery-equipment-3.jpg';
@@ -45,10 +54,42 @@ const GalleryPage = () => {
     },
     {
       id: 2,
+      src: finishedProject2,
+      title: language === 'fr' 
+        ? "Montage de la Charpente et Silo de 200 Tonnes - CIMBENIN S.A." 
+        : "Framework and 200-Ton Silo Assembly - CIMBENIN S.A.",
+      location: 'CIMBENIN, Cotonou',
+      date: '2023',
+      category: language === 'fr' ? 'Industriel' : 'Industrial',
+      description: language === 'fr'
+        ? "Construction et montage de la charpente métallique et du silo de 200 tonnes à la cimenterie CIMBENIN."
+        : "Construction and assembly of the metal framework and 200-ton silo at the CIMBENIN cement plant.",
+      highlights: language === 'fr'
+        ? ['Silo 200 tonnes', 'Structure industrielle', 'Haute résistance', 'Expertise cimenterie']
+        : ['200-ton silo', 'Industrial structure', 'High resistance', 'Cement plant expertise'],
+    },
+    {
+      id: 3,
+      src: finishedProject3,
+      title: language === 'fr' 
+        ? "Montage de la Charpente et Silo - Vue d'ensemble" 
+        : "Framework and Silo Assembly - Overview",
+      location: 'CIMBENIN, Cotonou',
+      date: '2023',
+      category: language === 'fr' ? 'Industriel' : 'Industrial',
+      description: language === 'fr'
+        ? "Vue d'ensemble du projet de montage de silo et charpente métallique à la cimenterie."
+        : "Overview of the silo and metal framework assembly project at the cement plant.",
+      highlights: language === 'fr'
+        ? ['Travaux en hauteur', 'Échafaudages sécurisés', 'Équipe expérimentée', 'Précision de montage']
+        : ['High-altitude work', 'Secure scaffolding', 'Experienced team', 'Assembly precision'],
+    },
+    {
+      id: 4,
       src: finishedProject6,
       title: language === 'fr' 
         ? "Montage de la Charpente du Hall Séparateur Ciment" 
-        : "Assembly of Cement Separator Hall Framework",
+        : "Cement Separator Hall Framework Assembly",
       location: 'Zone Industrielle, Cotonou',
       date: '2024',
       category: language === 'fr' ? 'Industriel' : 'Industrial',
@@ -60,13 +101,45 @@ const GalleryPage = () => {
         : ['Industrial environment', 'Reinforced structure', 'Vibration resistance', 'Safety standards'],
     },
     {
-      id: 3,
+      id: 5,
+      src: finishedProject8,
+      title: language === 'fr' 
+        ? "Montage du Moteur de l'Élévateur Ciment" 
+        : "Cement Elevator Motor Assembly",
+      location: 'CIMBENIN, Cotonou',
+      date: '2024',
+      category: language === 'fr' ? 'Montage' : 'Assembly',
+      description: language === 'fr'
+        ? "Installation et montage du moteur de l'élévateur à ciment, incluant les travaux mécaniques et électriques."
+        : "Installation and assembly of the cement elevator motor, including mechanical and electrical work.",
+      highlights: language === 'fr'
+        ? ['Moteur haute puissance', 'Montage mécanique', 'Raccordement électrique', 'Tests de fonctionnement']
+        : ['High-power motor', 'Mechanical assembly', 'Electrical connection', 'Function tests'],
+    },
+    {
+      id: 6,
+      src: finishedProject9,
+      title: language === 'fr' 
+        ? "Montage de la Charpente de l'Arène du Palais Royal de Nikki" 
+        : "Royal Palace Arena Framework Assembly - Nikki",
+      location: 'Nikki, Bénin',
+      date: '2024',
+      category: language === 'fr' ? 'Charpente' : 'Framework',
+      description: language === 'fr'
+        ? "Réalisation de la charpente métallique pour l'arène du Palais Royal de Nikki."
+        : "Construction of the metal framework for the Royal Palace arena in Nikki.",
+      highlights: language === 'fr'
+        ? ['Projet culturel', 'Grande portée', 'Design traditionnel', 'Équipe sur site']
+        : ['Cultural project', 'Large span', 'Traditional design', 'On-site team'],
+    },
+    {
+      id: 7,
       src: galleryCrane1,
       title: language === 'fr' 
         ? "Levage de Séparateur Industriel" 
         : "Industrial Separator Lifting",
       location: 'Cimenterie, Cotonou',
-      date: '2026',
+      date: '2024',
       category: language === 'fr' ? 'Levage' : 'Lifting',
       description: language === 'fr'
         ? "Opération de levage et positionnement d'un séparateur industriel lourd à la cimenterie."
@@ -76,13 +149,13 @@ const GalleryPage = () => {
         : ['Heavy equipment', 'High-capacity crane', 'Millimeter precision', 'Maximum safety'],
     },
     {
-      id: 4,
+      id: 8,
       src: galleryWelding1,
       title: language === 'fr' 
         ? "Travaux de Soudure Industrielle" 
         : "Industrial Welding Work",
       location: 'Site industriel, Cotonou',
-      date: '2026',
+      date: '2024',
       category: language === 'fr' ? 'Soudure' : 'Welding',
       description: language === 'fr'
         ? "Travaux de soudure de haute précision sur des structures métalliques et tuyauteries industrielles."
@@ -92,13 +165,13 @@ const GalleryPage = () => {
         : ['Certified welders', 'High precision', 'International standards', 'Quality control'],
     },
     {
-      id: 5,
+      id: 9,
       src: galleryIndustrial1,
       title: language === 'fr' 
         ? "Transport d'Équipements Industriels" 
         : "Industrial Equipment Transport",
       location: 'Zone Industrielle',
-      date: '2026',
+      date: '2024',
       category: language === 'fr' ? 'Logistique' : 'Logistics',
       description: language === 'fr'
         ? "Transport et livraison de cuves et équipements industriels lourds sur site."
@@ -108,13 +181,13 @@ const GalleryPage = () => {
         : ['Safe transport', 'Special equipment', 'Optimized logistics', 'Punctual delivery'],
     },
     {
-      id: 6,
+      id: 10,
       src: galleryEquipment1,
       title: language === 'fr' 
         ? "Installation de Broyeur Industriel" 
         : "Industrial Crusher Installation",
       location: 'Cimenterie, Bénin',
-      date: '2026',
+      date: '2024',
       category: language === 'fr' ? 'Installation' : 'Installation',
       description: language === 'fr'
         ? "Installation et positionnement d'un broyeur industriel de grande capacité."
@@ -124,13 +197,13 @@ const GalleryPage = () => {
         : ['Heavy equipment', 'Precise installation', 'Lifting chains', 'Technical expertise'],
     },
     {
-      id: 7,
+      id: 11,
       src: galleryEquipment2,
       title: language === 'fr' 
         ? "Montage de Moteurs Industriels" 
         : "Industrial Motor Assembly",
       location: 'Site industriel',
-      date: '2026',
+      date: '2024',
       category: language === 'fr' ? 'Montage' : 'Assembly',
       description: language === 'fr'
         ? "Assemblage et installation de moteurs industriels haute performance."
@@ -140,13 +213,13 @@ const GalleryPage = () => {
         : ['Powerful motors', 'Expert assembly', 'Performance tests', 'Commissioning'],
     },
     {
-      id: 8,
+      id: 12,
       src: galleryEquipment3,
       title: language === 'fr' 
         ? "Manutention de Cuves" 
         : "Tank Handling",
       location: 'Zone Portuaire',
-      date: '2026',
+      date: '2024',
       category: language === 'fr' ? 'Manutention' : 'Handling',
       description: language === 'fr'
         ? "Opérations de manutention et positionnement de cuves industrielles."
@@ -156,13 +229,13 @@ const GalleryPage = () => {
         : ['Large capacity tanks', 'Experienced team', 'Enhanced safety', 'Precision'],
     },
     {
-      id: 9,
+      id: 13,
       src: galleryTeam1,
       title: language === 'fr' 
         ? "L'Équipe NOCOMETAB BTP" 
         : "NOCOMETAB BTP Team",
       location: 'Cotonou, Bénin',
-      date: '2026',
+      date: '2024',
       category: language === 'fr' ? 'Équipe' : 'Team',
       description: language === 'fr'
         ? "Notre équipe de professionnels qualifiés sur un chantier industriel."
@@ -172,13 +245,13 @@ const GalleryPage = () => {
         : ['United team', 'Recognized expertise', 'Continuous training', 'Professionalism'],
     },
     {
-      id: 10,
+      id: 14,
       src: galleryEquipment4,
       title: language === 'fr' 
         ? "Inspection d'Équipements" 
         : "Equipment Inspection",
       location: 'Atelier NOCOMETAB',
-      date: '2026',
+      date: '2024',
       category: language === 'fr' ? 'Contrôle' : 'Control',
       description: language === 'fr'
         ? "Inspection et contrôle qualité des équipements avant installation."
@@ -188,7 +261,7 @@ const GalleryPage = () => {
         : ['Rigorous control', 'High standards', 'Complete documentation', 'Traceability'],
     },
     {
-      id: 11,
+      id: 15,
       src: heroImage1,
       title: language === 'fr' 
         ? "Équipe NOCOMETAB BTP en action" 
@@ -204,7 +277,7 @@ const GalleryPage = () => {
         : ['Qualified team', 'Certified welders', 'Continuous training', 'Safety priority'],
     },
     {
-      id: 12,
+      id: 16,
       src: heroImage2,
       title: language === 'fr' 
         ? "Construction de Hangar Industriel" 
@@ -250,28 +323,28 @@ const GalleryPage = () => {
         backgroundImage={heroImage3}
       />
 
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-12 md:py-16">
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {galleryImages.map((image, index) => (
             <Card
               key={image.id}
-              className={`overflow-hidden hover:shadow-elevated transition-all duration-500 animate-fade-in-up border-2 hover:border-primary/50 cursor-pointer group ${
-                expandedCard === image.id ? 'lg:col-span-2 lg:row-span-2' : ''
+              className={`overflow-hidden hover:shadow-elevated transition-all duration-500 animate-fade-in-up border hover:border-primary/50 cursor-pointer group ${
+                expandedCard === image.id ? 'sm:col-span-2 lg:col-span-2' : ''
               }`}
-              style={{ animationDelay: `${index * 50}ms` }}
+              style={{ animationDelay: `${index * 30}ms` }}
             >
               <div className="relative overflow-hidden">
                 <img
                   src={image.src}
                   alt={image.title}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-gradient-to-t from-accent/90 via-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-4 left-4 right-4">
                     <Button
                       size="sm"
-                      className="bg-primary hover:bg-primary/90"
+                      className="bg-primary hover:bg-primary/90 text-primary-foreground"
                       onClick={(e) => {
                         e.stopPropagation();
                         setSelectedImage(image);
@@ -282,38 +355,38 @@ const GalleryPage = () => {
                     </Button>
                   </div>
                 </div>
-                <div className="absolute top-4 right-4">
-                  <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-semibold rounded-full">
+                <div className="absolute top-3 right-3">
+                  <span className="px-2 py-1 bg-accent text-accent-foreground text-xs font-semibold rounded-md">
                     {image.category}
                   </span>
                 </div>
               </div>
               
-              <CardContent className="p-6">
-                <h3 className="text-lg font-bold text-foreground mb-2 line-clamp-2">
+              <CardContent className="p-4 md:p-5">
+                <h3 className="text-sm md:text-base font-bold text-foreground mb-2 line-clamp-2">
                   {image.title}
                 </h3>
                 
-                <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                <div className="flex flex-wrap items-center gap-2 md:gap-3 text-xs md:text-sm text-muted-foreground mb-2">
                   <span className="flex items-center gap-1">
-                    <MapPin className="h-4 w-4 text-primary" />
+                    <MapPin className="h-3 w-3 text-primary" />
                     {image.location}
                   </span>
                   <span className="flex items-center gap-1">
-                    <Calendar className="h-4 w-4 text-primary" />
+                    <Calendar className="h-3 w-3 text-primary" />
                     {image.date}
                   </span>
                 </div>
                 
-                <p className={`text-muted-foreground text-sm leading-relaxed ${
-                  expandedCard === image.id ? '' : 'line-clamp-3'
+                <p className={`text-muted-foreground text-xs md:text-sm leading-relaxed ${
+                  expandedCard === image.id ? '' : 'line-clamp-2'
                 }`}>
                   {image.description}
                 </p>
                 
                 <Button
                   variant="link"
-                  className="p-0 h-auto mt-3 text-primary font-semibold"
+                  className="p-0 h-auto mt-2 text-primary font-semibold text-xs md:text-sm"
                   onClick={() => setExpandedCard(expandedCard === image.id ? null : image.id)}
                 >
                   {expandedCard === image.id 
@@ -335,54 +408,54 @@ const GalleryPage = () => {
             <img
               src={selectedImage?.src}
               alt={selectedImage?.title}
-              className="w-full max-h-[60vh] object-contain bg-black"
+              className="w-full max-h-[50vh] md:max-h-[60vh] object-contain bg-accent"
             />
             
             {/* Navigation buttons */}
             <button
               onClick={handlePrev}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 hover:bg-white flex items-center justify-center shadow-lg transition-all"
+              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-background/90 hover:bg-background flex items-center justify-center shadow-lg transition-all"
             >
-              <ChevronLeft className="h-6 w-6" />
+              <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
             </button>
             <button
               onClick={handleNext}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 hover:bg-white flex items-center justify-center shadow-lg transition-all"
+              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-background/90 hover:bg-background flex items-center justify-center shadow-lg transition-all"
             >
-              <ChevronRight className="h-6 w-6" />
+              <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
             </button>
           </div>
           
-          <div className="p-6">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="px-3 py-1 bg-primary text-primary-foreground text-sm font-semibold rounded-full">
+          <div className="p-4 md:p-6">
+            <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-3 md:mb-4">
+              <span className="px-2 md:px-3 py-1 bg-primary text-primary-foreground text-xs md:text-sm font-semibold rounded-md">
                 {selectedImage?.category}
               </span>
-              <span className="flex items-center gap-1 text-muted-foreground">
-                <MapPin className="h-4 w-4" />
+              <span className="flex items-center gap-1 text-xs md:text-sm text-muted-foreground">
+                <MapPin className="h-3 w-3 md:h-4 md:w-4" />
                 {selectedImage?.location}
               </span>
-              <span className="flex items-center gap-1 text-muted-foreground">
-                <Calendar className="h-4 w-4" />
+              <span className="flex items-center gap-1 text-xs md:text-sm text-muted-foreground">
+                <Calendar className="h-3 w-3 md:h-4 md:w-4" />
                 {selectedImage?.date}
               </span>
             </div>
             
-            <h2 className="text-2xl font-bold text-foreground mb-4">
+            <h2 className="text-lg md:text-2xl font-bold text-foreground mb-3 md:mb-4">
               {selectedImage?.title}
             </h2>
             
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
               {selectedImage?.description}
             </p>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
               {selectedImage?.highlights.map((highlight, index) => (
                 <div 
                   key={index}
-                  className="px-4 py-3 bg-secondary rounded-lg text-center"
+                  className="px-3 py-2 md:px-4 md:py-3 bg-secondary rounded-lg text-center"
                 >
-                  <span className="text-sm font-medium text-foreground">{highlight}</span>
+                  <span className="text-xs md:text-sm font-medium text-foreground">{highlight}</span>
                 </div>
               ))}
             </div>

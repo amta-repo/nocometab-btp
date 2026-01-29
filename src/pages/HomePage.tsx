@@ -54,11 +54,11 @@ const HomePage = () => {
       description: t('service.topo.desc'),
       path: '/services/structures',
       fullDescription: language === 'fr' 
-        ? "Notre expertise en structures métalliques comprend la conception, la fabrication et le montage de bâtiments industriels, commerciaux et agricoles. Nous utilisons des aciers de haute qualité et des techniques de soudure avancées pour garantir la solidité et la durabilité de chaque structure. Notre équipe d'ingénieurs assure un suivi rigoureux de chaque projet, de l'étude de faisabilité à la livraison finale."
-        : "Our metal structure expertise includes design, fabrication and assembly of industrial, commercial and agricultural buildings. We use high quality steels and advanced welding techniques to ensure the strength and durability of each structure. Our team of engineers ensures rigorous monitoring of each project, from feasibility study to final delivery.",
+        ? "Notre expertise en structures métalliques comprend la conception, la fabrication et le montage de bâtiments industriels, commerciaux et agricoles. Nous utilisons des aciers de haute qualité et des techniques de soudure avancées pour garantir la solidité et la durabilité de chaque structure."
+        : "Our metal structure expertise includes design, fabrication and assembly of industrial, commercial and agricultural buildings. We use high quality steels and advanced welding techniques to ensure the strength and durability of each structure.",
       features: language === 'fr'
-        ? ['Études techniques et calculs de structures', 'Fabrication en atelier', 'Montage sur site', 'Certification qualité']
-        : ['Technical studies and structural calculations', 'Workshop manufacturing', 'On-site assembly', 'Quality certification'],
+        ? ['Études techniques et calculs', 'Fabrication en atelier', 'Montage sur site', 'Certification qualité']
+        : ['Technical studies', 'Workshop manufacturing', 'On-site assembly', 'Quality certification'],
     },
     {
       icon: Construction,
@@ -66,8 +66,8 @@ const HomePage = () => {
       description: t('service.bornage.desc'),
       path: '/services/charpentes',
       fullDescription: language === 'fr'
-        ? "Nous réalisons des charpentes métalliques sur mesure pour tous types de bâtiments. Nos charpentes sont conçues pour offrir une résistance maximale aux intempéries et aux charges. Avec plus de 50 000 m² de charpentes réalisées, nous sommes votre partenaire de confiance."
-        : "We create custom metal frameworks for all types of buildings. Our frameworks are designed to offer maximum resistance to weather and loads. With over 50,000 m² of frameworks completed, we are your trusted partner.",
+        ? "Nous réalisons des charpentes métalliques sur mesure pour tous types de bâtiments. Nos charpentes sont conçues pour offrir une résistance maximale aux intempéries et aux charges."
+        : "We create custom metal frameworks for all types of buildings. Our frameworks are designed to offer maximum resistance to weather and loads.",
       features: language === 'fr'
         ? ['Charpentes industrielles', 'Charpentes commerciales', 'Fermes et pannes', 'Traitement anticorrosion']
         : ['Industrial frameworks', 'Commercial frameworks', 'Trusses and purlins', 'Anti-corrosion treatment'],
@@ -78,8 +78,8 @@ const HomePage = () => {
       description: t('service.drone.desc'),
       path: '/services/menuiserie',
       fullDescription: language === 'fr'
-        ? "Notre atelier de menuiserie métallique fabrique portes, fenêtres, portails, garde-corps et escaliers sur mesure. Chaque pièce est réalisée avec précision pour s'adapter parfaitement à vos espaces. Nous proposons différentes finitions: peinture, galvanisation, thermolaquage."
-        : "Our metal joinery workshop manufactures custom doors, windows, gates, railings and stairs. Each piece is made with precision to fit your spaces perfectly. We offer different finishes: painting, galvanization, powder coating.",
+        ? "Notre atelier de menuiserie métallique fabrique portes, fenêtres, portails, garde-corps et escaliers sur mesure."
+        : "Our metal joinery workshop manufactures custom doors, windows, gates, railings and stairs.",
       features: language === 'fr'
         ? ['Portes et portails', 'Fenêtres et baies vitrées', 'Garde-corps et rampes', 'Escaliers métalliques']
         : ['Doors and gates', 'Windows and bay windows', 'Railings and handrails', 'Metal stairs'],
@@ -90,8 +90,8 @@ const HomePage = () => {
       description: t('service.urbanisme.desc'),
       path: '/services/hangars',
       fullDescription: language === 'fr'
-        ? "Construction de hangars et entrepôts métalliques de grande portée. Nos solutions permettent d'optimiser l'espace de stockage tout en garantissant la sécurité et la durabilité. Nous réalisons des portées allant jusqu'à 50 mètres sans poteau intermédiaire."
-        : "Construction of large-span metal warehouses and storage facilities. Our solutions optimize storage space while ensuring safety and durability. We achieve spans up to 50 meters without intermediate columns.",
+        ? "Construction de hangars et entrepôts métalliques de grande portée. Nos solutions permettent d'optimiser l'espace de stockage."
+        : "Construction of large-span metal warehouses and storage facilities. Our solutions optimize storage space.",
       features: language === 'fr'
         ? ['Hangars industriels', 'Entrepôts logistiques', 'Ateliers de production', 'Structures agricoles']
         : ['Industrial warehouses', 'Logistics warehouses', 'Production workshops', 'Agricultural structures'],
@@ -102,8 +102,8 @@ const HomePage = () => {
       description: t('service.vrd.desc'),
       path: '/services/toiture',
       fullDescription: language === 'fr'
-        ? "Installation de couvertures métalliques performantes: bac acier, tôles ondulées, panneaux sandwich. Nos toitures offrent une excellente isolation thermique et une grande résistance aux intempéries. Nous assurons également l'étanchéité et l'évacuation des eaux pluviales."
-        : "Installation of high-performance metal roofing: steel decking, corrugated sheets, sandwich panels. Our roofs offer excellent thermal insulation and great weather resistance. We also ensure waterproofing and rainwater drainage.",
+        ? "Installation de couvertures métalliques performantes: bac acier, tôles ondulées, panneaux sandwich."
+        : "Installation of high-performance metal roofing: steel decking, corrugated sheets, sandwich panels.",
       features: language === 'fr'
         ? ['Bac acier et tôles', 'Panneaux sandwich', 'Gouttières et descentes', 'Isolation thermique']
         : ['Steel decking and sheets', 'Sandwich panels', 'Gutters and downspouts', 'Thermal insulation'],
@@ -114,19 +114,36 @@ const HomePage = () => {
       description: t('service.conseil.desc'),
       path: '/services/renovation',
       fullDescription: language === 'fr'
-        ? "Rénovation et renforcement de structures métalliques existantes. Nous diagnostiquons l'état de vos installations et proposons des solutions adaptées: remplacement d'éléments, traitement anticorrosion, mise aux normes, extension de bâtiments."
-        : "Renovation and reinforcement of existing metal structures. We diagnose the condition of your facilities and offer suitable solutions: element replacement, anti-corrosion treatment, standards compliance, building extensions.",
+        ? "Rénovation et renforcement de structures métalliques existantes. Nous diagnostiquons l'état de vos installations."
+        : "Renovation and reinforcement of existing metal structures. We diagnose the condition of your facilities.",
       features: language === 'fr'
         ? ['Diagnostic structurel', 'Renforcement', 'Réhabilitation', 'Extensions']
         : ['Structural diagnosis', 'Reinforcement', 'Rehabilitation', 'Extensions'],
     },
   ];
 
+  // Updated metal construction metrics based on attestations
   const achievements = [
-    { icon: Building2, value: '+50K', label: t('achievements.hectares') },
-    { icon: MapPin, value: '15', label: t('achievements.communes') },
-    { icon: Users, value: '100+', label: t('achievements.clients') },
-    { icon: TrendingUp, value: '99.9%', label: t('achievements.accuracy') },
+    { 
+      icon: Building2, 
+      value: '200T', 
+      label: language === 'fr' ? 'Silos fabriqués' : 'Silos fabricated' 
+    },
+    { 
+      icon: Factory, 
+      value: '50+', 
+      label: language === 'fr' ? 'Charpentes montées' : 'Frameworks installed' 
+    },
+    { 
+      icon: Users, 
+      value: '100+', 
+      label: language === 'fr' ? 'Clients satisfaits' : 'Satisfied clients' 
+    },
+    { 
+      icon: Award, 
+      value: '15+', 
+      label: language === 'fr' ? 'Années d\'expérience' : 'Years of experience' 
+    },
   ];
 
   const trustBadges = [
@@ -140,8 +157,8 @@ const HomePage = () => {
       icon: Award,
       title: language === 'fr' ? 'Expertise Reconnue' : 'Recognized Expertise',
       description: language === 'fr'
-        ? "Plus de 10 ans d'expérience dans la construction métallique au Bénin."
-        : 'Over 10 years of experience in metal construction in Benin.',
+        ? "Plus de 15 ans d'expérience dans la construction métallique au Bénin."
+        : 'Over 15 years of experience in metal construction in Benin.',
     },
     {
       icon: Shield,
@@ -169,7 +186,7 @@ const HomePage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Sliding Background */}
-      <section className="relative h-[650px] md:h-[750px] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Sliding Background Images */}
         {heroImages.map((image, index) => (
           <div
@@ -182,89 +199,91 @@ const HomePage = () => {
           />
         ))}
         
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+        {/* Dark overlay with navy tint */}
+        <div className="absolute inset-0 bg-gradient-to-b from-accent/80 via-accent/60 to-accent/90" />
         
-        {/* Yellow accent line */}
-        <div className="absolute bottom-0 left-0 right-0 h-2 bg-primary" />
+        {/* Accent line */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
         
-        <div className="container relative z-10 mx-auto px-4 text-center text-white animate-fade-in-up">
-          <div className="inline-block px-4 py-2 mb-6 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-              {language === 'fr' ? 'Construction Métallique Professionnelle' : 'Professional Metal Construction'}
-            </span>
-          </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            NOCOMETAB <span className="text-primary">BTP</span>
-          </h1>
-          <p className="text-2xl md:text-4xl mb-4 font-semibold">
-            {t('hero.title')}
-          </p>
-          <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-gray-200">
-            {t('hero.subtitle')}
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Link to="/contact">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-8 py-6 text-lg">
-                {t('hero.cta.quote')}
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Button
-              size="lg"
-              className="rounded-full w-14 h-14 p-0 bg-accent hover:bg-accent/90 text-accent-foreground"
-              onClick={() => window.open('https://wa.me/+22995954663', '_blank')}
-            >
-              <Phone className="h-6 w-6" />
-            </Button>
-          </div>
-
-          {/* Trust Badges */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-            {trustBadges.map((badge, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3 animate-scale-in border border-white/10"
-                style={{ animationDelay: `${index * 100}ms` }}
+        <div className="container relative z-10 mx-auto px-4 text-center text-white">
+          <div className="max-w-4xl mx-auto">
+            <div className="inline-block px-4 py-2 mb-4 md:mb-6 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30">
+              <span className="text-primary font-semibold text-xs md:text-sm uppercase tracking-wider">
+                {language === 'fr' ? 'Construction Métallique Professionnelle' : 'Professional Metal Construction'}
+              </span>
+            </div>
+            
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight">
+              NOCOMETAB <span className="text-primary">BTP</span>
+            </h1>
+            <p className="text-lg sm:text-xl md:text-3xl lg:text-4xl mb-3 md:mb-4 font-semibold">
+              {t('hero.title')}
+            </p>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-8 md:mb-10 max-w-2xl mx-auto text-gray-200 px-4">
+              {t('hero.subtitle')}
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-8 md:mb-12 px-4">
+              <Link to="/contact">
+                <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-6 md:px-8 py-5 md:py-6 text-base md:text-lg shadow-lg">
+                  {t('hero.cta.quote')}
+                  <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
+                </Button>
+              </Link>
+              <Button
+                size="lg"
+                className="rounded-full w-12 h-12 md:w-14 md:h-14 p-0 bg-white/20 hover:bg-primary text-white hover:text-primary-foreground backdrop-blur-sm border border-white/30"
+                onClick={() => window.open('https://wa.me/+22995954663', '_blank')}
               >
-                <badge.icon className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium">{badge.text}</span>
-              </div>
-            ))}
+                <Phone className="h-5 w-5 md:h-6 md:w-6" />
+              </Button>
+            </div>
+
+            {/* Trust Badges - responsive grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-4 max-w-3xl mx-auto px-4">
+              {trustBadges.map((badge, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 md:px-4 md:py-3 animate-scale-in border border-white/10"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <badge.icon className="h-4 w-4 md:h-5 md:w-5 text-primary flex-shrink-0" />
+                  <span className="text-xs md:text-sm font-medium">{badge.text}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         
-        {/* Image indicators */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+        {/* Image indicators - positioned higher on mobile */}
+        <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 flex gap-1.5 md:gap-2 z-20">
           {heroImages.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentImageIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                currentImageIndex === index ? 'bg-primary w-8' : 'bg-white/50 hover:bg-white/80'
+              className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all ${
+                currentImageIndex === index ? 'bg-primary w-5 md:w-8' : 'bg-white/50 hover:bg-white/80'
               }`}
             />
           ))}
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-16 bg-accent text-accent-foreground">
+      {/* Why Choose Us - Navy Background */}
+      <section className="py-12 md:py-16 bg-accent text-accent-foreground">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {whyChooseUs.map((item, index) => (
               <div 
                 key={index} 
-                className="text-center animate-fade-in"
+                className="text-center animate-fade-in p-4"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center">
-                  <item.icon className="h-8 w-8 text-primary" />
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 rounded-full bg-primary/20 flex items-center justify-center">
+                  <item.icon className="h-6 w-6 md:h-8 md:w-8 text-primary" />
                 </div>
-                <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-                <p className="text-sm text-accent-foreground/80">{item.description}</p>
+                <h3 className="font-bold text-sm md:text-lg mb-1 md:mb-2">{item.title}</h3>
+                <p className="text-xs md:text-sm text-accent-foreground/80 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
@@ -272,33 +291,33 @@ const HomePage = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-background">
+      <section className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4 md:mb-6">
               {t('about.title')}
             </h2>
-            <p className="text-xl text-primary font-semibold mb-6 italic">
+            <p className="text-lg md:text-xl text-primary font-semibold mb-4 md:mb-6 italic">
               {t('about.mission')}
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 md:mb-8">
               {t('about.description')}
             </p>
 
             {/* Values */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mt-8 md:mt-12">
               {[
                 { key: 'integrity', icon: Award },
                 { key: 'accuracy', icon: CheckCircle2 },
                 { key: 'innovation', icon: TrendingUp },
                 { key: 'sustainability', icon: Building2 },
               ].map((value, index) => (
-                <Card key={value.key} className="hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/50">
-                  <CardContent className="pt-6 pb-6 flex flex-col items-center">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
-                      <value.icon className="h-6 w-6 text-primary" />
+                <Card key={value.key} className="hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 border hover:border-primary/50">
+                  <CardContent className="pt-4 pb-4 md:pt-6 md:pb-6 flex flex-col items-center">
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-accent/10 flex items-center justify-center mb-2 md:mb-3">
+                      <value.icon className="h-5 w-5 md:h-6 md:w-6 text-accent" />
                     </div>
-                    <p className="font-semibold text-sm">
+                    <p className="font-semibold text-xs md:text-sm text-center">
                       {t(`about.value.${value.key}`)}
                     </p>
                   </CardContent>
@@ -310,37 +329,37 @@ const HomePage = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-secondary/50">
+      <section className="py-16 md:py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <div className="text-center mb-8 md:mb-12 animate-fade-in">
+            <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-3 md:mb-4">
               {t('services.title')}
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               {t('services.subtitle')}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 animate-scale-in group border-2 hover:border-primary/50"
+                className="hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 animate-scale-in group border hover:border-primary/50"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <CardContent className="pt-6 pb-6">
-                  <div className="h-14 w-14 rounded-lg bg-gradient-hero flex items-center justify-center mb-4 group-hover:bg-gradient-accent transition-all duration-300">
-                    <service.icon className="h-7 w-7 text-white group-hover:text-primary-foreground" />
+                <CardContent className="pt-5 pb-5 md:pt-6 md:pb-6">
+                  <div className="h-12 w-12 md:h-14 md:w-14 rounded-lg bg-gradient-navy flex items-center justify-center mb-3 md:mb-4 group-hover:bg-gradient-accent transition-all duration-300">
+                    <service.icon className="h-6 w-6 md:h-7 md:w-7 text-white group-hover:text-primary-foreground" />
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                  <h3 className="text-lg md:text-xl font-semibold text-foreground mb-2 md:mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
+                  <p className="text-sm md:text-base text-muted-foreground mb-3 md:mb-4 leading-relaxed">
                     {service.description}
                   </p>
                   <Button 
                     variant="link" 
-                    className="p-0 h-auto text-primary font-semibold"
+                    className="p-0 h-auto text-primary font-semibold text-sm md:text-base"
                     onClick={() => setSelectedService(service)}
                   >
                     {t('services.learnmore')} →
@@ -354,28 +373,28 @@ const HomePage = () => {
 
       {/* Service Detail Modal */}
       <Dialog open={!!selectedService} onOpenChange={() => setSelectedService(null)}>
-        <DialogContent className="max-w-2xl">
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
-            <div className="flex items-center gap-4 mb-4">
+            <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
               {selectedService && (
-                <div className="h-14 w-14 rounded-lg bg-gradient-hero flex items-center justify-center">
-                  <selectedService.icon className="h-7 w-7 text-white" />
+                <div className="h-12 w-12 md:h-14 md:w-14 rounded-lg bg-gradient-navy flex items-center justify-center flex-shrink-0">
+                  <selectedService.icon className="h-6 w-6 md:h-7 md:w-7 text-white" />
                 </div>
               )}
-              <DialogTitle className="text-2xl">{selectedService?.title}</DialogTitle>
+              <DialogTitle className="text-xl md:text-2xl">{selectedService?.title}</DialogTitle>
             </div>
-            <DialogDescription className="text-base leading-relaxed">
+            <DialogDescription className="text-sm md:text-base leading-relaxed">
               {selectedService?.fullDescription}
             </DialogDescription>
           </DialogHeader>
           
-          <div className="mt-6">
-            <h4 className="font-semibold mb-3 text-foreground">
+          <div className="mt-4 md:mt-6">
+            <h4 className="font-semibold mb-2 md:mb-3 text-foreground text-sm md:text-base">
               {language === 'fr' ? 'Nos prestations incluent:' : 'Our services include:'}
             </h4>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
               {selectedService?.features.map((feature, index) => (
-                <li key={index} className="flex items-center gap-2 text-muted-foreground">
+                <li key={index} className="flex items-center gap-2 text-muted-foreground text-sm">
                   <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0" />
                   <span>{feature}</span>
                 </li>
@@ -383,14 +402,14 @@ const HomePage = () => {
             </ul>
           </div>
           
-          <div className="mt-6 flex gap-4">
+          <div className="mt-4 md:mt-6 flex flex-col sm:flex-row gap-3 md:gap-4">
             <Link to="/contact" className="flex-1">
               <Button className="w-full bg-primary hover:bg-primary/90">
                 {language === 'fr' ? 'Demander un devis' : 'Request a Quote'}
               </Button>
             </Link>
             <Link to={selectedService?.path || '/services'}>
-              <Button variant="outline">
+              <Button variant="outline" className="w-full sm:w-auto">
                 {language === 'fr' ? 'En savoir plus' : 'Learn more'}
               </Button>
             </Link>
@@ -398,39 +417,39 @@ const HomePage = () => {
         </DialogContent>
       </Dialog>
 
-      {/* Achievements Section */}
+      {/* Achievements Section - Dark Navy */}
       <section
-        className="py-20 relative bg-cover bg-center bg-fixed"
+        className="py-16 md:py-20 relative bg-cover bg-center bg-fixed"
         style={{
-          backgroundImage: `linear-gradient(rgba(20, 20, 20, 0.9), rgba(20, 20, 20, 0.9)), url(${servicesImage})`,
+          backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.95), rgba(30, 41, 59, 0.95)), url(${servicesImage})`,
         }}
       >
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 text-white animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <div className="text-center mb-8 md:mb-12 text-white animate-fade-in">
+            <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4">
               {t('achievements.title')}
             </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+            <p className="text-sm md:text-lg text-gray-300 max-w-2xl mx-auto">
               {language === 'fr' 
                 ? 'Des chiffres qui témoignent de notre engagement et de notre expertise.'
                 : 'Numbers that reflect our commitment and expertise.'}
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-5xl mx-auto">
             {achievements.map((achievement, index) => (
               <div
                 key={index}
-                className="text-center text-white animate-scale-in"
+                className="text-center text-white animate-scale-in p-3 md:p-4"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-14 h-14 md:w-20 md:h-20 mx-auto mb-3 md:mb-4 rounded-full bg-primary/20 flex items-center justify-center">
-                  <achievement.icon className="h-7 w-7 md:h-10 md:w-10 text-primary" />
+                <div className="w-12 h-12 md:w-16 lg:w-20 md:h-16 lg:h-20 mx-auto mb-2 md:mb-4 rounded-full bg-primary/20 flex items-center justify-center">
+                  <achievement.icon className="h-6 w-6 md:h-8 lg:h-10 md:w-8 lg:w-10 text-primary" />
                 </div>
-                <div className="text-2xl md:text-4xl font-bold mb-1 md:mb-2 text-primary">
+                <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-1 md:mb-2 text-primary">
                   {achievement.value}
                 </div>
-                <p className="text-xs md:text-base text-gray-300">{achievement.label}</p>
+                <p className="text-xs sm:text-sm md:text-base text-gray-300 leading-tight">{achievement.label}</p>
               </div>
             ))}
           </div>
@@ -438,30 +457,30 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary">
+      <section className="py-12 md:py-16 bg-primary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-primary-foreground mb-3 md:mb-4">
               {language === 'fr' ? 'Prêt à démarrer votre projet ?' : 'Ready to start your project?'}
             </h2>
-            <p className="text-lg text-primary-foreground/80 mb-8">
+            <p className="text-sm md:text-lg text-primary-foreground/80 mb-6 md:mb-8 max-w-2xl mx-auto">
               {language === 'fr' 
                 ? 'Contactez-nous dès maintenant pour une étude gratuite et un devis personnalisé.'
                 : 'Contact us now for a free study and personalized quote.'}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
               <Link to="/contact">
-                <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold px-8">
+                <Button size="lg" className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground font-bold px-6 md:px-8">
                   {t('cta.quoterequest')}
                 </Button>
               </Link>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                className="w-full sm:w-auto border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
                 onClick={() => window.open('https://wa.me/+22995954663', '_blank')}
               >
-                <Phone className="h-5 w-5 mr-2" />
+                <Phone className="h-4 w-4 md:h-5 md:w-5 mr-2" />
                 {t('cta.whatsapp')}
               </Button>
             </div>
@@ -470,59 +489,60 @@ const HomePage = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-background">
+      <section className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
-          <Card className="max-w-4xl mx-auto shadow-elevated border-2 border-primary/20">
-            <CardContent className="pt-12 pb-12">
+          <Card className="max-w-4xl mx-auto shadow-elevated border border-accent/20">
+            <CardContent className="py-8 md:py-12 px-4 md:px-8">
               <div className="text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4 md:mb-6">
                   {t('contact.title')}
                 </h2>
-                <p className="text-lg text-muted-foreground mb-8">
+                <p className="text-sm md:text-lg text-muted-foreground mb-6 md:mb-8">
                   {t('contact.subtitle')}
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                  <div className="flex flex-col items-center p-4 rounded-lg bg-secondary/50">
-                    <Phone className="h-8 w-8 text-primary mb-2" />
-                    <p className="text-sm text-muted-foreground mb-1">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-8">
+                  <div className="flex flex-col items-center p-4 md:p-5 rounded-lg bg-secondary/50">
+                    <Phone className="h-6 w-6 md:h-8 md:w-8 text-primary mb-2" />
+                    <p className="text-xs md:text-sm text-muted-foreground mb-1">
                       {language === 'fr' ? 'Téléphone' : 'Phone'}
                     </p>
                     <a
                       href="tel:+2290195954763"
-                      className="font-semibold text-foreground hover:text-primary transition-colors"
+                      className="font-semibold text-sm md:text-base text-foreground hover:text-primary transition-colors"
                     >
                       +229 01 95 95 47 63
                     </a>
                   </div>
-                  <div className="flex flex-col items-center p-4 rounded-lg bg-secondary/50">
-                    <Mail className="h-8 w-8 text-primary mb-2" />
-                    <p className="text-sm text-muted-foreground mb-1">Email</p>
+                  <div className="flex flex-col items-center p-4 md:p-5 rounded-lg bg-secondary/50">
+                    <Mail className="h-6 w-6 md:h-8 md:w-8 text-primary mb-2" />
+                    <p className="text-xs md:text-sm text-muted-foreground mb-1">Email</p>
                     <a
                       href="mailto:nocometabbtp@gmail.com"
-                      className="font-semibold text-foreground hover:text-primary transition-colors"
+                      className="font-semibold text-sm md:text-base text-foreground hover:text-primary transition-colors break-all"
                     >
                       nocometabbtp@gmail.com
                     </a>
                   </div>
-                  <div className="flex flex-col items-center p-4 rounded-lg bg-secondary/50">
-                    <Clock className="h-8 w-8 text-primary mb-2" />
-                    <p className="text-sm text-muted-foreground mb-1">{t('contact.hours')}</p>
-                    <p className="font-semibold text-foreground text-sm">
+                  <div className="flex flex-col items-center p-4 md:p-5 rounded-lg bg-secondary/50">
+                    <Clock className="h-6 w-6 md:h-8 md:w-8 text-primary mb-2" />
+                    <p className="text-xs md:text-sm text-muted-foreground mb-1">{t('contact.hours')}</p>
+                    <p className="font-semibold text-sm md:text-base text-foreground">
                       {t('contact.hours.weekday')}
                     </p>
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
                   <Link to="/contact">
-                    <Button size="lg" className="bg-primary hover:bg-primary/90">
+                    <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90">
                       {t('cta.quoterequest')}
                     </Button>
                   </Link>
                   <Button
                     size="lg"
                     variant="outline"
+                    className="w-full sm:w-auto"
                     onClick={() => window.open('https://wa.me/+22995954663', '_blank')}
                   >
                     {t('cta.whatsapp')}

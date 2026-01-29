@@ -21,40 +21,40 @@ const NewsStrip = () => {
     {
       id: 3,
       title: language === 'fr'
-        ? "🔧 Travaux de soudure et découpe sur site en cours"
-        : "🔧 On-site welding and cutting work in progress",
+        ? "🔧 Charpente métallique de l'Arène du Palais Royal de Nikki terminée"
+        : "🔧 Metal framework for Nikki Royal Palace Arena completed",
     },
     {
       id: 4,
       title: language === 'fr'
-        ? "📋 NOCOMETAB BTP obtient de nouvelles certifications"
-        : "📋 NOCOMETAB BTP obtains new certifications",
+        ? "📋 Nouvelles attestations de bonne fin d'exécution obtenues"
+        : "📋 New certificates of completion obtained",
     },
     {
       id: 5,
       title: language === 'fr'
-        ? "🎉 Célébration de 10 ans d'excellence en construction métallique"
-        : "🎉 Celebrating 10 years of excellence in metal construction",
+        ? "🎉 Plus de 15 ans d'excellence en construction métallique"
+        : "🎉 Over 15 years of excellence in metal construction",
     },
   ];
 
   return (
-    <div className="bg-accent text-accent-foreground">
-      <div className="relative overflow-hidden py-2">
+    <div className="bg-accent text-accent-foreground border-b border-white/10">
+      <div className="relative overflow-hidden py-1.5 md:py-2">
         <Link to="/news" className="block">
           <div className="flex items-center animate-news-scroll">
             {/* News icon */}
-            <div className="flex items-center gap-2 px-4 py-1 bg-primary text-primary-foreground font-semibold text-sm flex-shrink-0 rounded-r-full">
-              <Newspaper className="h-4 w-4" />
-              <span>{language === 'fr' ? 'Actualités' : 'News'}</span>
-              <ChevronRight className="h-4 w-4" />
+            <div className="flex items-center gap-1.5 md:gap-2 px-2 md:px-4 py-0.5 md:py-1 bg-primary text-primary-foreground font-semibold text-xs md:text-sm flex-shrink-0 rounded-r-full">
+              <Newspaper className="h-3 w-3 md:h-4 md:w-4" />
+              <span className="hidden sm:inline">{language === 'fr' ? 'Actualités' : 'News'}</span>
+              <ChevronRight className="h-3 w-3 md:h-4 md:w-4" />
             </div>
             
             {/* First set of news */}
             {newsItems.map((news) => (
               <span 
                 key={`first-${news.id}`}
-                className="flex-shrink-0 px-8 text-sm font-medium whitespace-nowrap hover:text-primary transition-colors"
+                className="flex-shrink-0 px-4 md:px-8 text-xs md:text-sm font-medium whitespace-nowrap hover:text-primary transition-colors"
               >
                 {news.title}
               </span>
@@ -64,7 +64,7 @@ const NewsStrip = () => {
             {newsItems.map((news) => (
               <span 
                 key={`second-${news.id}`}
-                className="flex-shrink-0 px-8 text-sm font-medium whitespace-nowrap hover:text-primary transition-colors"
+                className="flex-shrink-0 px-4 md:px-8 text-xs md:text-sm font-medium whitespace-nowrap hover:text-primary transition-colors"
               >
                 {news.title}
               </span>
