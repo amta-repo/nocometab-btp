@@ -17,8 +17,13 @@ import attestation7 from '@/assets/attestation-bonne-fin-7.jpg';
 import heroImage1 from '@/assets/nocometab-hero-1.jpg';
 import finishedProject2 from '@/assets/finished-projects-2.jpg';
 import finishedProject3 from '@/assets/finished-projects-3.jpg';
+import finishedProject4 from '@/assets/finished-projects-4.jpg';
+import finishedProject5 from '@/assets/finished-projects-5.jpg';
+import finishedProject7 from '@/assets/finished-projects-7.jpg';
 import finishedProject8 from '@/assets/finished-projects-8.jpg';
 import finishedProject9 from '@/assets/finished-projects-9.jpg';
+import heroImage5 from '@/assets/nocometab-hero-5.jpg';
+import heroImage6 from '@/assets/nocometab-hero-6.jpg';
 
 const ProjectsPage = () => {
   const { t, language } = useLanguage();
@@ -92,7 +97,7 @@ const ProjectsPage = () => {
 
   const projects = [
     {
-      image: finishedProject2,
+      image: finishedProject5,
       title: language === 'fr' ? 'Montage Charpente et Silo 200 Tonnes - CIMBENIN' : '200-Ton Silo and Framework Assembly - CIMBENIN',
       location: 'CIMBENIN, Cotonou',
       date: '2023',
@@ -112,7 +117,27 @@ const ProjectsPage = () => {
       ],
     },
     {
-      image: finishedProject9,
+      image: heroImage5,
+      title: language === 'fr' ? "Charpente Métallique Industrielle" : 'Industrial Metal Framework',
+      location: 'Cotonou, Bénin',
+      date: '2024',
+      type: language === 'fr' ? 'Charpente' : 'Framework',
+      description: language === 'fr'
+        ? "Fabrication et montage de charpentes métalliques industrielles avec une équipe de professionnels qualifiés."
+        : 'Fabrication and assembly of industrial metal frameworks with a team of qualified professionals.',
+      stats: [
+        { label: language === 'fr' ? 'Portée' : 'Span', value: '25 m' },
+        { label: language === 'fr' ? 'Équipe' : 'Team', value: '12+' },
+        { label: language === 'fr' ? 'Durée' : 'Duration', value: '6 sem' },
+      ],
+      highlights: [
+        language === 'fr' ? 'Haute précision' : 'High precision',
+        language === 'fr' ? 'Montage sécurisé' : 'Safe assembly',
+        language === 'fr' ? 'Équipe formée' : 'Trained team',
+      ],
+    },
+    {
+      image: heroImage6,
       title: language === 'fr' ? "Charpente de l'Arène du Palais Royal de Nikki" : 'Royal Palace Arena Framework - Nikki',
       location: 'Nikki, Bénin',
       date: '2024',
@@ -132,43 +157,43 @@ const ProjectsPage = () => {
       ],
     },
     {
-      image: finishedProject8,
-      title: language === 'fr' ? "Montage du Moteur de l'Élévateur Ciment" : 'Cement Elevator Motor Assembly',
-      location: 'CIMBENIN, Cotonou',
+      image: finishedProject7,
+      title: language === 'fr' ? "Installation Industrielle de Silos" : 'Industrial Silo Installation',
+      location: 'Zone Industrielle, Cotonou',
       date: '2024',
       type: language === 'fr' ? 'Montage Mécanique' : 'Mechanical Assembly',
       description: language === 'fr'
-        ? "Installation et montage du moteur de l'élévateur à ciment incluant les travaux mécaniques, électriques et les tests de fonctionnement."
-        : 'Installation and assembly of the cement elevator motor including mechanical, electrical work and function tests.',
+        ? "Montage et installation de silos industriels avec échafaudages sécurisés et équipes spécialisées."
+        : 'Assembly and installation of industrial silos with secure scaffolding and specialized teams.',
       stats: [
-        { label: language === 'fr' ? 'Puissance' : 'Power', value: '150 kW' },
-        { label: language === 'fr' ? 'Charge' : 'Load', value: '50 T/h' },
+        { label: language === 'fr' ? 'Hauteur' : 'Height', value: '35 m' },
+        { label: language === 'fr' ? 'Capacité' : 'Capacity', value: '500 T' },
         { label: language === 'fr' ? 'Tests' : 'Tests', value: '100%' },
       ],
       highlights: [
-        language === 'fr' ? 'Haute puissance' : 'High power',
+        language === 'fr' ? 'Haute capacité' : 'High capacity',
         language === 'fr' ? 'Installation précise' : 'Precise installation',
-        language === 'fr' ? 'Tests complets' : 'Complete testing',
+        language === 'fr' ? 'Sécurité maximale' : 'Maximum safety',
       ],
     },
     {
-      image: finishedProject3,
-      title: language === 'fr' ? 'Montage Silo et Charpente - Vue Technique' : 'Silo and Framework Assembly - Technical View',
-      location: 'CIMBENIN, Cotonou',
-      date: '2023',
-      type: language === 'fr' ? 'Structure Métallique' : 'Metal Structure',
+      image: finishedProject4,
+      title: language === 'fr' ? "Équipe NOCOMETAB sur Chantier" : 'NOCOMETAB Team On Site',
+      location: 'Bénin',
+      date: '2024',
+      type: language === 'fr' ? 'Équipe' : 'Team',
       description: language === 'fr'
-        ? "Vue technique du montage de silo et charpente métallique avec échafaudages sécurisés et équipe expérimentée."
-        : 'Technical view of silo and metal framework assembly with secure scaffolding and experienced team.',
+        ? "Notre équipe de professionnels qualifiés prête à intervenir sur tous vos projets de construction métallique."
+        : 'Our team of qualified professionals ready to work on all your metal construction projects.',
       stats: [
-        { label: language === 'fr' ? 'Échafaudages' : 'Scaffolding', value: '500 m²' },
-        { label: language === 'fr' ? 'Sécurité' : 'Safety', value: '100%' },
-        { label: language === 'fr' ? 'Équipe' : 'Team', value: '20+' },
+        { label: language === 'fr' ? 'Équipe' : 'Team', value: '50+' },
+        { label: language === 'fr' ? 'Expérience' : 'Experience', value: '15+ ans' },
+        { label: language === 'fr' ? 'Projets' : 'Projects', value: '100+' },
       ],
       highlights: [
-        language === 'fr' ? 'Sécurité renforcée' : 'Enhanced safety',
-        language === 'fr' ? 'Échafaudages pro' : 'Pro scaffolding',
-        language === 'fr' ? 'Équipe formée' : 'Trained team',
+        language === 'fr' ? 'Équipe qualifiée' : 'Qualified team',
+        language === 'fr' ? 'Expérience reconnue' : 'Recognized experience',
+        language === 'fr' ? 'Sécurité prioritaire' : 'Safety priority',
       ],
     },
   ];

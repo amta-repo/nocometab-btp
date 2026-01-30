@@ -10,15 +10,18 @@ import PageHeader from '@/components/PageHeader';
 import finishedProject1 from '@/assets/finished-projects-1.jpg';
 import finishedProject2 from '@/assets/finished-projects-2.jpg';
 import finishedProject3 from '@/assets/finished-projects-3.jpg';
+import finishedProject4 from '@/assets/finished-projects-4.jpg';
+import finishedProject5 from '@/assets/finished-projects-5.jpg';
 import finishedProject6 from '@/assets/finished-projects-6.jpg';
+import finishedProject7 from '@/assets/finished-projects-7.jpg';
 import finishedProject8 from '@/assets/finished-projects-8.jpg';
 import finishedProject9 from '@/assets/finished-projects-9.jpg';
 
 // Hero images
-import heroImage1 from '@/assets/nocometab-hero-1.jpg';
-import heroImage2 from '@/assets/nocometab-hero-2.jpg';
 import heroImage3 from '@/assets/nocometab-hero-3.jpg';
-import heroImage4 from '@/assets/nocometab-hero-4.jpg';
+import heroImage5 from '@/assets/nocometab-hero-5.jpg';
+import heroImage6 from '@/assets/nocometab-hero-6.jpg';
+import heroImage7 from '@/assets/nocometab-hero-7.jpg';
 
 // Equipment and team
 import galleryEquipment1 from '@/assets/gallery-equipment-1.jpg';
@@ -262,35 +265,99 @@ const GalleryPage = () => {
     },
     {
       id: 15,
-      src: heroImage1,
+      src: heroImage5,
       title: language === 'fr' 
-        ? "Équipe NOCOMETAB BTP en action" 
-        : "NOCOMETAB BTP Team in Action",
+        ? "Montage Charpente Métallique en Hauteur" 
+        : "High-Altitude Metal Framework Assembly",
       location: 'Cotonou, Bénin',
       date: '2024',
-      category: language === 'fr' ? 'Équipe' : 'Team',
+      category: language === 'fr' ? 'Charpente' : 'Framework',
       description: language === 'fr'
-        ? "Notre équipe de professionnels qualifiés travaillant sur un chantier de construction métallique."
-        : "Our team of qualified professionals working on a metal construction site.",
+        ? "Notre équipe de professionnels qualifiés travaillant sur un chantier de construction métallique en hauteur."
+        : "Our team of qualified professionals working on a high-altitude metal construction site.",
       highlights: language === 'fr'
-        ? ['Équipe qualifiée', 'Soudeurs certifiés', 'Formation continue', 'Sécurité prioritaire']
-        : ['Qualified team', 'Certified welders', 'Continuous training', 'Safety priority'],
+        ? ['Équipe qualifiée', 'Soudeurs certifiés', 'Travaux en hauteur', 'Sécurité prioritaire']
+        : ['Qualified team', 'Certified welders', 'High-altitude work', 'Safety priority'],
     },
     {
       id: 16,
-      src: heroImage2,
+      src: heroImage6,
       title: language === 'fr' 
-        ? "Construction de Hangar Industriel" 
-        : "Industrial Warehouse Construction",
-      location: 'Porto-Novo',
+        ? "Construction de Charpente Église" 
+        : "Church Framework Construction",
+      location: 'Nikki, Bénin',
       date: '2024',
-      category: language === 'fr' ? 'Hangar' : 'Warehouse',
+      category: language === 'fr' ? 'Charpente' : 'Framework',
       description: language === 'fr'
-        ? "Montage d'un hangar industriel de grande portée avec charpente métallique."
-        : "Assembly of a large-span industrial warehouse with metal framework.",
+        ? "Montage de charpente métallique pour édifice religieux avec arcs métalliques."
+        : "Metal framework assembly for religious building with metal arches.",
       highlights: language === 'fr'
-        ? ['Grande portée', 'Sans poteau central', 'Optimisation espace', 'Polyvalent']
-        : ['Large span', 'No central column', 'Space optimization', 'Versatile'],
+        ? ['Grande portée', 'Arcs métalliques', 'Design unique', 'Précision']
+        : ['Large span', 'Metal arches', 'Unique design', 'Precision'],
+    },
+    {
+      id: 17,
+      src: heroImage7,
+      title: language === 'fr' 
+        ? "Travaux de Soudure Industrielle" 
+        : "Industrial Welding Work",
+      location: 'Cimenterie, Cotonou',
+      date: '2024',
+      category: language === 'fr' ? 'Soudure' : 'Welding',
+      description: language === 'fr'
+        ? "Travaux de soudure et découpe sur chantier industriel avec équipements de sécurité."
+        : "Welding and cutting work on industrial site with safety equipment.",
+      highlights: language === 'fr'
+        ? ['Soudeurs certifiés', 'Équipements sécurisés', 'Haute précision', 'Normes industrielles']
+        : ['Certified welders', 'Safe equipment', 'High precision', 'Industrial standards'],
+    },
+    {
+      id: 18,
+      src: finishedProject4,
+      title: language === 'fr' 
+        ? "Équipe NOCOMETAB BTP" 
+        : "NOCOMETAB BTP Team",
+      location: 'Bénin',
+      date: '2024',
+      category: language === 'fr' ? 'Équipe' : 'Team',
+      description: language === 'fr'
+        ? "Notre équipe de professionnels qualifiés sur un chantier de construction métallique."
+        : "Our team of qualified professionals on a metal construction site.",
+      highlights: language === 'fr'
+        ? ['Équipe soudée', 'Expertise reconnue', 'Formation continue', 'Professionnalisme']
+        : ['United team', 'Recognized expertise', 'Continuous training', 'Professionalism'],
+    },
+    {
+      id: 19,
+      src: finishedProject5,
+      title: language === 'fr' 
+        ? "Installation Industrielle Complète" 
+        : "Complete Industrial Installation",
+      location: 'CIMBENIN, Cotonou',
+      date: '2024',
+      category: language === 'fr' ? 'Industriel' : 'Industrial',
+      description: language === 'fr'
+        ? "Vue d'ensemble d'une installation industrielle complète avec grues et équipes."
+        : "Overview of a complete industrial installation with cranes and teams.",
+      highlights: language === 'fr'
+        ? ['Installation complète', 'Grue haute capacité', 'Équipe expérimentée', 'Projet majeur']
+        : ['Complete installation', 'High-capacity crane', 'Experienced team', 'Major project'],
+    },
+    {
+      id: 20,
+      src: finishedProject7,
+      title: language === 'fr' 
+        ? "Installation de Silos Industriels" 
+        : "Industrial Silo Installation",
+      location: 'Zone Industrielle, Cotonou',
+      date: '2024',
+      category: language === 'fr' ? 'Silos' : 'Silos',
+      description: language === 'fr'
+        ? "Montage et installation de silos de grande capacité pour industrie cimentière."
+        : "Assembly and installation of large capacity silos for cement industry.",
+      highlights: language === 'fr'
+        ? ['Grande capacité', 'Échafaudages sécurisés', 'Équipe spécialisée', 'Standards industriels']
+        : ['Large capacity', 'Secure scaffolding', 'Specialized team', 'Industrial standards'],
     },
   ];
 
