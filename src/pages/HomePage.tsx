@@ -24,21 +24,25 @@ import {
   Wrench,
 } from 'lucide-react';
 
-import heroImage1 from '@/assets/nocometab-hero-1.jpg';
-import heroImage2 from '@/assets/nocometab-hero-2.jpg';
-import heroImage3 from '@/assets/nocometab-hero-3.jpg';
-import heroImage4 from '@/assets/nocometab-hero-4.jpg';
-import galleryCrane1 from '@/assets/gallery-crane-1.jpg';
-import galleryWelding1 from '@/assets/gallery-welding-1.jpg';
-import galleryIndustrial1 from '@/assets/gallery-industrial-1.jpg';
-import servicesImage from '@/assets/services-aerial.jpg';
+// New hero images
+import heroImage5 from '@/assets/nocometab-hero-5.jpg';
+import heroImage6 from '@/assets/nocometab-hero-6.jpg';
+import heroImage7 from '@/assets/nocometab-hero-7.jpg';
+import servicesFramework from '@/assets/services-framework-1.jpg';
+import servicesCivil from '@/assets/services-civil-1.jpg';
+import servicesPiping from '@/assets/services-piping-1.jpg';
+import servicesWelding from '@/assets/services-welding-1.jpg';
+import finishedProject4 from '@/assets/finished-projects-4.jpg';
+import finishedProject5 from '@/assets/finished-projects-5.jpg';
+import finishedProject7 from '@/assets/finished-projects-7.jpg';
 
-const heroImages = [heroImage1, heroImage2, heroImage3, heroImage4, galleryCrane1, galleryWelding1, galleryIndustrial1];
+const heroImages = [heroImage5, heroImage6, heroImage7, servicesFramework, servicesCivil, finishedProject4, finishedProject5, finishedProject7];
 
 const HomePage = () => {
   const { t, language } = useLanguage();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [selectedService, setSelectedService] = useState<typeof services[0] | null>(null);
+  const [selectedService, setSelectedService] = useState<(typeof services)[number] | null>(null);
+  const [serviceImageIndex, setServiceImageIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -53,6 +57,7 @@ const HomePage = () => {
       title: t('service.topo.title'),
       description: t('service.topo.desc'),
       path: '/services/structures',
+      images: [finishedProject5, servicesCivil, finishedProject7],
       fullDescription: language === 'fr' 
         ? "Notre expertise en structures métalliques comprend la conception, la fabrication et le montage de bâtiments industriels, commerciaux et agricoles. Nous utilisons des aciers de haute qualité et des techniques de soudure avancées pour garantir la solidité et la durabilité de chaque structure."
         : "Our metal structure expertise includes design, fabrication and assembly of industrial, commercial and agricultural buildings. We use high quality steels and advanced welding techniques to ensure the strength and durability of each structure.",
@@ -65,6 +70,7 @@ const HomePage = () => {
       title: t('service.bornage.title'),
       description: t('service.bornage.desc'),
       path: '/services/charpentes',
+      images: [heroImage5, heroImage6, servicesFramework],
       fullDescription: language === 'fr'
         ? "Nous réalisons des charpentes métalliques sur mesure pour tous types de bâtiments. Nos charpentes sont conçues pour offrir une résistance maximale aux intempéries et aux charges."
         : "We create custom metal frameworks for all types of buildings. Our frameworks are designed to offer maximum resistance to weather and loads.",
@@ -77,6 +83,7 @@ const HomePage = () => {
       title: t('service.drone.title'),
       description: t('service.drone.desc'),
       path: '/services/menuiserie',
+      images: [servicesWelding, heroImage7, servicesPiping],
       fullDescription: language === 'fr'
         ? "Notre atelier de menuiserie métallique fabrique portes, fenêtres, portails, garde-corps et escaliers sur mesure."
         : "Our metal joinery workshop manufactures custom doors, windows, gates, railings and stairs.",
@@ -89,6 +96,7 @@ const HomePage = () => {
       title: t('service.urbanisme.title'),
       description: t('service.urbanisme.desc'),
       path: '/services/hangars',
+      images: [servicesFramework, heroImage5, finishedProject4],
       fullDescription: language === 'fr'
         ? "Construction de hangars et entrepôts métalliques de grande portée. Nos solutions permettent d'optimiser l'espace de stockage."
         : "Construction of large-span metal warehouses and storage facilities. Our solutions optimize storage space.",
@@ -101,6 +109,7 @@ const HomePage = () => {
       title: t('service.vrd.title'),
       description: t('service.vrd.desc'),
       path: '/services/toiture',
+      images: [heroImage6, servicesFramework, heroImage5],
       fullDescription: language === 'fr'
         ? "Installation de couvertures métalliques performantes: bac acier, tôles ondulées, panneaux sandwich."
         : "Installation of high-performance metal roofing: steel decking, corrugated sheets, sandwich panels.",
@@ -113,6 +122,7 @@ const HomePage = () => {
       title: t('service.conseil.title'),
       description: t('service.conseil.desc'),
       path: '/services/renovation',
+      images: [servicesPiping, heroImage7, servicesWelding],
       fullDescription: language === 'fr'
         ? "Rénovation et renforcement de structures métalliques existantes. Nous diagnostiquons l'état de vos installations."
         : "Renovation and reinforcement of existing metal structures. We diagnose the condition of your facilities.",
@@ -371,48 +381,91 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Service Detail Modal */}
-      <Dialog open={!!selectedService} onOpenChange={() => setSelectedService(null)}>
-        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
-          <DialogHeader>
-            <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
-              {selectedService && (
-                <div className="h-12 w-12 md:h-14 md:w-14 rounded-lg bg-gradient-navy flex items-center justify-center flex-shrink-0">
-                  <selectedService.icon className="h-6 w-6 md:h-7 md:w-7 text-white" />
-                </div>
-              )}
-              <DialogTitle className="text-xl md:text-2xl">{selectedService?.title}</DialogTitle>
-            </div>
-            <DialogDescription className="text-sm md:text-base leading-relaxed">
-              {selectedService?.fullDescription}
-            </DialogDescription>
-          </DialogHeader>
-          
-          <div className="mt-4 md:mt-6">
-            <h4 className="font-semibold mb-2 md:mb-3 text-foreground text-sm md:text-base">
-              {language === 'fr' ? 'Nos prestations incluent:' : 'Our services include:'}
-            </h4>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-              {selectedService?.features.map((feature, index) => (
-                <li key={index} className="flex items-center gap-2 text-muted-foreground text-sm">
-                  <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0" />
-                  <span>{feature}</span>
-                </li>
+      {/* Service Detail Modal with Image Carousel */}
+      <Dialog open={!!selectedService} onOpenChange={() => { setSelectedService(null); setServiceImageIndex(0); }}>
+        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto p-0">
+          {/* Image Carousel */}
+          {selectedService?.images && selectedService.images.length > 0 && (
+            <div className="relative w-full h-48 sm:h-64 md:h-80 overflow-hidden">
+              {selectedService.images.map((img, idx) => (
+                <img
+                  key={idx}
+                  src={img}
+                  alt={`${selectedService.title} ${idx + 1}`}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+                    serviceImageIndex === idx ? 'opacity-100' : 'opacity-0'
+                  }`}
+                />
               ))}
-            </ul>
-          </div>
+              {/* Carousel indicators */}
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                {selectedService.images.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setServiceImageIndex(idx)}
+                    className={`w-2.5 h-2.5 rounded-full transition-all ${
+                      serviceImageIndex === idx ? 'bg-primary w-6' : 'bg-white/60 hover:bg-white'
+                    }`}
+                  />
+                ))}
+              </div>
+              {/* Navigation arrows */}
+              <button
+                onClick={() => setServiceImageIndex((prev) => prev > 0 ? prev - 1 : selectedService.images.length - 1)}
+                className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-background/80 hover:bg-background flex items-center justify-center shadow"
+              >
+                <ArrowRight className="h-4 w-4 rotate-180" />
+              </button>
+              <button
+                onClick={() => setServiceImageIndex((prev) => prev < selectedService.images.length - 1 ? prev + 1 : 0)}
+                className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-background/80 hover:bg-background flex items-center justify-center shadow"
+              >
+                <ArrowRight className="h-4 w-4" />
+              </button>
+            </div>
+          )}
           
-          <div className="mt-4 md:mt-6 flex flex-col sm:flex-row gap-3 md:gap-4">
-            <Link to="/contact" className="flex-1">
-              <Button className="w-full bg-primary hover:bg-primary/90">
-                {language === 'fr' ? 'Demander un devis' : 'Request a Quote'}
-              </Button>
-            </Link>
-            <Link to={selectedService?.path || '/services'}>
-              <Button variant="outline" className="w-full sm:w-auto">
-                {language === 'fr' ? 'En savoir plus' : 'Learn more'}
-              </Button>
-            </Link>
+          <div className="p-4 md:p-6">
+            <DialogHeader>
+              <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+                {selectedService && (
+                  <div className="h-12 w-12 md:h-14 md:w-14 rounded-lg bg-gradient-navy flex items-center justify-center flex-shrink-0">
+                    <selectedService.icon className="h-6 w-6 md:h-7 md:w-7 text-white" />
+                  </div>
+                )}
+                <DialogTitle className="text-xl md:text-2xl">{selectedService?.title}</DialogTitle>
+              </div>
+              <DialogDescription className="text-sm md:text-base leading-relaxed">
+                {selectedService?.fullDescription}
+              </DialogDescription>
+            </DialogHeader>
+            
+            <div className="mt-4 md:mt-6">
+              <h4 className="font-semibold mb-2 md:mb-3 text-foreground text-sm md:text-base">
+                {language === 'fr' ? 'Nos prestations incluent:' : 'Our services include:'}
+              </h4>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                {selectedService?.features.map((feature, index) => (
+                  <li key={index} className="flex items-center gap-2 text-muted-foreground text-sm">
+                    <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="mt-4 md:mt-6 flex flex-col sm:flex-row gap-3 md:gap-4">
+              <Link to="/contact" className="flex-1">
+                <Button className="w-full">
+                  {language === 'fr' ? 'Demander un devis' : 'Request a Quote'}
+                </Button>
+              </Link>
+              <Link to={selectedService?.path || '/services'}>
+                <Button variant="outline" className="w-full sm:w-auto">
+                  {language === 'fr' ? 'En savoir plus' : 'Learn more'}
+                </Button>
+              </Link>
+            </div>
           </div>
         </DialogContent>
       </Dialog>
@@ -421,7 +474,7 @@ const HomePage = () => {
       <section
         className="py-16 md:py-20 relative bg-cover bg-center bg-fixed"
         style={{
-          backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.95), rgba(30, 41, 59, 0.95)), url(${servicesImage})`,
+          backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.95), rgba(30, 41, 59, 0.95)), url(${finishedProject5})`,
         }}
       >
         <div className="container mx-auto px-4">
