@@ -199,8 +199,8 @@ const HomePage = () => {
           />
         ))}
         
-        {/* Dark overlay with navy tint */}
-        <div className="absolute inset-0 bg-gradient-to-b from-accent/80 via-accent/60 to-accent/90" />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
         
         {/* Accent line */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
@@ -240,7 +240,7 @@ const HomePage = () => {
             </div>
 
             {/* Trust Badges - responsive grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-4 max-w-3xl mx-auto px-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-4 max-w-3xl mx-auto px-4 mb-16 sm:mb-20 md:mb-24">
               {trustBadges.map((badge, index) => (
                 <div
                   key={index}
@@ -255,22 +255,22 @@ const HomePage = () => {
           </div>
         </div>
         
-        {/* Image indicators - positioned higher on mobile */}
-        <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 flex gap-1.5 md:gap-2 z-20">
+        {/* Image indicators - separated from trust badges */}
+        <div className="absolute bottom-6 sm:bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 flex gap-2 md:gap-2.5 z-20">
           {heroImages.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentImageIndex(index)}
-              className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all ${
-                currentImageIndex === index ? 'bg-primary w-5 md:w-8' : 'bg-white/50 hover:bg-white/80'
+              className={`w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-3.5 md:h-3.5 rounded-full transition-all duration-300 ${
+                currentImageIndex === index ? 'bg-primary w-6 sm:w-8 md:w-10' : 'bg-white/50 hover:bg-white/80'
               }`}
             />
           ))}
         </div>
       </section>
 
-      {/* Why Choose Us - Navy Background */}
-      <section className="py-12 md:py-16 bg-accent text-accent-foreground">
+      {/* Why Choose Us */}
+      <section className="py-12 md:py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {whyChooseUs.map((item, index) => (
@@ -282,8 +282,8 @@ const HomePage = () => {
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 rounded-full bg-primary/20 flex items-center justify-center">
                   <item.icon className="h-6 w-6 md:h-8 md:w-8 text-primary" />
                 </div>
-                <h3 className="font-bold text-sm md:text-lg mb-1 md:mb-2">{item.title}</h3>
-                <p className="text-xs md:text-sm text-accent-foreground/80 leading-relaxed">{item.description}</p>
+                <h3 className="font-bold text-sm md:text-lg mb-1 md:mb-2 text-foreground">{item.title}</h3>
+                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
