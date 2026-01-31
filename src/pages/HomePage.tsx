@@ -217,7 +217,7 @@ const HomePage = () => {
         
         <div className="container relative z-10 mx-auto px-4 text-center text-white">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-block px-4 py-2 mb-4 md:mb-6 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30">
+            <div className="inline-block px-4 py-2 mt-8 sm:mt-10 md:mt-12 mb-4 md:mb-6 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30">
               <span className="text-primary font-semibold text-xs md:text-sm uppercase tracking-wider">
                 {language === 'fr' ? 'Construction Métallique Professionnelle' : 'Professional Metal Construction'}
               </span>
