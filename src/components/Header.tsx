@@ -37,7 +37,7 @@ const Header = () => {
               />
             </div>
             <div className="hidden sm:block">
-              <div className="font-bold text-base md:text-lg text-accent">NOCOMETAB BTP</div>
+              <div className="font-bold text-base md:text-lg text-foreground">NOCOMETAB BTP</div>
               <div className="text-xs text-muted-foreground hidden md:block">{t('footer.description')}</div>
             </div>
           </Link>

@@ -9,100 +9,102 @@ NOCOMETAB BTP Brand: Navy Blue, Golden Yellow (muted), Grey/Black
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 220 30% 12%;
+    /* Navy Blue & Gold Theme - Professional Reliability */
+    --background: 0 0% 98%;
+    --foreground: 220 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 12%;
+    --card-foreground: 220 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 12%;
+    --popover-foreground: 220 15% 15%;
 
-    /* Navy blue inspired primary - muted golden amber */
-    --primary: 42 85% 48%;
-    --primary-foreground: 220 30% 12%;
+    /* Gold/Orange primary - professional warmth */
+    --primary: 38 92% 50%;
+    --primary-foreground: 220 25% 12%;
 
-    --secondary: 210 15% 95%;
-    --secondary-foreground: 220 30% 15%;
+    /* Neutral light grey secondary */
+    --secondary: 220 10% 96%;
+    --secondary-foreground: 220 15% 20%;
 
-    --muted: 210 15% 93%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 220 10% 94%;
+    --muted-foreground: 220 10% 40%;
 
-    /* Navy blue accent - matches logo */
-    --accent: 220 55% 28%;
+    /* Navy blue accent for professional touch */
+    --accent: 220 60% 22%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 88%;
-    --input: 210 20% 88%;
-    --ring: 220 55% 35%;
+    --border: 220 10% 90%;
+    --input: 220 10% 90%;
+    --ring: 38 92% 50%;
 
     --radius: 0.5rem;
     
-    /* Navy blue gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(220 55% 28%) 0%, hsl(220 55% 18%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(42 85% 48%) 0%, hsl(38 80% 45%) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(42 85% 52%) 0%, hsl(38 80% 48%) 100%);
-    --gradient-navy: linear-gradient(135deg, hsl(220 55% 32%) 0%, hsl(220 60% 22%) 100%);
-    --shadow-soft: 0 4px 20px -2px hsl(220 55% 28% / 0.1);
-    --shadow-elevated: 0 10px 40px -10px hsl(220 55% 28% / 0.2);
+    /* Professional gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220 25% 12%) 0%, hsl(220 20% 8%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(38 92% 50%) 0%, hsl(32 88% 45%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(38 92% 55%) 0%, hsl(32 88% 50%) 100%);
+    --gradient-navy: linear-gradient(135deg, hsl(220 60% 22%) 0%, hsl(220 60% 15%) 100%);
+    --shadow-soft: 0 4px 20px -2px hsl(220 15% 15% / 0.08);
+    --shadow-elevated: 0 10px 40px -10px hsl(220 15% 15% / 0.15);
 
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 220 30% 20%;
-    --sidebar-primary: 220 55% 28%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 15% 95%;
-    --sidebar-accent-foreground: 220 30% 15%;
-    --sidebar-border: 210 20% 88%;
-    --sidebar-ring: 220 55% 35%;
+    --sidebar-foreground: 220 15% 20%;
+    --sidebar-primary: 38 92% 50%;
+    --sidebar-primary-foreground: 220 25% 12%;
+    --sidebar-accent: 220 10% 96%;
+    --sidebar-accent-foreground: 220 15% 20%;
+    --sidebar-border: 220 10% 90%;
+    --sidebar-ring: 38 92% 50%;
   }
 
   .dark {
-    --background: 220 25% 8%;
-    --foreground: 210 20% 98%;
+    --background: 220 20% 8%;
+    --foreground: 0 0% 98%;
 
-    --card: 220 25% 12%;
-    --card-foreground: 210 20% 98%;
+    --card: 220 20% 12%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 220 25% 12%;
-    --popover-foreground: 210 20% 98%;
+    --popover: 220 20% 12%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 42 85% 50%;
-    --primary-foreground: 220 30% 12%;
+    --primary: 38 92% 52%;
+    --primary-foreground: 220 25% 12%;
 
-    --secondary: 220 25% 16%;
-    --secondary-foreground: 210 20% 98%;
+    --secondary: 220 20% 16%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 220 25% 18%;
-    --muted-foreground: 210 15% 65%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 10% 65%;
 
-    --accent: 220 55% 45%;
+    --accent: 220 60% 35%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 25% 20%;
-    --input: 220 25% 20%;
-    --ring: 42 85% 50%;
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 38 92% 52%;
     
-    --gradient-hero: linear-gradient(135deg, hsl(220 50% 18%) 0%, hsl(220 55% 10%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(42 90% 52%) 0%, hsl(38 85% 48%) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(42 90% 52%) 0%, hsl(38 85% 48%) 100%);
-    --gradient-navy: linear-gradient(135deg, hsl(220 55% 25%) 0%, hsl(220 60% 15%) 100%);
-    --shadow-soft: 0 4px 20px -2px hsl(42 85% 50% / 0.15);
-    --shadow-elevated: 0 10px 40px -10px hsl(42 85% 50% / 0.25);
+    --gradient-hero: linear-gradient(135deg, hsl(220 20% 12%) 0%, hsl(220 20% 6%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(38 92% 55%) 0%, hsl(32 88% 50%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(38 92% 55%) 0%, hsl(32 88% 50%) 100%);
+    --gradient-navy: linear-gradient(135deg, hsl(220 60% 22%) 0%, hsl(220 60% 15%) 100%);
+    --shadow-soft: 0 4px 20px -2px hsl(38 92% 50% / 0.15);
+    --shadow-elevated: 0 10px 40px -10px hsl(38 92% 50% / 0.25);
     
-    --sidebar-background: 220 25% 10%;
-    --sidebar-foreground: 210 20% 98%;
-    --sidebar-primary: 42 85% 50%;
-    --sidebar-primary-foreground: 220 30% 12%;
-    --sidebar-accent: 220 25% 16%;
-    --sidebar-accent-foreground: 210 20% 98%;
-    --sidebar-border: 220 25% 18%;
-    --sidebar-ring: 42 85% 50%;
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 38 92% 52%;
+    --sidebar-primary-foreground: 220 25% 12%;
+    --sidebar-accent: 220 20% 16%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 220 20% 18%;
+    --sidebar-ring: 38 92% 52%;
   }
 }
 

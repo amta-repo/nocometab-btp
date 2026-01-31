@@ -39,7 +39,7 @@ const NewsStrip = () => {
   ];
 
   return (
-    <div className="bg-accent text-accent-foreground border-b border-white/10">
+    <div className="bg-foreground text-background border-b border-white/10">
       <div className="relative overflow-hidden py-1.5 md:py-2">
         <Link to="/news" className="block">
           <div className="flex items-center animate-news-scroll">
