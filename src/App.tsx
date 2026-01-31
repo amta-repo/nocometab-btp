@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import NewsStrip from "@/components/NewsStrip";
 import Header from "@/components/Header";
+import BackToHome from "@/components/BackToHome";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import HomePage from "./pages/HomePage";
@@ -30,6 +31,7 @@ const App = () => (
           <div className="flex flex-col min-h-screen w-full">
             <NewsStrip />
             <Header />
+            <BackToHome />
             <main className="flex-1">
               <Routes>
                 <Route path="/" element={<HomePage />} />
