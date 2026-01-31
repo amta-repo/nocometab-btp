@@ -17,7 +17,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-accent text-accent-foreground">
+    <footer className="bg-foreground text-background">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Section */}
@@ -31,11 +31,11 @@ const Footer = () => {
                 />
               </div>
               <div>
-                <div className="font-bold text-lg">NOCOMETAB BTP</div>
-                <div className="text-xs text-accent-foreground/70">{t('footer.description')}</div>
+                <div className="font-bold text-lg text-background">NOCOMETAB BTP</div>
+                <div className="text-xs text-background/70">{t('footer.description')}</div>
               </div>
             </div>
-            <p className="text-sm text-accent-foreground/80 leading-relaxed">
+            <p className="text-sm text-background/80 leading-relaxed">
               {t('about.mission')}
             </p>
           </div>
@@ -48,7 +48,7 @@ const Footer = () => {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-sm text-accent-foreground/80 hover:text-primary transition-colors"
+                    className="text-sm text-background/80 hover:text-primary transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -61,17 +61,17 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-primary mb-4">Contact</h3>
             <ul className="space-y-3">
-              <li className="flex items-start space-x-3 text-sm text-accent-foreground/80">
+              <li className="flex items-start space-x-3 text-sm text-background/80">
                 <MapPin className="h-4 w-4 mt-0.5 text-primary flex-shrink-0" />
                 <span>Kindonou, Cotonou, Bénin</span>
               </li>
-              <li className="flex items-center space-x-3 text-sm text-accent-foreground/80">
+              <li className="flex items-center space-x-3 text-sm text-background/80">
                 <Phone className="h-4 w-4 text-primary flex-shrink-0" />
                 <a href="tel:+2290195954763" className="hover:text-primary transition-colors">
                   +229 01 95 95 47 63
                 </a>
               </li>
-              <li className="flex items-center space-x-3 text-sm text-accent-foreground/80">
+              <li className="flex items-center space-x-3 text-sm text-background/80">
                 <Mail className="h-4 w-4 text-primary flex-shrink-0" />
                 <a href="mailto:nocometabbtp@gmail.com" className="hover:text-primary transition-colors">
                   nocometabbtp@gmail.com
@@ -83,7 +83,7 @@ const Footer = () => {
           {/* Social & Hours */}
           <div>
             <h3 className="font-semibold text-primary mb-4">{t('contact.hours')}</h3>
-            <ul className="space-y-2 text-sm text-accent-foreground/80 mb-6">
+            <ul className="space-y-2 text-sm text-background/80 mb-6">
               <li>{t('contact.hours.weekday')}</li>
               <li>{t('contact.hours.saturday')}</li>
             </ul>
@@ -92,7 +92,7 @@ const Footer = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-10 w-10 rounded-lg bg-white/10 hover:bg-primary hover:text-accent transition-all duration-300 flex items-center justify-center"
+                className="h-10 w-10 rounded-lg bg-white/10 hover:bg-primary hover:text-foreground transition-all duration-300 flex items-center justify-center"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
@@ -101,7 +101,7 @@ const Footer = () => {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-10 w-10 rounded-lg bg-white/10 hover:bg-primary hover:text-accent transition-all duration-300 flex items-center justify-center"
+                className="h-10 w-10 rounded-lg bg-white/10 hover:bg-primary hover:text-foreground transition-all duration-300 flex items-center justify-center"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
@@ -111,7 +111,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-white/10 text-center text-sm text-accent-foreground/60">
+        <div className="mt-12 pt-8 border-t border-white/10 text-center text-sm text-background/60">
           <p>© {new Date().getFullYear()} NOCOMETAB BTP. {t('footer.rights')}.</p>
         </div>
       </div>
