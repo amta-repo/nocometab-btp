@@ -35,6 +35,7 @@ import servicesWelding from '@/assets/services-welding-1.jpg';
 import finishedProject4 from '@/assets/finished-projects-4.jpg';
 import finishedProject5 from '@/assets/finished-projects-5.jpg';
 import finishedProject7 from '@/assets/finished-projects-7.jpg';
+import directorImage from '@/assets/director-angelo-gbetie.jpg';
 
 const heroImages = [heroImage5, heroImage6, heroImage7, servicesFramework, servicesCivil, finishedProject4, finishedProject5, finishedProject7];
 
@@ -276,6 +277,80 @@ const HomePage = () => {
               }`}
             />
           ))}
+        </div>
+      </section>
+
+      {/* Director's Welcome Section */}
+      <section className="py-16 md:py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+              {/* Director Image */}
+              <div className="relative animate-fade-in order-1 lg:order-1">
+                <div className="relative overflow-hidden rounded-2xl shadow-elevated">
+                  <img 
+                    src={directorImage} 
+                    alt="Mr Angelo GBETIE - Directeur de NOCOMETAB BTP" 
+                    className="w-full h-auto object-cover aspect-[3/4]"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 md:p-6">
+                    <h3 className="text-white font-bold text-lg md:text-xl">Mr Angelo GBETIE</h3>
+                    <p className="text-primary font-medium text-sm md:text-base">
+                      {language === 'fr' ? 'Directeur, NOCOMETAB BTP' : 'Director, NOCOMETAB BTP'}
+                    </p>
+                  </div>
+                </div>
+                {/* Decorative element */}
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 md:w-32 md:h-32 bg-primary/20 rounded-2xl -z-10" />
+                <div className="absolute -top-4 -left-4 w-16 h-16 md:w-24 md:h-24 bg-accent/20 rounded-2xl -z-10" />
+              </div>
+
+              {/* Welcome Message */}
+              <div className="animate-fade-in order-2 lg:order-2" style={{ animationDelay: '200ms' }}>
+                <div className="inline-block px-3 py-1 mb-4 bg-primary/10 rounded-full">
+                  <span className="text-primary font-semibold text-xs md:text-sm uppercase tracking-wider">
+                    {language === 'fr' ? 'Mot du Directeur' : 'Director\'s Message'}
+                  </span>
+                </div>
+                
+                <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4 md:mb-6">
+                  {language === 'fr' ? 'Bienvenue chez NOCOMETAB BTP' : 'Welcome to NOCOMETAB BTP'}
+                </h2>
+                
+                <div className="space-y-4 text-muted-foreground">
+                  <p className="text-base md:text-lg leading-relaxed">
+                    {language === 'fr' 
+                      ? "Chers partenaires et clients, c'est avec fierté que je vous accueille sur le site de NOCOMETAB BTP, votre partenaire de confiance pour tous vos projets de construction métallique en Afrique de l'Ouest."
+                      : "Dear partners and clients, it is with pride that I welcome you to the NOCOMETAB BTP website, your trusted partner for all your metal construction projects in West Africa."}
+                  </p>
+                  <p className="text-sm md:text-base leading-relaxed">
+                    {language === 'fr'
+                      ? "Depuis plus de 15 ans, notre engagement envers l'excellence, la qualité et le respect des délais a fait de nous le leader incontesté dans notre domaine. Notre équipe de techniciens qualifiés et notre parc d'équipements modernes nous permettent de réaliser des projets d'envergure avec la plus grande précision."
+                      : "For over 15 years, our commitment to excellence, quality and meeting deadlines has made us the undisputed leader in our field. Our team of qualified technicians and our modern equipment fleet enable us to carry out large-scale projects with the greatest precision."}
+                  </p>
+                  <p className="text-sm md:text-base leading-relaxed">
+                    {language === 'fr'
+                      ? "Que vous ayez besoin de charpentes métalliques, de hangars industriels ou de menuiserie métallique, nous sommes là pour transformer votre vision en réalité."
+                      : "Whether you need metal frameworks, industrial warehouses or metal joinery, we are here to transform your vision into reality."}
+                  </p>
+                </div>
+
+                <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-4">
+                  <Link to="/about">
+                    <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
+                      {language === 'fr' ? 'En savoir plus sur nous' : 'Learn more about us'}
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                  <Link to="/contact">
+                    <Button variant="outline" className="border-primary text-primary hover:bg-primary/10">
+                      {language === 'fr' ? 'Contactez-nous' : 'Contact us'}
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
