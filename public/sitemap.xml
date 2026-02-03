@@ -1,87 +1,194 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage -->
   <url>
     <loc>https://nocometabbtp.com/</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://nocometabbtp.com/nocometab-logo.jpg</image:loc>
-      <image:title>NOCOMETAB BTP - Construction Métallique au Bénin</image:title>
-      <image:caption>Logo de NOCOMETAB BTP, leader en construction métallique en Afrique de l'Ouest</image:caption>
+      <image:title>NOCOMETAB BTP - Leader Construction Métallique au Bénin</image:title>
+      <image:caption>Logo officiel de NOCOMETAB BTP, entreprise leader en construction métallique en Afrique de l'Ouest</image:caption>
     </image:image>
   </url>
+  
+  <!-- About Page -->
   <url>
     <loc>https://nocometabbtp.com/about</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://nocometabbtp.com/nocometab-logo.jpg</image:loc>
+      <image:title>À Propos de NOCOMETAB BTP - Notre Histoire</image:title>
+      <image:caption>Découvrez l'histoire et les valeurs de NOCOMETAB BTP, expert en construction métallique depuis plus de 15 ans</image:caption>
+    </image:image>
   </url>
+  
+  <!-- Services Main Page -->
   <url>
     <loc>https://nocometabbtp.com/services</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://nocometabbtp.com/nocometab-logo.jpg</image:loc>
+      <image:title>Services de Construction Métallique - NOCOMETAB BTP</image:title>
+      <image:caption>Gamme complète de services: charpentes métalliques, hangars industriels, menuiserie métallique, structures acier</image:caption>
+    </image:image>
   </url>
+  
+  <!-- Service Detail Pages -->
   <url>
     <loc>https://nocometabbtp.com/services/structures</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://nocometabbtp.com/nocometab-logo.jpg</image:loc>
+      <image:title>Structures Métalliques - NOCOMETAB BTP Bénin</image:title>
+      <image:caption>Conception et réalisation de structures métalliques industrielles et commerciales au Bénin et Afrique de l'Ouest</image:caption>
+    </image:image>
   </url>
+  
   <url>
     <loc>https://nocometabbtp.com/services/charpentes</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://nocometabbtp.com/nocometab-logo.jpg</image:loc>
+      <image:title>Charpentes Métalliques - Fabrication et Montage Bénin</image:title>
+      <image:caption>Fabrication et montage de charpentes métalliques sur mesure pour bâtiments industriels et commerciaux</image:caption>
+    </image:image>
   </url>
+  
   <url>
     <loc>https://nocometabbtp.com/services/menuiserie</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://nocometabbtp.com/nocometab-logo.jpg</image:loc>
+      <image:title>Menuiserie Métallique - Portes, Fenêtres, Garde-corps</image:title>
+      <image:caption>Fabrication de menuiserie métallique: portes, fenêtres, garde-corps, escaliers en acier au Bénin</image:caption>
+    </image:image>
   </url>
+  
   <url>
     <loc>https://nocometabbtp.com/services/hangars</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://nocometabbtp.com/nocometab-logo.jpg</image:loc>
+      <image:title>Hangars Industriels - Construction Grande Portée Bénin</image:title>
+      <image:caption>Construction de hangars industriels et entrepôts métalliques grande portée au Bénin et en Afrique</image:caption>
+    </image:image>
   </url>
+  
   <url>
     <loc>https://nocometabbtp.com/services/toiture</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://nocometabbtp.com/nocometab-logo.jpg</image:loc>
+      <image:title>Toiture Métallique - Couverture Bâtiments Industriels</image:title>
+      <image:caption>Installation de toitures métalliques et couvertures pour bâtiments industriels et commerciaux</image:caption>
+    </image:image>
   </url>
+  
   <url>
     <loc>https://nocometabbtp.com/services/renovation</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://nocometabbtp.com/nocometab-logo.jpg</image:loc>
+      <image:title>Rénovation Structures Métalliques - NOCOMETAB BTP</image:title>
+      <image:caption>Services de rénovation et maintenance de structures métalliques existantes</image:caption>
+    </image:image>
   </url>
+
+  <url>
+    <loc>https://nocometabbtp.com/services/tuyauterie</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://nocometabbtp.com/nocometab-logo.jpg</image:loc>
+      <image:title>Tuyauterie Industrielle - Installation et Montage</image:title>
+      <image:caption>Installation et montage de tuyauterie industrielle au Bénin et en Afrique de l'Ouest</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://nocometabbtp.com/services/genie-civil</loc>
+    <lastmod>2026-02-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://nocometabbtp.com/nocometab-logo.jpg</image:loc>
+      <image:title>Génie Civil - Construction et Travaux Publics</image:title>
+      <image:caption>Services de génie civil et travaux publics au Bénin</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Projects Page -->
   <url>
     <loc>https://nocometabbtp.com/projects</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://nocometabbtp.com/nocometab-logo.jpg</image:loc>
+      <image:title>Projets Réalisés - Portfolio NOCOMETAB BTP</image:title>
+      <image:caption>Découvrez nos réalisations: plus de 50 charpentes montées, silos de 200 tonnes, bâtiments industriels</image:caption>
+    </image:image>
   </url>
+  
+  <!-- Gallery Page -->
   <url>
     <loc>https://nocometabbtp.com/gallery</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://nocometabbtp.com/nocometab-logo.jpg</image:loc>
+      <image:title>Galerie Photos - Réalisations NOCOMETAB BTP</image:title>
+      <image:caption>Photos de nos chantiers et réalisations en construction métallique au Bénin et en Afrique</image:caption>
+    </image:image>
   </url>
+  
+  <!-- News Page -->
   <url>
     <loc>https://nocometabbtp.com/news</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://nocometabbtp.com/nocometab-logo.jpg</image:loc>
+      <image:title>Actualités - NOCOMETAB BTP Construction Métallique</image:title>
+      <image:caption>Suivez les dernières actualités et nouveaux projets de NOCOMETAB BTP</image:caption>
+    </image:image>
   </url>
+  
+  <!-- Contact Page -->
   <url>
     <loc>https://nocometabbtp.com/contact</loc>
-    <lastmod>2026-01-31</lastmod>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://nocometabbtp.com/nocometab-logo.jpg</image:loc>
+      <image:title>Contactez NOCOMETAB BTP - Devis Gratuit</image:title>
+      <image:caption>Contactez-nous pour un devis gratuit: +229 01 95 95 47 63 - nocometabbtp@gmail.com - Cotonou, Bénin</image:caption>
+    </image:image>
   </url>
+  
 </urlset>
