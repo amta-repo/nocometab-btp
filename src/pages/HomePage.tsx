@@ -636,10 +636,10 @@ const HomePage = () => {
                       {language === 'fr' ? 'Téléphone' : 'Phone'}
                     </p>
                     <a
-                      href="tel:+22995954763"
+                      href="tel:+2290195954763"
                       className="font-semibold text-sm md:text-base text-foreground hover:text-primary transition-colors"
                     >
-                      +229 95 95 47 63
+                      +229 01 95 95 47 63
                     </a>
                   </div>
                   <div className="flex flex-col items-center p-4 md:p-5 rounded-lg bg-secondary/50">

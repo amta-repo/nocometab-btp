@@ -43,8 +43,8 @@ const ContactPage = () => {
     {
       icon: Phone,
       title: language === 'fr' ? 'Téléphone' : 'Phone',
-      content: '+229 95 95 47 63',
-      link: 'tel:+22995954763',
+      content: '+229 01 95 95 47 63',
+      link: 'tel:+2290195954763',
     },
     {
       icon: Mail,
