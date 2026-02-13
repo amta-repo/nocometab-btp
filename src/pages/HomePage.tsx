@@ -244,7 +244,7 @@ const HomePage = () => {
               <Button
                 size="lg"
                 className="rounded-full w-12 h-12 md:w-14 md:h-14 p-0 bg-white/20 hover:bg-primary text-white hover:text-primary-foreground backdrop-blur-sm border border-white/30"
-                onClick={() => window.open('https://wa.me/+22995954663', '_blank')}
+                onClick={() => window.open('https://wa.me/+22995954763', '_blank')}
               >
                 <Phone className="h-5 w-5 md:h-6 md:w-6" />
               </Button>
@@ -606,7 +606,7 @@ const HomePage = () => {
                 size="lg"
                 variant="outline"
                 className="w-full sm:w-auto border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-                onClick={() => window.open('https://wa.me/+22995954663', '_blank')}
+                onClick={() => window.open('https://wa.me/+22995954763', '_blank')}
               >
                 <Phone className="h-4 w-4 md:h-5 md:w-5 mr-2" />
                 {t('cta.whatsapp')}
@@ -636,10 +636,10 @@ const HomePage = () => {
                       {language === 'fr' ? 'Téléphone' : 'Phone'}
                     </p>
                     <a
-                      href="tel:+2290195954763"
+                      href="tel:+22995954763"
                       className="font-semibold text-sm md:text-base text-foreground hover:text-primary transition-colors"
                     >
-                      +229 01 95 95 47 63
+                      +229 95 95 47 63
                     </a>
                   </div>
                   <div className="flex flex-col items-center p-4 md:p-5 rounded-lg bg-secondary/50">
@@ -671,7 +671,7 @@ const HomePage = () => {
                     size="lg"
                     variant="outline"
                     className="w-full sm:w-auto"
-                    onClick={() => window.open('https://wa.me/+22995954663', '_blank')}
+                    onClick={() => window.open('https://wa.me/+22995954763', '_blank')}
                   >
                     {t('cta.whatsapp')}
                   </Button>

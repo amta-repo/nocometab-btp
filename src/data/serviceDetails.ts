@@ -48,12 +48,12 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     applicationsFr: ['Bâtiments industriels', 'Centres commerciaux', 'Complexes agricoles', 'Plateformes logistiques'],
     applicationsEn: ['Industrial buildings', 'Shopping centers', 'Agricultural complexes', 'Logistics platforms'],
     faqFr: [
-      { q: 'Combien coûte une structure métallique au Bénin ?', a: "Le coût dépend de la surface, la complexité et les finitions. NOCOMETAB BTP offre des devis gratuits personnalisés. En moyenne, les structures métalliques coûtent 15 à 30 % moins cher que le béton pour des portées équivalentes. Contactez-nous au +229 01 95 95 47 63 pour une estimation." },
+      { q: 'Combien coûte une structure métallique au Bénin ?', a: "Le coût dépend de la surface, la complexité et les finitions. NOCOMETAB BTP offre des devis gratuits personnalisés. En moyenne, les structures métalliques coûtent 15 à 30 % moins cher que le béton pour des portées équivalentes. Contactez-nous au +229 95 95 47 63 pour une estimation." },
       { q: 'Quelle est la durée de vie d\'une structure métallique ?', a: "Avec un traitement anticorrosion approprié, une structure métallique NOCOMETAB BTP dure plus de 50 ans. Nous appliquons des peintures époxy et des galvanisations qui protègent l'acier contre la corrosion tropicale." },
       { q: 'Quels types d\'acier utilisez-vous ?', a: "Nous utilisons principalement des aciers S235, S275 et S355 conformes aux normes européennes. Le choix dépend des charges, de la portée et des conditions environnementales du projet." },
     ],
     faqEn: [
-      { q: 'How much does a metal structure cost in Benin?', a: "The cost depends on surface area, complexity and finishes. NOCOMETAB BTP offers free personalized quotes. On average, metal structures cost 15-30% less than concrete for equivalent spans. Contact us at +229 01 95 95 47 63 for an estimate." },
+      { q: 'How much does a metal structure cost in Benin?', a: "The cost depends on surface area, complexity and finishes. NOCOMETAB BTP offers free personalized quotes. On average, metal structures cost 15-30% less than concrete for equivalent spans. Contact us at +229 95 95 47 63 for an estimate." },
       { q: 'What is the lifespan of a metal structure?', a: "With proper anti-corrosion treatment, a NOCOMETAB BTP metal structure lasts over 50 years. We apply epoxy paints and galvanizations that protect steel against tropical corrosion." },
       { q: 'What types of steel do you use?', a: "We primarily use S235, S275 and S355 steels that comply with European standards. The choice depends on loads, span and environmental conditions of the project." },
     ],
@@ -100,7 +100,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     seoTitleFr: 'Charpentes Métalliques au Bénin | Fabrication & Montage | NOCOMETAB BTP',
     seoTitleEn: 'Metal Frameworks in Benin | Fabrication & Assembly | NOCOMETAB BTP',
-    seoDescFr: "Fabrication et montage de charpentes métalliques au Bénin. Portées jusqu'à 40m. Traitement anticorrosion. Devis gratuit NOCOMETAB BTP ☎ +229 01 95 95 47 63",
+    seoDescFr: "Fabrication et montage de charpentes métalliques au Bénin. Portées jusqu'à 40m. Traitement anticorrosion. Devis gratuit NOCOMETAB BTP ☎ +229 95 95 47 63",
     seoDescEn: 'Fabrication and assembly of metal frameworks in Benin. Spans up to 40m. Anti-corrosion treatment. Free quote from NOCOMETAB BTP.',
   },
   menuiserie: {
@@ -139,7 +139,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     seoTitleFr: 'Menuiserie Métallique Cotonou | Portes, Fenêtres, Portails | NOCOMETAB BTP',
     seoTitleEn: 'Metal Joinery Cotonou | Doors, Windows, Gates | NOCOMETAB BTP',
-    seoDescFr: 'Fabrication menuiserie métallique à Cotonou: portes, fenêtres, portails, garde-corps, escaliers. Sur mesure. NOCOMETAB BTP ☎ +229 01 95 95 47 63',
+    seoDescFr: 'Fabrication menuiserie métallique à Cotonou: portes, fenêtres, portails, garde-corps, escaliers. Sur mesure. NOCOMETAB BTP ☎ +229 95 95 47 63',
     seoDescEn: 'Metal joinery fabrication in Cotonou: doors, windows, gates, railings, stairs. Custom made. NOCOMETAB BTP.',
   },
   hangars: {
@@ -178,7 +178,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     seoTitleFr: 'Hangars Industriels & Entrepôts au Bénin | Construction Métallique | NOCOMETAB BTP',
     seoTitleEn: 'Industrial Warehouses & Storage in Benin | Metal Construction | NOCOMETAB BTP',
-    seoDescFr: "Construction de hangars industriels et entrepôts métalliques au Bénin. Portées jusqu'à 50m. Solutions clé en main. NOCOMETAB BTP ☎ +229 01 95 95 47 63",
+    seoDescFr: "Construction de hangars industriels et entrepôts métalliques au Bénin. Portées jusqu'à 50m. Solutions clé en main. NOCOMETAB BTP ☎ +229 95 95 47 63",
     seoDescEn: 'Construction of industrial warehouses and metal storage in Benin. Spans up to 50m. Turnkey solutions. NOCOMETAB BTP.',
   },
   toiture: {
@@ -217,7 +217,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     seoTitleFr: 'Toiture Métallique au Bénin | Bac Acier & Panneaux Sandwich | NOCOMETAB BTP',
     seoTitleEn: 'Metal Roofing in Benin | Steel Decking & Sandwich Panels | NOCOMETAB BTP',
-    seoDescFr: 'Installation toiture métallique au Bénin: bac acier, tôles, panneaux sandwich. Étanchéité garantie. NOCOMETAB BTP ☎ +229 01 95 95 47 63',
+    seoDescFr: 'Installation toiture métallique au Bénin: bac acier, tôles, panneaux sandwich. Étanchéité garantie. NOCOMETAB BTP ☎ +229 95 95 47 63',
     seoDescEn: 'Metal roofing installation in Benin: steel decking, sheets, sandwich panels. Guaranteed waterproofing. NOCOMETAB BTP.',
   },
   renovation: {
@@ -256,7 +256,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
     seoTitleFr: 'Rénovation Structures Métalliques au Bénin | Diagnostic & Renforcement | NOCOMETAB BTP',
     seoTitleEn: 'Metal Structure Renovation in Benin | Diagnosis & Reinforcement | NOCOMETAB BTP',
-    seoDescFr: 'Rénovation et renforcement de structures métalliques au Bénin. Diagnostic gratuit. NOCOMETAB BTP ☎ +229 01 95 95 47 63',
+    seoDescFr: 'Rénovation et renforcement de structures métalliques au Bénin. Diagnostic gratuit. NOCOMETAB BTP ☎ +229 95 95 47 63',
     seoDescEn: 'Renovation and reinforcement of metal structures in Benin. Free diagnosis. NOCOMETAB BTP.',
   },
 };

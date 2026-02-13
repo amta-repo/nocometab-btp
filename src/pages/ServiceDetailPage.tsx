@@ -177,7 +177,7 @@ const ServiceDetailPage = () => {
                   variant="outline"
                   size="lg"
                   className="bg-white/10 border-white/30 text-white hover:bg-white/20"
-                  onClick={() => window.location.href = 'tel:+22901959547633'}
+                  onClick={() => window.location.href = 'tel:+22995954763'}
                 >
                   <Phone className="h-5 w-5 mr-2" />
                   {t('cta.callnow')}
