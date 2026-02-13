@@ -2,7 +2,7 @@ import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const WhatsAppButton = () => {
-  const whatsappNumber = '+22995954663';
+  const whatsappNumber = '+22995954763';
   const defaultMessage = encodeURIComponent('Bonjour, je souhaite obtenir plus d\'informations sur vos services de construction métallique.');
 
   const handleWhatsAppClick = () => {
