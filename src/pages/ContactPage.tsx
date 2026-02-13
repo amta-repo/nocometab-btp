@@ -49,8 +49,8 @@ const ContactPage = () => {
     {
       icon: Mail,
       title: 'Email',
-      content: 'nocometabbtp@gmail.com',
-      link: 'mailto:nocometabbtp@gmail.com',
+      content: 'contact@nocometabbtp.com',
+      link: 'mailto:contact@nocometabbtp.com',
     },
     {
       icon: Clock,

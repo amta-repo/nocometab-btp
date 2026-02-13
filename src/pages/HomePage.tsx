@@ -646,10 +646,10 @@ const HomePage = () => {
                     <Mail className="h-6 w-6 md:h-8 md:w-8 text-primary mb-2" />
                     <p className="text-xs md:text-sm text-muted-foreground mb-1">Email</p>
                     <a
-                      href="mailto:nocometabbtp@gmail.com"
+                      href="mailto:contact@nocometabbtp.com"
                       className="font-semibold text-sm md:text-base text-foreground hover:text-primary transition-colors break-all"
                     >
-                      nocometabbtp@gmail.com
+                      contact@nocometabbtp.com
                     </a>
                   </div>
                   <div className="flex flex-col items-center p-4 md:p-5 rounded-lg bg-secondary/50">
