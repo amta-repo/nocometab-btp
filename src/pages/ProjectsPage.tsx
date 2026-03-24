@@ -24,6 +24,9 @@ import finishedProject8 from '@/assets/finished-projects-8.jpg';
 import finishedProject9 from '@/assets/finished-projects-9.jpg';
 import heroImage5 from '@/assets/nocometab-hero-5.jpg';
 import heroImage6 from '@/assets/nocometab-hero-6.jpg';
+import charpenteNikki1 from '@/assets/charpente-nikki-1.jpg';
+import charpenteNikki2 from '@/assets/charpente-nikki-2.jpeg';
+import equipeChantier from '@/assets/equipe-nocometab-chantier.jpg';
 
 const ProjectsPage = () => {
   const { t, language } = useLanguage();
