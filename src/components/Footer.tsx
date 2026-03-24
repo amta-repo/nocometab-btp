@@ -90,7 +90,7 @@ const Footer = () => {
             </ul>
             <div className="flex space-x-3">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61588065011103"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="h-10 w-10 rounded-lg bg-white/10 hover:bg-primary hover:text-foreground transition-all duration-300 flex items-center justify-center"

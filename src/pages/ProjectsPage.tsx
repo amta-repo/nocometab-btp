@@ -180,7 +180,7 @@ const ProjectsPage = () => {
       ],
     },
     {
-      image: finishedProject4,
+      image: equipeChantier,
       title: language === 'fr' ? "Équipe NOCOMETAB sur Chantier" : 'NOCOMETAB Team On Site',
       location: 'Bénin',
       date: '2024',
