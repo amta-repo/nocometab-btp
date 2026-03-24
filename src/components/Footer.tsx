@@ -74,8 +74,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3 text-sm text-background/80">
                 <Mail className="h-4 w-4 text-primary flex-shrink-0" />
-                <a href="mailto:contact@nocometabbtp.com" className="hover:text-primary transition-colors">
-                  contact@nocometabbtp.com
+                <a href="mailto:nocometabbtp@gmail.com" className="hover:text-primary transition-colors">
+                  nocometabbtp@gmail.com
                 </a>
               </li>
             </ul>
@@ -90,7 +90,7 @@ const Footer = () => {
             </ul>
             <div className="flex space-x-3">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61588065011103"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="h-10 w-10 rounded-lg bg-white/10 hover:bg-primary hover:text-foreground transition-all duration-300 flex items-center justify-center"
