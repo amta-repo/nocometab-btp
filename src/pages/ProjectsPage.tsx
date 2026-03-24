@@ -140,7 +140,7 @@ const ProjectsPage = () => {
       ],
     },
     {
-      image: heroImage6,
+      image: charpenteNikki1,
       title: language === 'fr' ? "Charpente de l'Arène du Palais Royal de Nikki" : 'Royal Palace Arena Framework - Nikki',
       location: 'Nikki, Bénin',
       date: '2024',
