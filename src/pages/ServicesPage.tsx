@@ -82,6 +82,11 @@ const ServicesPage = () => {
 
   return (
     <div className="min-h-screen bg-secondary/30">
+      <SeoHelmet
+        title="Services de Construction Métallique | NOCOMETAB BTP"
+        description="Découvrez nos services: charpentes métalliques, hangars industriels, structures acier, menuiserie métallique, soudure industrielle au Bénin et en Afrique de l'Ouest."
+        canonical="https://nocometabbtp.com/services"
+      />
       {/* Page Header */}
       <PageHeader
         titleFr="Nos Services"

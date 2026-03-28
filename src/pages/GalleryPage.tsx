@@ -382,6 +382,11 @@ const GalleryPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SeoHelmet
+        title="Galerie Photos | Construction Métallique | NOCOMETAB BTP"
+        description="Galerie photo de nos réalisations en construction métallique: charpentes, hangars, silos, structures acier. Découvrez le savoir-faire de NOCOMETAB BTP au Bénin."
+        canonical="https://nocometabbtp.com/gallery"
+      />
       {/* Page Header */}
       <PageHeader
         titleFr="Notre Galerie"

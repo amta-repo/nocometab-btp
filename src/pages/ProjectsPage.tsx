@@ -204,6 +204,11 @@ const ProjectsPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SeoHelmet
+        title="Nos Réalisations | Projets Construction Métallique | NOCOMETAB BTP"
+        description="Découvrez les projets et réalisations de NOCOMETAB BTP: charpentes métalliques, hangars industriels, silos, structures acier au Bénin et en Afrique de l'Ouest."
+        canonical="https://nocometabbtp.com/projects"
+      />
       {/* Page Header */}
       <PageHeader
         titleFr="Nos Réalisations"

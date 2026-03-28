@@ -19,6 +19,11 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SeoHelmet
+        title="À Propos | NOCOMETAB BTP | Construction Métallique Bénin"
+        description="Découvrez NOCOMETAB BTP: +15 ans d'expertise en construction métallique au Bénin. Notre équipe, nos valeurs, notre vision pour l'Afrique de l'Ouest."
+        canonical="https://nocometabbtp.com/about"
+      />
       {/* Page Header */}
       <PageHeader
         titleFr="À Propos de Nous"

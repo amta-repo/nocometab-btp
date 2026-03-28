@@ -218,6 +218,11 @@ Our expertise in heavy handling allows us to handle equipment of all sizes safel
 
   return (
     <div className="min-h-screen bg-background">
+      <SeoHelmet
+        title="Actualités & Projets | NOCOMETAB BTP"
+        description="Suivez les dernières actualités, projets et réalisations de NOCOMETAB BTP, leader en construction métallique au Bénin et en Afrique de l'Ouest."
+        canonical="https://nocometabbtp.com/news"
+      />
       {/* Page Header */}
       <PageHeader
         titleFr="Actualités & Projets"

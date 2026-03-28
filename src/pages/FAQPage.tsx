@@ -100,6 +100,11 @@ const FAQPage = () => {
 
   return (
     <div className="min-h-screen bg-secondary/30">
+      <SeoHelmet
+        title="FAQ Construction Métallique Bénin | NOCOMETAB BTP"
+        description="Questions fréquentes sur la construction métallique au Bénin. NOCOMETAB BTP répond à vos interrogations sur les charpentes, hangars, prix et délais."
+        canonical="https://nocometabbtp.com/faq"
+      />
       <PageHeader
         titleFr="Questions Fréquentes"
         titleEn="Frequently Asked Questions"
