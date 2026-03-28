@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
+import SeoHelmet from '@/components/SeoHelmet';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ZoomIn, MapPin, Calendar, ChevronLeft, ChevronRight } from 'lucide-react';

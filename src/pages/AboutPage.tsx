@@ -1,5 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
+import SeoHelmet from '@/components/SeoHelmet';
 import { Award, Target, Users, TrendingUp, CheckCircle2, Building2, Shield } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 

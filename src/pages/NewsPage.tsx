@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import SeoHelmet from '@/components/SeoHelmet';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Calendar, ArrowRight } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';

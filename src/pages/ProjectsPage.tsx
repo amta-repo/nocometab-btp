@@ -1,6 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/contexts/LanguageContext';
+import SeoHelmet from '@/components/SeoHelmet';
 import { MapPin, Calendar, Building2, Users, Factory, Award, Shield, FileCheck } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 

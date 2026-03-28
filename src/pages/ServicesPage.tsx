@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import SeoHelmet from '@/components/SeoHelmet';
 import { Ruler, Building2, Construction, ArrowRight, Hammer, Wrench, Factory } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 
