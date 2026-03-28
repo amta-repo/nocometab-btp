@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import SeoHelmet from '@/components/SeoHelmet';
-import { MapPin, Calendar, Building2, Users, Factory, Award, Shield, FileCheck } from 'lucide-react';
+import { MapPin, Calendar, Building2, Users, Factory, Award, Shield, FileCheck, ArrowRight } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 
 // Attestation images
