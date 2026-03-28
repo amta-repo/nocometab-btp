@@ -622,6 +622,65 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Internal Links & SEO Section */}
+      <section className="py-12 md:py-16 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 md:mb-8 text-center">
+              {language === 'fr' ? 'Explorez NOCOMETAB BTP' : 'Explore NOCOMETAB BTP'}
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+              {[
+                { path: '/about', labelFr: 'Notre Histoire & Valeurs', labelEn: 'Our History & Values' },
+                { path: '/services/structures', labelFr: 'Structures Métalliques', labelEn: 'Metal Structures' },
+                { path: '/services/charpentes', labelFr: 'Charpentes Métalliques', labelEn: 'Metal Frameworks' },
+                { path: '/services/menuiserie', labelFr: 'Menuiserie Métallique', labelEn: 'Metal Joinery' },
+                { path: '/services/hangars', labelFr: 'Hangars Industriels', labelEn: 'Industrial Warehouses' },
+                { path: '/services/toiture', labelFr: 'Toiture & Couverture', labelEn: 'Roofing & Coverage' },
+                { path: '/services/renovation', labelFr: 'Rénovation & Entretien', labelEn: 'Renovation & Maintenance' },
+                { path: '/projects', labelFr: 'Nos Réalisations', labelEn: 'Our Projects' },
+                { path: '/gallery', labelFr: 'Galerie Photos', labelEn: 'Photo Gallery' },
+                { path: '/news', labelFr: 'Actualités', labelEn: 'News' },
+                { path: '/faq', labelFr: 'Questions Fréquentes', labelEn: 'FAQ' },
+                { path: '/contact', labelFr: 'Devis Gratuit', labelEn: 'Free Quote' },
+              ].map(link => (
+                <Link key={link.path} to={link.path}>
+                  <Card className="hover:border-primary/50 transition-colors cursor-pointer h-full">
+                    <CardContent className="pt-3 pb-3 md:pt-4 md:pb-4 flex items-center gap-2">
+                      <ArrowRight className="h-3 w-3 md:h-4 md:w-4 text-primary flex-shrink-0" />
+                      <span className="text-xs md:text-sm font-medium text-foreground">
+                        {language === 'fr' ? link.labelFr : link.labelEn}
+                      </span>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+
+            {/* External Authority Links */}
+            <div className="mt-8 text-center">
+              <h3 className="text-lg font-semibold text-foreground mb-3">
+                {language === 'fr' ? 'Ressources du Secteur' : 'Industry Resources'}
+              </h3>
+              <div className="flex flex-wrap justify-center gap-4">
+                <a href="https://www.worldsteel.org/" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">
+                  World Steel Association ↗
+                </a>
+                <a href="https://www.steelconstruction.info/" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">
+                  Steel Construction Info ↗
+                </a>
+                <a href="https://www.aisc.org/" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">
+                  AISC ↗
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61588065011103" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">
+                  NOCOMETAB BTP Facebook ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
