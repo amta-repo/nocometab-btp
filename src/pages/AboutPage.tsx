@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
 import SeoHelmet from '@/components/SeoHelmet';
-import { Award, Target, Users, TrendingUp, CheckCircle2, Building2, Shield } from 'lucide-react';
+import { Award, Target, Users, TrendingUp, CheckCircle2, Building2, Shield, ArrowRight } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 
 import organogram from '@/assets/nocometab-organogram-1.jpg';
@@ -111,6 +112,52 @@ const AboutPage = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+
+        {/* Internal Links & External Resources */}
+        <div className="max-w-5xl mx-auto mt-12 md:mt-16">
+          <h2 className="text-xl md:text-2xl font-bold text-foreground mb-6">
+            {language === 'fr' ? 'Explorez NOCOMETAB BTP' : 'Explore NOCOMETAB BTP'}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+            {[
+              { path: '/services', labelFr: 'Nos Services de Construction', labelEn: 'Our Construction Services' },
+              { path: '/projects', labelFr: 'Nos Réalisations & Projets', labelEn: 'Our Projects & Achievements' },
+              { path: '/gallery', labelFr: 'Galerie Photos', labelEn: 'Photo Gallery' },
+              { path: '/contact', labelFr: 'Demander un Devis Gratuit', labelEn: 'Request a Free Quote' },
+              { path: '/faq', labelFr: 'Questions Fréquentes', labelEn: 'Frequently Asked Questions' },
+              { path: '/news', labelFr: 'Actualités & Projets en Cours', labelEn: 'News & Ongoing Projects' },
+            ].map(link => (
+              <Link key={link.path} to={link.path}>
+                <Card className="hover:border-primary/50 transition-colors cursor-pointer h-full">
+                  <CardContent className="pt-4 pb-4 flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4 text-primary flex-shrink-0" />
+                    <span className="text-sm font-medium text-foreground">
+                      {language === 'fr' ? link.labelFr : link.labelEn}
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+
+          {/* External Authority Links */}
+          <div className="mt-8">
+            <h3 className="text-lg font-semibold text-foreground mb-3">
+              {language === 'fr' ? 'Ressources Utiles' : 'Useful Resources'}
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              <a href="https://www.worldsteel.org/" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">
+                World Steel Association ↗
+              </a>
+              <a href="https://www.aisc.org/" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">
+                American Institute of Steel Construction ↗
+              </a>
+              <a href="https://www.iso.org/standard/72140.html" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">
+                {language === 'fr' ? 'Normes ISO Construction Acier' : 'ISO Steel Construction Standards'} ↗
+              </a>
+            </div>
           </div>
         </div>
       </div>

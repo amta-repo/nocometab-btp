@@ -1,11 +1,12 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import SeoHelmet from '@/components/SeoHelmet';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, ArrowRight } from 'lucide-react';
 import { toast } from 'sonner';
 import PageHeader from '@/components/PageHeader';
 
@@ -209,6 +210,32 @@ const ContactPage = () => {
                 />
               </CardContent>
             </Card>
+          </div>
+        </div>
+
+        {/* Internal Links */}
+        <div className="max-w-6xl mx-auto mt-12 md:mt-16">
+          <h2 className="text-xl md:text-2xl font-bold text-foreground mb-6">
+            {language === 'fr' ? 'Liens Utiles' : 'Useful Links'}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+            {[
+              { path: '/services', labelFr: 'Voir nos Services', labelEn: 'View our Services' },
+              { path: '/projects', labelFr: 'Nos Réalisations', labelEn: 'Our Projects' },
+              { path: '/faq', labelFr: 'Questions Fréquentes', labelEn: 'FAQ' },
+              { path: '/about', labelFr: 'À Propos de Nous', labelEn: 'About Us' },
+            ].map(link => (
+              <Link key={link.path} to={link.path}>
+                <Card className="hover:border-primary/50 transition-colors cursor-pointer h-full">
+                  <CardContent className="pt-4 pb-4 flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4 text-primary flex-shrink-0" />
+                    <span className="text-sm font-medium text-foreground">
+                      {language === 'fr' ? link.labelFr : link.labelEn}
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
