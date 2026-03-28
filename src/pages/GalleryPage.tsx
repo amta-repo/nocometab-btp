@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import SeoHelmet from '@/components/SeoHelmet';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { ZoomIn, MapPin, Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ZoomIn, MapPin, Calendar, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 
 // Finished projects
