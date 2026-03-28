@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import SeoHelmet from '@/components/SeoHelmet';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -61,6 +62,11 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen bg-secondary/30">
+      <SeoHelmet
+        title="Contactez-Nous | Devis Gratuit | NOCOMETAB BTP"
+        description="Contactez NOCOMETAB BTP pour vos projets de construction métallique au Bénin. Devis gratuit, conseil personnalisé. ☎ +229 01 95 95 47 63 | nocometabbtp@gmail.com"
+        canonical="https://nocometabbtp.com/contact"
+      />
       {/* Page Header */}
       <PageHeader
         titleFr="Contactez-Nous"

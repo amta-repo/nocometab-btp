@@ -1,6 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/contexts/LanguageContext';
+import SeoHelmet from '@/components/SeoHelmet';
 import { MapPin, Calendar, Building2, Users, Factory, Award, Shield, FileCheck } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 
@@ -203,6 +204,11 @@ const ProjectsPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SeoHelmet
+        title="Nos Réalisations | Projets Construction Métallique | NOCOMETAB BTP"
+        description="Découvrez les projets et réalisations de NOCOMETAB BTP: charpentes métalliques, hangars industriels, silos, structures acier au Bénin et en Afrique de l'Ouest."
+        canonical="https://nocometabbtp.com/projects"
+      />
       {/* Page Header */}
       <PageHeader
         titleFr="Nos Réalisations"

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SeoHelmet from '@/components/SeoHelmet';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -99,6 +100,11 @@ const FAQPage = () => {
 
   return (
     <div className="min-h-screen bg-secondary/30">
+      <SeoHelmet
+        title="FAQ Construction Métallique Bénin | NOCOMETAB BTP"
+        description="Questions fréquentes sur la construction métallique au Bénin. NOCOMETAB BTP répond à vos interrogations sur les charpentes, hangars, prix et délais."
+        canonical="https://nocometabbtp.com/faq"
+      />
       <PageHeader
         titleFr="Questions Fréquentes"
         titleEn="Frequently Asked Questions"

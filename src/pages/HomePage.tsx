@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SeoHelmet from '@/components/SeoHelmet';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
@@ -196,6 +197,11 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen">
+      <SeoHelmet
+        title="NOCOMETAB BTP | N°1 Construction Métallique au Bénin & Afrique de l'Ouest"
+        description="NOCOMETAB BTP - Leader en construction métallique au Bénin. Charpentes métalliques, hangars industriels, structures acier, menuiserie métallique. +15 ans d'expérience. Devis gratuit ☎ +229 01 95 95 47 63"
+        canonical="https://nocometabbtp.com/"
+      />
       {/* Hero Section with Sliding Background */}
       <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Sliding Background Images */}

@@ -1,5 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
+import SeoHelmet from '@/components/SeoHelmet';
 import { Award, Target, Users, TrendingUp, CheckCircle2, Building2, Shield } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 
@@ -18,6 +19,11 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SeoHelmet
+        title="À Propos | NOCOMETAB BTP | Construction Métallique Bénin"
+        description="Découvrez NOCOMETAB BTP: +15 ans d'expertise en construction métallique au Bénin. Notre équipe, nos valeurs, notre vision pour l'Afrique de l'Ouest."
+        canonical="https://nocometabbtp.com/about"
+      />
       {/* Page Header */}
       <PageHeader
         titleFr="À Propos de Nous"

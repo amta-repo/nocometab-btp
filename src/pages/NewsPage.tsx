@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import SeoHelmet from '@/components/SeoHelmet';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Calendar, ArrowRight } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
@@ -217,6 +218,11 @@ Our expertise in heavy handling allows us to handle equipment of all sizes safel
 
   return (
     <div className="min-h-screen bg-background">
+      <SeoHelmet
+        title="Actualités & Projets | NOCOMETAB BTP"
+        description="Suivez les dernières actualités, projets et réalisations de NOCOMETAB BTP, leader en construction métallique au Bénin et en Afrique de l'Ouest."
+        canonical="https://nocometabbtp.com/news"
+      />
       {/* Page Header */}
       <PageHeader
         titleFr="Actualités & Projets"

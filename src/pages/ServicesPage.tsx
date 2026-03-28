@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import SeoHelmet from '@/components/SeoHelmet';
 import { Ruler, Building2, Construction, ArrowRight, Hammer, Wrench, Factory } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 
@@ -81,6 +82,11 @@ const ServicesPage = () => {
 
   return (
     <div className="min-h-screen bg-secondary/30">
+      <SeoHelmet
+        title="Services de Construction Métallique | NOCOMETAB BTP"
+        description="Découvrez nos services: charpentes métalliques, hangars industriels, structures acier, menuiserie métallique, soudure industrielle au Bénin et en Afrique de l'Ouest."
+        canonical="https://nocometabbtp.com/services"
+      />
       {/* Page Header */}
       <PageHeader
         titleFr="Nos Services"
