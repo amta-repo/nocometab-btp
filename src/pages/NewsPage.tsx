@@ -305,6 +305,32 @@ Our expertise in heavy handling allows us to handle equipment of all sizes safel
             </Card>
           ))}
         </div>
+
+        {/* Internal Links */}
+        <div className="max-w-6xl mx-auto mt-12 md:mt-16">
+          <h2 className="text-xl md:text-2xl font-bold text-foreground mb-6">
+            {language === 'fr' ? 'Découvrir Aussi' : 'Also Discover'}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+            {[
+              { path: '/projects', labelFr: 'Tous nos Projets', labelEn: 'All Our Projects' },
+              { path: '/services', labelFr: 'Nos Services', labelEn: 'Our Services' },
+              { path: '/gallery', labelFr: 'Galerie Photos', labelEn: 'Photo Gallery' },
+              { path: '/contact', labelFr: 'Nous Contacter', labelEn: 'Contact Us' },
+            ].map(link => (
+              <Link key={link.path} to={link.path}>
+                <Card className="hover:border-primary/50 transition-colors cursor-pointer h-full">
+                  <CardContent className="pt-4 pb-4 flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4 text-primary flex-shrink-0" />
+                    <span className="text-sm font-medium text-foreground">
+                      {language === 'fr' ? link.labelFr : link.labelEn}
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* News Detail Modal */}
