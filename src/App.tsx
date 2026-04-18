@@ -33,9 +33,6 @@ const ScrollToTop = () => {
 };
 
 const App = () => {
-  const { pathname } = useLocation();
-  const isHome = pathname === '/';
-
   return (
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
@@ -49,16 +46,13 @@ const App = () => {
             className="fixed inset-0 -z-10 bg-cover bg-center"
             style={{ backgroundImage: `url(${siteBackground})` }}
           />
-          <div aria-hidden="true" className="fixed inset-0 -z-10 bg-background/80" />
+          <div aria-hidden="true" className="fixed inset-0 -z-10 bg-background/85" />
 
           <div className="flex flex-col min-h-screen w-full relative">
             <NewsStrip />
-            {/* On home, header overlays the hero (transparent → solid on scroll) */}
-            <div className={isHome ? 'absolute top-0 left-0 right-0 z-40' : ''}>
-              <Header />
-            </div>
+            <Header />
             <BackToHome />
-            <main className={`flex-1 ${isHome ? '' : ''}`}>
+            <main className="flex-1">
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
