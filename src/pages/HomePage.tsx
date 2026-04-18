@@ -36,22 +36,15 @@ import servicesWelding from '@/assets/services-welding-1.jpg';
 import finishedProject4 from '@/assets/finished-projects-4.jpg';
 import finishedProject5 from '@/assets/finished-projects-5.jpg';
 import finishedProject7 from '@/assets/finished-projects-7.jpg';
-import directorImage from '@/assets/director-angelo-gbetie.jpg';
-
-const heroImages = [heroImage5, heroImage6, heroImage7, servicesFramework, servicesCivil, finishedProject4, finishedProject5, finishedProject7];
+import directorImage from '@/assets/director.jpg';
+import heroVideo from '@/assets/hero-video.mp4';
+import contactBg from '@/assets/contact-bg.jpg';
+import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 
 const HomePage = () => {
   const { t, language } = useLanguage();
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [selectedService, setSelectedService] = useState<(typeof services)[number] | null>(null);
   const [serviceImageIndex, setServiceImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
 
   const services = [
     {
