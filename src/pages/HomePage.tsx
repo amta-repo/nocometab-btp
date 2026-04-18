@@ -663,69 +663,56 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-16 md:py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <Card className="max-w-4xl mx-auto shadow-elevated border border-accent/20">
-            <CardContent className="py-8 md:py-12 px-4 md:px-8">
-              <div className="text-center">
-                <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4 md:mb-6">
-                  {t('contact.title')}
-                </h2>
-                <p className="text-sm md:text-lg text-muted-foreground mb-6 md:mb-8">
-                  {t('contact.subtitle')}
-                </p>
+      {/* Testimonials Carousel */}
+      <TestimonialsCarousel />
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-8">
-                  <div className="flex flex-col items-center p-4 md:p-5 rounded-lg bg-secondary/50">
-                    <Phone className="h-6 w-6 md:h-8 md:w-8 text-primary mb-2" />
-                    <p className="text-xs md:text-sm text-muted-foreground mb-1">
-                      {language === 'fr' ? 'Téléphone' : 'Phone'}
-                    </p>
-                    <a
-                      href="tel:+2290195954763"
-                      className="font-semibold text-sm md:text-base text-foreground hover:text-primary transition-colors"
-                    >
-                      +229 01 95 95 47 63
-                    </a>
-                  </div>
-                  <div className="flex flex-col items-center p-4 md:p-5 rounded-lg bg-secondary/50">
-                    <Mail className="h-6 w-6 md:h-8 md:w-8 text-primary mb-2" />
-                    <p className="text-xs md:text-sm text-muted-foreground mb-1">Email</p>
-                    <a
-                      href="mailto:nocometabbtp@gmail.com"
-                      className="font-semibold text-sm md:text-base text-foreground hover:text-primary transition-colors break-all"
-                    >
-                      nocometabbtp@gmail.com
-                    </a>
-                  </div>
-                  <div className="flex flex-col items-center p-4 md:p-5 rounded-lg bg-secondary/50">
-                    <Clock className="h-6 w-6 md:h-8 md:w-8 text-primary mb-2" />
-                    <p className="text-xs md:text-sm text-muted-foreground mb-1">{t('contact.hours')}</p>
-                    <p className="font-semibold text-sm md:text-base text-foreground">
-                      {t('contact.hours.weekday')}
-                    </p>
-                  </div>
-                </div>
+      {/* Compelling Contact CTA over background image */}
+      <section
+        className="relative py-20 md:py-28 bg-cover bg-center"
+        style={{ backgroundImage: `url(${contactBg})` }}
+      >
+        {/* Dark overlay for legibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/75 to-foreground/55" />
+        {/* Accent line */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
 
-                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-                  <Link to="/contact">
-                    <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90">
-                      {t('cta.quoterequest')}
-                    </Button>
-                  </Link>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="w-full sm:w-auto"
-                    onClick={() => window.open('https://wa.me/+22995954763', '_blank')}
-                  >
-                    {t('cta.whatsapp')}
-                  </Button>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+        <div className="container relative z-10 mx-auto px-4">
+          <div className="max-w-3xl text-center mx-auto text-white">
+            <div className="inline-block px-3 py-1 mb-4 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30">
+              <span className="text-primary font-semibold text-xs md:text-sm uppercase tracking-wider">
+                {language === 'fr' ? 'Parlons de votre projet' : "Let's talk about your project"}
+              </span>
+            </div>
+
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-4 md:mb-6 leading-tight">
+              {language === 'fr'
+                ? 'Et si votre prochain projet devenait notre prochaine réussite ?'
+                : 'What if your next project became our next success story?'}
+            </h2>
+            <p className="text-base md:text-lg text-white/85 mb-8 md:mb-10">
+              {language === 'fr'
+                ? 'Recevez une étude gratuite et un devis personnalisé en moins de 24h.'
+                : 'Get a free study and a personalized quote in less than 24 hours.'}
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+              <Link to="/contact" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-6 md:px-10 py-5 md:py-6 text-base md:text-lg shadow-lg">
+                  {t('cta.quoterequest')}
+                  <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
+                </Button>
+              </Link>
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-foreground font-semibold px-6 md:px-10 py-5 md:py-6 text-base md:text-lg backdrop-blur-sm bg-white/10"
+                onClick={() => window.open('https://wa.me/+22995954763', '_blank')}
+              >
+                <Phone className="h-4 w-4 md:h-5 md:w-5 mr-2" />
+                {t('cta.whatsapp')}
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
     </div>
