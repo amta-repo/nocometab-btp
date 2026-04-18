@@ -195,46 +195,43 @@ const HomePage = () => {
         description="NOCOMETAB BTP - Leader en construction métallique au Bénin. Charpentes métalliques, hangars industriels, structures acier, menuiserie métallique. +15 ans d'expérience. Devis gratuit ☎ +229 01 95 95 47 63"
         canonical="https://nocometabbtp.com/"
       />
-      {/* Hero Section with Sliding Background */}
-      <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Sliding Background Images */}
-        {heroImages.map((image, index) => (
-          <div
-            key={index}
-            className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
-            style={{
-              backgroundImage: `url(${image})`,
-              opacity: currentImageIndex === index ? 1 : 0,
-            }}
-          />
-        ))}
-        
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
-        
+      {/* Hero Section with Video Background */}
+      <section className="relative min-h-[88vh] md:min-h-[92vh] flex items-center overflow-hidden">
+        {/* Background video */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src={heroVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+        />
+
+        {/* Dark overlay for legibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
+
         {/* Accent line */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
-        
-        <div className="container relative z-10 mx-auto px-4 text-center text-white">
-          <div className="max-w-4xl mx-auto">
-            <div className="inline-block px-4 py-2 mt-8 sm:mt-10 md:mt-12 mb-4 md:mb-6 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30">
-              <span className="text-primary font-semibold text-xs md:text-sm uppercase tracking-wider">
+
+        <div className="container relative z-10 mx-auto px-4 text-white pt-20 sm:pt-24 md:pt-28">
+          <div className="max-w-2xl text-left">
+            <div className="inline-block px-3 py-1 mb-4 md:mb-6 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30">
+              <span className="text-primary font-semibold text-[0.6rem] md:text-xs uppercase tracking-wider">
                 {language === 'fr' ? 'Construction Métallique Professionnelle' : 'Professional Metal Construction'}
               </span>
             </div>
-            
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight">
-              NOCOMETAB <span className="text-primary">BTP</span>
+
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 md:mb-6 leading-tight">
+              {language === 'fr' ? (
+                <>Bâtir <span className="text-primary">l’avenir</span> en acier.</>
+              ) : (
+                <>Building the <span className="text-primary">future</span> in steel.</>
+              )}
             </h1>
-            <p className="text-lg sm:text-xl md:text-3xl lg:text-4xl mb-3 md:mb-4 font-semibold">
-              {t('hero.title')}
-            </p>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-8 md:mb-10 max-w-2xl mx-auto text-gray-200 px-4">
-              {t('hero.subtitle')}
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-8 md:mb-12 px-4">
-              <Link to="/contact">
+
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 items-start sm:items-center mb-8 md:mb-12">
+              <Link to="/contact" className="w-full sm:w-auto">
                 <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-6 md:px-8 py-5 md:py-6 text-base md:text-lg shadow-lg">
                   {t('hero.cta.quote')}
                   <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
@@ -244,17 +241,18 @@ const HomePage = () => {
                 size="lg"
                 className="rounded-full w-12 h-12 md:w-14 md:h-14 p-0 bg-white/20 hover:bg-primary text-white hover:text-primary-foreground backdrop-blur-sm border border-white/30"
                 onClick={() => window.open('https://wa.me/+22995954763', '_blank')}
+                aria-label="WhatsApp"
               >
                 <Phone className="h-5 w-5 md:h-6 md:w-6" />
               </Button>
             </div>
 
-            {/* Trust Badges - responsive grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-4 max-w-3xl mx-auto px-4 mb-16 sm:mb-20 md:mb-24">
+            {/* Trust Badges */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-3 max-w-2xl">
               {trustBadges.map((badge, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 md:px-4 md:py-3 animate-scale-in border border-white/10"
+                  className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 md:px-4 md:py-3 animate-scale-in border border-white/10"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <badge.icon className="h-4 w-4 md:h-5 md:w-5 text-primary flex-shrink-0" />
@@ -263,19 +261,6 @@ const HomePage = () => {
               ))}
             </div>
           </div>
-        </div>
-        
-        {/* Image indicators - separated from trust badges */}
-        <div className="absolute bottom-6 sm:bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 flex gap-2 md:gap-2.5 z-20">
-          {heroImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentImageIndex(index)}
-              className={`w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-3.5 md:h-3.5 rounded-full transition-all duration-300 ${
-                currentImageIndex === index ? 'bg-primary w-6 sm:w-8 md:w-10' : 'bg-white/50 hover:bg-white/80'
-              }`}
-            />
-          ))}
         </div>
       </section>
 
