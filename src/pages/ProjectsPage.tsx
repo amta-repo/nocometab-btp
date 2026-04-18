@@ -222,7 +222,7 @@ const ProjectsPage = () => {
 
       <div className="container mx-auto px-4 py-12 md:py-16">
         {/* Stats Section - Responsive */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 max-w-5xl mx-auto mb-16 md:mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 max-w-5xl mx-auto mb-16 md:mb-20">
           {achievements.map((achievement, index) => (
             <Card
               key={index}

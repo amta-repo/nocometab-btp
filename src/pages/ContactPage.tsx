@@ -10,7 +10,7 @@ import { MapPin, Phone, Mail, Clock, Send, ArrowRight } from 'lucide-react';
 import { toast } from 'sonner';
 import PageHeader from '@/components/PageHeader';
 
-import heroImage2 from '@/assets/nocometab-hero-2.jpg';
+import contactBg from '@/assets/contact-bg.jpg';
 
 const ContactPage = () => {
   const { t, language } = useLanguage();
@@ -74,7 +74,7 @@ const ContactPage = () => {
         titleEn="Contact Us"
         subtitleFr="Nous sommes là pour répondre à toutes vos questions"
         subtitleEn="We're here to answer all your questions"
-        backgroundImage={heroImage2}
+        backgroundImage={contactBg}
       />
 
       <div className="container mx-auto px-4 py-12 md:py-16">

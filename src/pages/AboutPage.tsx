@@ -6,7 +6,7 @@ import { Award, Target, Users, TrendingUp, CheckCircle2, Building2, Shield, Arro
 import PageHeader from '@/components/PageHeader';
 
 import organogram from '@/assets/nocometab-organogram-1.jpg';
-import heroImage4 from '@/assets/nocometab-hero-4.jpg';
+import aboutHeader from '@/assets/about-header.jpg';
 
 const AboutPage = () => {
   const { t, language } = useLanguage();
@@ -31,7 +31,7 @@ const AboutPage = () => {
         titleEn="About Us"
         subtitleFr="Experts en construction métallique depuis plus de 15 ans"
         subtitleEn="Metal construction experts for over 15 years"
-        backgroundImage={heroImage4}
+        backgroundImage={aboutHeader}
       />
 
       <div className="container mx-auto px-4 py-12 md:py-16">
@@ -69,7 +69,7 @@ const AboutPage = () => {
         {/* Values Section */}
         <div className="mb-12 md:mb-16">
           <h2 className="text-xl md:text-3xl font-bold text-center text-foreground mb-8 md:mb-12">{t('about.values')}</h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
             {values.map((value, index) => (
               <Card 
                 key={value.key} 

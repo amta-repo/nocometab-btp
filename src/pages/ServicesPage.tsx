@@ -6,7 +6,7 @@ import SeoHelmet from '@/components/SeoHelmet';
 import { Ruler, Building2, Construction, ArrowRight, Hammer, Wrench, Factory } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 
-import heroImage3 from '@/assets/nocometab-hero-3.jpg';
+import servicesHeader from '@/assets/services-header.jpeg';
 
 const ServicesPage = () => {
   const { t, language } = useLanguage();
@@ -93,7 +93,7 @@ const ServicesPage = () => {
         titleEn="Our Services"
         subtitleFr="Des solutions complètes en construction métallique pour tous vos projets"
         subtitleEn="Complete metal construction solutions for all your projects"
-        backgroundImage={heroImage3}
+        backgroundImage={servicesHeader}
       />
 
       <div className="container mx-auto px-4 py-12 md:py-16">

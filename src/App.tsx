@@ -20,6 +20,7 @@ import NewsPage from "./pages/NewsPage";
 import ContactPage from "./pages/ContactPage";
 import FAQPage from "./pages/FAQPage";
 import NotFound from "./pages/NotFound";
+import siteBackground from "@/assets/site-background.jpg";
 
 const queryClient = new QueryClient();
 
@@ -31,38 +32,48 @@ const ScrollToTop = () => {
   return null;
 };
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <LanguageProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <ScrollToTop />
-        <div className="flex flex-col min-h-screen w-full">
-          <NewsStrip />
-          <Header />
-          <BackToHome />
-          <main className="flex-1">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
-              <Route path="/projects" element={<ProjectsPage />} />
-              <Route path="/gallery" element={<GalleryPage />} />
-              <Route path="/news" element={<NewsPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/faq" element={<FAQPage />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </main>
-          <Footer />
-          <WhatsAppButton />
-        </div>
-      </TooltipProvider>
-    </LanguageProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <LanguageProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <ScrollToTop />
+          {/* Fixed site-wide background (subtle behind translucent sections) */}
+          <div
+            aria-hidden="true"
+            className="fixed inset-0 -z-10 bg-cover bg-center"
+            style={{ backgroundImage: `url(${siteBackground})` }}
+          />
+          <div aria-hidden="true" className="fixed inset-0 -z-10 bg-background/85" />
+
+          <div className="flex flex-col min-h-screen w-full relative">
+            <NewsStrip />
+            <Header />
+            <BackToHome />
+            <main className="flex-1">
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/services/:serviceId" element={<ServiceDetailPage />} />
+                <Route path="/projects" element={<ProjectsPage />} />
+                <Route path="/gallery" element={<GalleryPage />} />
+                <Route path="/news" element={<NewsPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/faq" element={<FAQPage />} />
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </main>
+            <Footer />
+            <WhatsAppButton />
+          </div>
+        </TooltipProvider>
+      </LanguageProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;

@@ -36,22 +36,15 @@ import servicesWelding from '@/assets/services-welding-1.jpg';
 import finishedProject4 from '@/assets/finished-projects-4.jpg';
 import finishedProject5 from '@/assets/finished-projects-5.jpg';
 import finishedProject7 from '@/assets/finished-projects-7.jpg';
-import directorImage from '@/assets/director-angelo-gbetie.jpg';
-
-const heroImages = [heroImage5, heroImage6, heroImage7, servicesFramework, servicesCivil, finishedProject4, finishedProject5, finishedProject7];
+import directorImage from '@/assets/director.jpg';
+import heroVideo from '@/assets/hero-video.mp4';
+import contactBg from '@/assets/contact-bg.jpg';
+import TestimonialsCarousel from '@/components/TestimonialsCarousel';
 
 const HomePage = () => {
   const { t, language } = useLanguage();
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [selectedService, setSelectedService] = useState<(typeof services)[number] | null>(null);
   const [serviceImageIndex, setServiceImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
 
   const services = [
     {
@@ -202,46 +195,43 @@ const HomePage = () => {
         description="NOCOMETAB BTP - Leader en construction métallique au Bénin. Charpentes métalliques, hangars industriels, structures acier, menuiserie métallique. +15 ans d'expérience. Devis gratuit ☎ +229 01 95 95 47 63"
         canonical="https://nocometabbtp.com/"
       />
-      {/* Hero Section with Sliding Background */}
-      <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Sliding Background Images */}
-        {heroImages.map((image, index) => (
-          <div
-            key={index}
-            className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
-            style={{
-              backgroundImage: `url(${image})`,
-              opacity: currentImageIndex === index ? 1 : 0,
-            }}
-          />
-        ))}
-        
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
-        
+      {/* Hero Section with Video Background — pulled up under transparent header */}
+      <section className="relative -mt-16 md:-mt-20 min-h-[88vh] md:min-h-[92vh] flex items-center overflow-hidden">
+        {/* Background video */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src={heroVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+        />
+
+        {/* Dark overlay for legibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
+
         {/* Accent line */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
-        
-        <div className="container relative z-10 mx-auto px-4 text-center text-white">
-          <div className="max-w-4xl mx-auto">
-            <div className="inline-block px-4 py-2 mt-8 sm:mt-10 md:mt-12 mb-4 md:mb-6 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30">
-              <span className="text-primary font-semibold text-xs md:text-sm uppercase tracking-wider">
+
+        <div className="container relative z-10 mx-auto px-4 text-white pt-20 sm:pt-24 md:pt-28">
+          <div className="max-w-2xl text-left">
+            <div className="inline-block px-3 py-1 mb-4 md:mb-6 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30">
+              <span className="text-primary font-semibold text-[0.6rem] md:text-xs uppercase tracking-wider">
                 {language === 'fr' ? 'Construction Métallique Professionnelle' : 'Professional Metal Construction'}
               </span>
             </div>
-            
-            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight">
-              NOCOMETAB <span className="text-primary">BTP</span>
+
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 md:mb-6 leading-tight">
+              {language === 'fr' ? (
+                <>Bâtir <span className="text-primary">l’avenir</span> en acier.</>
+              ) : (
+                <>Building the <span className="text-primary">future</span> in steel.</>
+              )}
             </h1>
-            <p className="text-lg sm:text-xl md:text-3xl lg:text-4xl mb-3 md:mb-4 font-semibold">
-              {t('hero.title')}
-            </p>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-8 md:mb-10 max-w-2xl mx-auto text-gray-200 px-4">
-              {t('hero.subtitle')}
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-8 md:mb-12 px-4">
-              <Link to="/contact">
+
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 items-start sm:items-center mb-8 md:mb-12">
+              <Link to="/contact" className="w-full sm:w-auto">
                 <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-6 md:px-8 py-5 md:py-6 text-base md:text-lg shadow-lg">
                   {t('hero.cta.quote')}
                   <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
@@ -251,17 +241,18 @@ const HomePage = () => {
                 size="lg"
                 className="rounded-full w-12 h-12 md:w-14 md:h-14 p-0 bg-white/20 hover:bg-primary text-white hover:text-primary-foreground backdrop-blur-sm border border-white/30"
                 onClick={() => window.open('https://wa.me/+22995954763', '_blank')}
+                aria-label="WhatsApp"
               >
                 <Phone className="h-5 w-5 md:h-6 md:w-6" />
               </Button>
             </div>
 
-            {/* Trust Badges - responsive grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-4 max-w-3xl mx-auto px-4 mb-16 sm:mb-20 md:mb-24">
+            {/* Trust Badges */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-3 max-w-2xl">
               {trustBadges.map((badge, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 md:px-4 md:py-3 animate-scale-in border border-white/10"
+                  className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 md:px-4 md:py-3 animate-scale-in border border-white/10"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <badge.icon className="h-4 w-4 md:h-5 md:w-5 text-primary flex-shrink-0" />
@@ -271,88 +262,79 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        
-        {/* Image indicators - separated from trust badges */}
-        <div className="absolute bottom-6 sm:bottom-8 md:bottom-10 left-1/2 -translate-x-1/2 flex gap-2 md:gap-2.5 z-20">
-          {heroImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentImageIndex(index)}
-              className={`w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-3.5 md:h-3.5 rounded-full transition-all duration-300 ${
-                currentImageIndex === index ? 'bg-primary w-6 sm:w-8 md:w-10' : 'bg-white/50 hover:bg-white/80'
-              }`}
-            />
-          ))}
-        </div>
       </section>
 
-      {/* Director's Welcome Section */}
-      <section className="py-16 md:py-20 bg-background">
-        <div className="container mx-auto px-4">
+      {/* Director's Welcome Section - Modern card */}
+      <section className="py-16 md:py-24 bg-background relative overflow-hidden">
+        {/* Decorative background blobs */}
+        <div className="absolute top-10 -left-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl" aria-hidden="true" />
+        <div className="absolute bottom-10 -right-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl" aria-hidden="true" />
+
+        <div className="container mx-auto px-4 relative">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-              {/* Director Image */}
-              <div className="relative animate-fade-in order-1 lg:order-1">
-                <div className="relative overflow-hidden rounded-2xl shadow-elevated">
-                  <img 
-                    src={directorImage} 
-                    alt="Mr Angelo GBETIE - Directeur de NOCOMETAB BTP" 
-                    className="w-full h-auto object-cover aspect-[3/4]"
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 md:p-6">
-                    <h3 className="text-white font-bold text-lg md:text-xl">Mr Angelo GBETIE</h3>
-                    <p className="text-primary font-medium text-sm md:text-base">
-                      {language === 'fr' ? 'Directeur, NOCOMETAB BTP' : 'Director, NOCOMETAB BTP'}
-                    </p>
+            <div className="bg-card/90 backdrop-blur-sm rounded-3xl shadow-elevated border border-border/60 overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
+                {/* Director Image */}
+                <div className="relative lg:col-span-2 animate-fade-in">
+                  <div className="relative h-full min-h-[320px] md:min-h-[420px]">
+                    <img
+                      src={directorImage}
+                      alt="Mr Angelo GBETIE - Directeur de NOCOMETAB BTP"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    {/* Subtle gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/20 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-card/40" />
+                    {/* Name plate */}
+                    <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
+                      <div className="inline-block bg-card/95 backdrop-blur-md rounded-xl px-4 py-3 shadow-soft">
+                        <h3 className="font-bold text-base md:text-lg text-foreground">Mr Angelo GBETIE</h3>
+                        <p className="text-primary font-medium text-xs md:text-sm">
+                          {language === 'fr' ? 'Directeur, NOCOMETAB BTP' : 'Director, NOCOMETAB BTP'}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                {/* Decorative element */}
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 md:w-32 md:h-32 bg-primary/20 rounded-2xl -z-10" />
-                <div className="absolute -top-4 -left-4 w-16 h-16 md:w-24 md:h-24 bg-accent/20 rounded-2xl -z-10" />
-              </div>
 
-              {/* Welcome Message */}
-              <div className="animate-fade-in order-2 lg:order-2" style={{ animationDelay: '200ms' }}>
-                <div className="inline-block px-3 py-1 mb-4 bg-primary/10 rounded-full">
-                  <span className="text-primary font-semibold text-xs md:text-sm uppercase tracking-wider">
-                    {language === 'fr' ? 'Mot du Directeur' : 'Director\'s Message'}
-                  </span>
-                </div>
-                
-                <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4 md:mb-6">
-                  {language === 'fr' ? 'Bienvenue chez NOCOMETAB BTP' : 'Welcome to NOCOMETAB BTP'}
-                </h2>
-                
-                <div className="space-y-4 text-muted-foreground">
-                  <p className="text-base md:text-lg leading-relaxed">
-                    {language === 'fr' 
-                      ? "Chers partenaires et clients, c'est avec fierté que je vous accueille sur le site de NOCOMETAB BTP, votre partenaire de confiance pour tous vos projets de construction métallique en Afrique de l'Ouest."
-                      : "Dear partners and clients, it is with pride that I welcome you to the NOCOMETAB BTP website, your trusted partner for all your metal construction projects in West Africa."}
-                  </p>
-                  <p className="text-sm md:text-base leading-relaxed">
-                    {language === 'fr'
-                      ? "Depuis plus de 15 ans, notre engagement envers l'excellence, la qualité et le respect des délais a fait de nous le leader incontesté dans notre domaine. Notre équipe de techniciens qualifiés et notre parc d'équipements modernes nous permettent de réaliser des projets d'envergure avec la plus grande précision."
-                      : "For over 15 years, our commitment to excellence, quality and meeting deadlines has made us the undisputed leader in our field. Our team of qualified technicians and our modern equipment fleet enable us to carry out large-scale projects with the greatest precision."}
-                  </p>
-                  <p className="text-sm md:text-base leading-relaxed">
-                    {language === 'fr'
-                      ? "Que vous ayez besoin de charpentes métalliques, de hangars industriels ou de menuiserie métallique, nous sommes là pour transformer votre vision en réalité."
-                      : "Whether you need metal frameworks, industrial warehouses or metal joinery, we are here to transform your vision into reality."}
-                  </p>
-                </div>
+                {/* Welcome Message */}
+                <div className="lg:col-span-3 p-6 md:p-10 lg:p-12 animate-fade-in" style={{ animationDelay: '150ms' }}>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 bg-primary/10 rounded-full">
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                    <span className="text-primary font-semibold text-xs md:text-sm uppercase tracking-wider">
+                      {language === 'fr' ? 'Mot du Directeur' : "Director's Message"}
+                    </span>
+                  </div>
 
-                <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-4">
-                  <Link to="/about">
-                    <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
-                      {language === 'fr' ? 'En savoir plus sur nous' : 'Learn more about us'}
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                  <Link to="/contact">
-                    <Button variant="outline" className="border-primary text-primary hover:bg-primary/10">
-                      {language === 'fr' ? 'Contactez-nous' : 'Contact us'}
-                    </Button>
-                  </Link>
+                  <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4 md:mb-6 leading-tight">
+                    {language === 'fr' ? 'Bienvenue chez NOCOMETAB BTP' : 'Welcome to NOCOMETAB BTP'}
+                  </h2>
+
+                  <div className="space-y-3 md:space-y-4 text-muted-foreground">
+                    <p className="text-sm md:text-base leading-relaxed">
+                      {language === 'fr'
+                        ? "Chers partenaires et clients, c'est avec fierté que je vous accueille sur le site de NOCOMETAB BTP, votre partenaire de confiance pour tous vos projets de construction métallique en Afrique de l'Ouest."
+                        : "Dear partners and clients, it is with pride that I welcome you to the NOCOMETAB BTP website, your trusted partner for all your metal construction projects in West Africa."}
+                    </p>
+                    <p className="text-sm md:text-base leading-relaxed">
+                      {language === 'fr'
+                        ? "Depuis plus de 15 ans, notre engagement envers l'excellence, la qualité et le respect des délais a fait de nous une référence dans notre domaine."
+                        : "For over 15 years, our commitment to excellence, quality and meeting deadlines has made us a reference in our field."}
+                    </p>
+                  </div>
+
+                  <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
+                    <Link to="/about" className="w-full sm:w-auto">
+                      <Button className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
+                        {language === 'fr' ? 'En savoir plus sur nous' : 'Learn more about us'}
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                    <Link to="/contact" className="w-full sm:w-auto">
+                      <Button variant="outline" className="w-full sm:w-auto border-primary text-primary hover:bg-primary/10">
+                        {language === 'fr' ? 'Contactez-nous' : 'Contact us'}
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -363,7 +345,7 @@ const HomePage = () => {
       {/* Why Choose Us */}
       <section className="py-12 md:py-16 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {whyChooseUs.map((item, index) => (
               <div 
                 key={index} 
@@ -570,7 +552,7 @@ const HomePage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-5xl mx-auto">
             {achievements.map((achievement, index) => (
               <div
                 key={index}
@@ -681,69 +663,56 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-16 md:py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <Card className="max-w-4xl mx-auto shadow-elevated border border-accent/20">
-            <CardContent className="py-8 md:py-12 px-4 md:px-8">
-              <div className="text-center">
-                <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4 md:mb-6">
-                  {t('contact.title')}
-                </h2>
-                <p className="text-sm md:text-lg text-muted-foreground mb-6 md:mb-8">
-                  {t('contact.subtitle')}
-                </p>
+      {/* Testimonials Carousel */}
+      <TestimonialsCarousel />
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-8">
-                  <div className="flex flex-col items-center p-4 md:p-5 rounded-lg bg-secondary/50">
-                    <Phone className="h-6 w-6 md:h-8 md:w-8 text-primary mb-2" />
-                    <p className="text-xs md:text-sm text-muted-foreground mb-1">
-                      {language === 'fr' ? 'Téléphone' : 'Phone'}
-                    </p>
-                    <a
-                      href="tel:+2290195954763"
-                      className="font-semibold text-sm md:text-base text-foreground hover:text-primary transition-colors"
-                    >
-                      +229 01 95 95 47 63
-                    </a>
-                  </div>
-                  <div className="flex flex-col items-center p-4 md:p-5 rounded-lg bg-secondary/50">
-                    <Mail className="h-6 w-6 md:h-8 md:w-8 text-primary mb-2" />
-                    <p className="text-xs md:text-sm text-muted-foreground mb-1">Email</p>
-                    <a
-                      href="mailto:nocometabbtp@gmail.com"
-                      className="font-semibold text-sm md:text-base text-foreground hover:text-primary transition-colors break-all"
-                    >
-                      nocometabbtp@gmail.com
-                    </a>
-                  </div>
-                  <div className="flex flex-col items-center p-4 md:p-5 rounded-lg bg-secondary/50">
-                    <Clock className="h-6 w-6 md:h-8 md:w-8 text-primary mb-2" />
-                    <p className="text-xs md:text-sm text-muted-foreground mb-1">{t('contact.hours')}</p>
-                    <p className="font-semibold text-sm md:text-base text-foreground">
-                      {t('contact.hours.weekday')}
-                    </p>
-                  </div>
-                </div>
+      {/* Compelling Contact CTA over background image */}
+      <section
+        className="relative py-20 md:py-28 bg-cover bg-center"
+        style={{ backgroundImage: `url(${contactBg})` }}
+      >
+        {/* Dark overlay for legibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/75 to-foreground/55" />
+        {/* Accent line */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
 
-                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-                  <Link to="/contact">
-                    <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90">
-                      {t('cta.quoterequest')}
-                    </Button>
-                  </Link>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="w-full sm:w-auto"
-                    onClick={() => window.open('https://wa.me/+22995954763', '_blank')}
-                  >
-                    {t('cta.whatsapp')}
-                  </Button>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+        <div className="container relative z-10 mx-auto px-4">
+          <div className="max-w-3xl text-center mx-auto text-white">
+            <div className="inline-block px-3 py-1 mb-4 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30">
+              <span className="text-primary font-semibold text-xs md:text-sm uppercase tracking-wider">
+                {language === 'fr' ? 'Parlons de votre projet' : "Let's talk about your project"}
+              </span>
+            </div>
+
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-4 md:mb-6 leading-tight">
+              {language === 'fr'
+                ? 'Et si votre prochain projet devenait notre prochaine réussite ?'
+                : 'What if your next project became our next success story?'}
+            </h2>
+            <p className="text-base md:text-lg text-white/85 mb-8 md:mb-10">
+              {language === 'fr'
+                ? 'Recevez une étude gratuite et un devis personnalisé en moins de 24h.'
+                : 'Get a free study and a personalized quote in less than 24 hours.'}
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+              <Link to="/contact" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-6 md:px-10 py-5 md:py-6 text-base md:text-lg shadow-lg">
+                  {t('cta.quoterequest')}
+                  <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
+                </Button>
+              </Link>
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-foreground font-semibold px-6 md:px-10 py-5 md:py-6 text-base md:text-lg backdrop-blur-sm bg-white/10"
+                onClick={() => window.open('https://wa.me/+22995954763', '_blank')}
+              >
+                <Phone className="h-4 w-4 md:h-5 md:w-5 mr-2" />
+                {t('cta.whatsapp')}
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
     </div>
