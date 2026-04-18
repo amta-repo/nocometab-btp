@@ -6,7 +6,7 @@ import { Award, Target, Users, TrendingUp, CheckCircle2, Building2, Shield, Arro
 import PageHeader from '@/components/PageHeader';
 
 import organogram from '@/assets/nocometab-organogram-1.jpg';
-import heroImage4 from '@/assets/nocometab-hero-4.jpg';
+import aboutHeader from '@/assets/about-header.jpg';
 
 const AboutPage = () => {
   const { t, language } = useLanguage();
@@ -31,7 +31,7 @@ const AboutPage = () => {
         titleEn="About Us"
         subtitleFr="Experts en construction métallique depuis plus de 15 ans"
         subtitleEn="Metal construction experts for over 15 years"
-        backgroundImage={heroImage4}
+        backgroundImage={aboutHeader}
       />
 
       <div className="container mx-auto px-4 py-12 md:py-16">

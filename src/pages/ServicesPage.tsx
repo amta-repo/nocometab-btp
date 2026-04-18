@@ -6,7 +6,7 @@ import SeoHelmet from '@/components/SeoHelmet';
 import { Ruler, Building2, Construction, ArrowRight, Hammer, Wrench, Factory } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 
-import heroImage3 from '@/assets/nocometab-hero-3.jpg';
+import servicesHeader from '@/assets/services-header.jpeg';
 
 const ServicesPage = () => {
   const { t, language } = useLanguage();
