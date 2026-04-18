@@ -195,8 +195,8 @@ const HomePage = () => {
         description="NOCOMETAB BTP - Leader en construction métallique au Bénin. Charpentes métalliques, hangars industriels, structures acier, menuiserie métallique. +15 ans d'expérience. Devis gratuit ☎ +229 01 95 95 47 63"
         canonical="https://nocometabbtp.com/"
       />
-      {/* Hero Section with Video Background */}
-      <section className="relative min-h-[88vh] md:min-h-[92vh] flex items-center overflow-hidden">
+      {/* Hero Section with Video Background — pulled up under transparent header */}
+      <section className="relative -mt-16 md:-mt-20 min-h-[88vh] md:min-h-[92vh] flex items-center overflow-hidden">
         {/* Background video */}
         <video
           className="absolute inset-0 w-full h-full object-cover"
