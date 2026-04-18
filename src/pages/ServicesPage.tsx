@@ -93,7 +93,7 @@ const ServicesPage = () => {
         titleEn="Our Services"
         subtitleFr="Des solutions complètes en construction métallique pour tous vos projets"
         subtitleEn="Complete metal construction solutions for all your projects"
-        backgroundImage={heroImage3}
+        backgroundImage={servicesHeader}
       />
 
       <div className="container mx-auto px-4 py-12 md:py-16">
