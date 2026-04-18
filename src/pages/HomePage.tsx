@@ -40,6 +40,8 @@ import directorImage from '@/assets/director.jpg';
 import heroVideo from '@/assets/hero-video.mp4';
 import contactBg from '@/assets/contact-bg.jpg';
 import TestimonialsCarousel from '@/components/TestimonialsCarousel';
+import Organogram from '@/components/Organogram';
+import nosRealisationBg from '@/assets/nos-realisation.jpeg';
 
 const HomePage = () => {
   const { t, language } = useLanguage();
@@ -363,40 +365,32 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About Section - Partial preview with link to full page */}
       <section className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
+          <div className="max-w-5xl mx-auto text-center animate-fade-in">
             <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-4 md:mb-6">
               {t('about.title')}
             </h2>
             <p className="text-lg md:text-xl text-primary font-semibold mb-4 md:mb-6 italic">
               {t('about.mission')}
             </p>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6 md:mb-8">
+            {/* Truncated description (line-clamp on mobile + max length feel) */}
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-8 md:mb-10 line-clamp-3 md:line-clamp-none max-w-3xl mx-auto">
               {t('about.description')}
             </p>
 
-            {/* Values */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mt-8 md:mt-12">
-              {[
-                { key: 'integrity', icon: Award },
-                { key: 'accuracy', icon: CheckCircle2 },
-                { key: 'innovation', icon: TrendingUp },
-                { key: 'sustainability', icon: Building2 },
-              ].map((value, index) => (
-                <Card key={value.key} className="hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 border hover:border-primary/50">
-                  <CardContent className="pt-4 pb-4 md:pt-6 md:pb-6 flex flex-col items-center">
-                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-accent/10 flex items-center justify-center mb-2 md:mb-3">
-                      <value.icon className="h-5 w-5 md:h-6 md:w-6 text-accent" />
-                    </div>
-                    <p className="font-semibold text-xs md:text-sm text-center">
-                      {t(`about.value.${value.key}`)}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
+            {/* Simplified Organogram */}
+            <div className="mb-8 md:mb-10">
+              <Organogram variant="simple" />
             </div>
+
+            <Link to="/about">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
+                {language === 'fr' ? 'En savoir plus' : 'Learn more'}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -533,11 +527,11 @@ const HomePage = () => {
         </DialogContent>
       </Dialog>
 
-      {/* Achievements Section - Dark Navy */}
+      {/* Achievements Section - "Nos Réalisations" with new background, overlay reduced by 50% */}
       <section
         className="py-16 md:py-20 relative bg-cover bg-center bg-fixed"
         style={{
-          backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.95), rgba(30, 41, 59, 0.95)), url(${finishedProject5})`,
+          backgroundImage: `linear-gradient(rgba(30, 41, 59, 0.475), rgba(30, 41, 59, 0.475)), url(${nosRealisationBg})`,
         }}
       >
         <div className="container mx-auto px-4">

@@ -4,8 +4,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import SeoHelmet from '@/components/SeoHelmet';
 import { Award, Target, Users, TrendingUp, CheckCircle2, Building2, Shield, ArrowRight } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
+import Organogram from '@/components/Organogram';
 
-import organogram from '@/assets/nocometab-organogram-1.jpg';
 import aboutHeader from '@/assets/about-header.jpg';
 
 const AboutPage = () => {
@@ -52,18 +52,12 @@ const AboutPage = () => {
           </CardContent>
         </Card>
 
-        {/* Organogram Section */}
-        <div className="max-w-4xl mx-auto mb-12 md:mb-16">
+        {/* Organogram Section - Detailed with avatars */}
+        <div className="max-w-5xl mx-auto mb-12 md:mb-16">
           <h2 className="text-xl md:text-3xl font-bold text-center text-foreground mb-6 md:mb-8">
             {language === 'fr' ? 'Notre Équipe de Direction' : 'Our Leadership Team'}
           </h2>
-          <Card className="overflow-hidden shadow-elevated border border-accent/20">
-            <img 
-              src={organogram} 
-              alt="Organigramme NOCOMETAB BTP" 
-              className="w-full object-contain bg-white"
-            />
-          </Card>
+          <Organogram variant="detailed" />
         </div>
 
         {/* Values Section */}

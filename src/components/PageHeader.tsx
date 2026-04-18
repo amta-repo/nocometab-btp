@@ -16,8 +16,8 @@ const PageHeader = ({ titleFr, titleEn, subtitleFr, subtitleEn, backgroundImage 
       className="relative h-[200px] sm:h-[280px] md:h-[350px] lg:h-[400px] flex items-center justify-center bg-cover bg-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      {/* Dark overlay for professional look and text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-foreground/85 via-foreground/70 to-foreground/90" />
+      {/* Very light overlay (10%) so the background image stays clearly visible */}
+      <div className="absolute inset-0 bg-gradient-to-b from-foreground/10 via-foreground/10 to-foreground/15" />
       
       {/* Golden accent line at bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />

@@ -46,7 +46,7 @@ const App = () => {
             className="fixed inset-0 -z-10 bg-cover bg-center"
             style={{ backgroundImage: `url(${siteBackground})` }}
           />
-          <div aria-hidden="true" className="fixed inset-0 -z-10 bg-background/85" />
+          {/* Background image is fully visible (no overlay) per design request */}
 
           <div className="flex flex-col min-h-screen w-full relative">
             <NewsStrip />
