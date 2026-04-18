@@ -24,6 +24,7 @@ import heroImage3 from '@/assets/nocometab-hero-3.jpg';
 import heroImage5 from '@/assets/nocometab-hero-5.jpg';
 import heroImage6 from '@/assets/nocometab-hero-6.jpg';
 import heroImage7 from '@/assets/nocometab-hero-7.jpg';
+import galleryHeader from '@/assets/gallery-header.jpg';
 
 // Equipment and team
 import galleryEquipment1 from '@/assets/gallery-equipment-1.jpg';
@@ -394,7 +395,7 @@ const GalleryPage = () => {
         titleEn="Our Gallery"
         subtitleFr="Découvrez nos réalisations en construction métallique à travers le Bénin"
         subtitleEn="Discover our metal construction achievements across Benin"
-        backgroundImage={heroImage3}
+        backgroundImage={galleryHeader}
       />
 
       <div className="container mx-auto px-4 py-12 md:py-16">
