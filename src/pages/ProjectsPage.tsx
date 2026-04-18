@@ -17,7 +17,7 @@ import attestation6 from '@/assets/attestation-bonne-fin-6.jpg';
 import attestation7 from '@/assets/attestation-bonne-fin-7.jpg';
 
 // Project images
-import heroImage1 from '@/assets/nocometab-hero-1.jpg';
+import nosRealisationHeader from '@/assets/nos-realisation.jpeg';
 import finishedProject2 from '@/assets/finished-projects-2.jpg';
 import finishedProject3 from '@/assets/finished-projects-3.jpg';
 import finishedProject4 from '@/assets/finished-projects-4.jpg';
@@ -217,7 +217,7 @@ const ProjectsPage = () => {
         titleEn="Our Achievements"
         subtitleFr="Découvrez nos projets réalisés avec succès à travers le Bénin"
         subtitleEn="Discover our successfully completed projects across Benin"
-        backgroundImage={heroImage1}
+        backgroundImage={nosRealisationHeader}
       />
 
       <div className="container mx-auto px-4 py-12 md:py-16">
