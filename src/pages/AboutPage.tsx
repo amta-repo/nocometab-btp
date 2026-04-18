@@ -69,7 +69,7 @@ const AboutPage = () => {
         {/* Values Section */}
         <div className="mb-12 md:mb-16">
           <h2 className="text-xl md:text-3xl font-bold text-center text-foreground mb-8 md:mb-12">{t('about.values')}</h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
             {values.map((value, index) => (
               <Card 
                 key={value.key} 
