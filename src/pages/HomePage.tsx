@@ -205,7 +205,7 @@ const HomePage = () => {
           src={heroVideo}
           autoPlay
           muted
-          defaultMuted
+          muted
           loop
           playsInline
           preload="auto"
