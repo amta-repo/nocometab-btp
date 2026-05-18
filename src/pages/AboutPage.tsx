@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
 import SeoHelmet from '@/components/SeoHelmet';
-import { Award, Target, Users, TrendingUp, CheckCircle2, Building2, Shield, ArrowRight } from 'lucide-react';
+import { Award, Target, Users, TrendingUp, CheckCircle2, Building2, Shield, ArrowRight, Factory, Hammer, Clock } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 import Organogram from '@/components/Organogram';
 
@@ -51,6 +51,36 @@ const AboutPage = () => {
             </p>
           </CardContent>
         </Card>
+
+        {/* Stats Section - Key numbers */}
+        <div className="max-w-6xl mx-auto mb-12 md:mb-16">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
+            {[
+              { icon: Award, value: '15+', labelFr: "Années d'expérience", labelEn: 'Years of experience' },
+              { icon: Building2, value: '200T', labelFr: 'Silos fabriqués', labelEn: 'Silos manufactured' },
+              { icon: Factory, value: '50+', labelFr: 'Charpentes montées', labelEn: 'Frameworks installed' },
+              { icon: Users, value: '100+', labelFr: 'Clients satisfaits', labelEn: 'Satisfied clients' },
+              { icon: Hammer, value: '300+', labelFr: 'Projets livrés', labelEn: 'Projects delivered' },
+              { icon: Shield, value: '100%', labelFr: 'Sécurité garantie', labelEn: 'Safety guaranteed' },
+              { icon: Clock, value: '24h', labelFr: 'Devis rapide', labelEn: 'Fast quote' },
+              { icon: TrendingUp, value: '95%', labelFr: 'Clients fidèles', labelEn: 'Returning clients' },
+            ].map((stat, i) => (
+              <div
+                key={i}
+                className="group rounded-2xl border border-border bg-card/60 backdrop-blur-sm p-4 md:p-6 text-center hover:border-primary/50 hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 animate-scale-in"
+                style={{ animationDelay: `${i * 70}ms` }}
+              >
+                <div className="h-10 w-10 md:h-12 md:w-12 mx-auto mb-2 md:mb-3 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <stat.icon className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+                </div>
+                <div className="text-2xl md:text-4xl font-extrabold text-primary mb-1">{stat.value}</div>
+                <div className="text-xs md:text-sm text-muted-foreground leading-tight">
+                  {language === 'fr' ? stat.labelFr : stat.labelEn}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* Organogram Section - Detailed with avatars */}
         <div className="max-w-5xl mx-auto mb-12 md:mb-16">

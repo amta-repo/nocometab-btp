@@ -199,7 +199,7 @@ const HomePage = () => {
       />
       {/* Hero Section with Video Background — pulled up under transparent header */}
       <section className="relative -mt-16 md:-mt-20 min-h-[88vh] md:min-h-[92vh] flex items-center overflow-hidden">
-        {/* Background video */}
+        {/* Background video (muted) */}
         <video
           className="absolute inset-0 w-full h-full object-cover"
           src={heroVideo}
@@ -207,7 +207,9 @@ const HomePage = () => {
           muted
           loop
           playsInline
+          preload="auto"
           aria-hidden="true"
+          ref={(el) => { if (el) { el.muted = true; el.volume = 0; } }}
         />
 
         {/* Dark overlay for legibility */}
@@ -395,45 +397,169 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-16 md:py-20 bg-secondary/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8 md:mb-12 animate-fade-in">
-            <h2 className="text-2xl md:text-4xl font-bold text-foreground mb-3 md:mb-4">
+      {/* Services Section - Storytelling alternating rows */}
+      <section className="py-16 md:py-24 bg-secondary/30 relative overflow-hidden">
+        {/* Decorative background blobs */}
+        <div className="absolute top-20 -left-32 w-80 h-80 bg-primary/5 rounded-full blur-3xl" aria-hidden="true" />
+        <div className="absolute bottom-20 -right-32 w-96 h-96 bg-accent/5 rounded-full blur-3xl" aria-hidden="true" />
+
+        <div className="container mx-auto px-4 relative">
+          <div className="text-center mb-12 md:mb-16 animate-fade-in max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 bg-primary/10 rounded-full">
+              <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+              <span className="text-primary font-semibold text-xs md:text-sm uppercase tracking-wider">
+                {language === 'fr' ? 'Nos Expertises' : 'Our Expertise'}
+              </span>
+            </div>
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-4">
               {t('services.title')}
             </h2>
-            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-muted-foreground">
               {t('services.subtitle')}
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {services.map((service, index) => (
-              <Card
-                key={index}
-                className="hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 animate-scale-in group border hover:border-primary/50"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <CardContent className="pt-5 pb-5 md:pt-6 md:pb-6">
-                  <div className="h-12 w-12 md:h-14 md:w-14 rounded-lg bg-gradient-navy flex items-center justify-center mb-3 md:mb-4 group-hover:bg-gradient-accent transition-all duration-300">
-                    <service.icon className="h-6 w-6 md:h-7 md:w-7 text-white group-hover:text-primary-foreground" />
+          <div className="space-y-16 md:space-y-24 max-w-6xl mx-auto">
+            {services.map((service, index) => {
+              const reversed = index % 2 === 1;
+              // Stats per service — concrete numbers to build trust
+              const stats = [
+                [
+                  { value: '50+', labelFr: 'Projets livrés', labelEn: 'Projects delivered' },
+                  { value: '15+', labelFr: "Ans d'expérience", labelEn: 'Years experience' },
+                ],
+                [
+                  { value: '100%', labelFr: 'Sur mesure', labelEn: 'Custom-made' },
+                  { value: '30+', labelFr: 'Charpentes posées', labelEn: 'Frameworks installed' },
+                ],
+                [
+                  { value: '200+', labelFr: 'Ouvrages fabriqués', labelEn: 'Items manufactured' },
+                  { value: '24h', labelFr: 'Devis rapide', labelEn: 'Fast quote' },
+                ],
+                [
+                  { value: '200T', labelFr: 'Silos fabriqués', labelEn: 'Silos manufactured' },
+                  { value: '10k m²', labelFr: 'Hangars montés', labelEn: 'Warehouses built' },
+                ],
+                [
+                  { value: '99%', labelFr: 'Étanchéité garantie', labelEn: 'Watertight guarantee' },
+                  { value: '5k m²', labelFr: 'Toitures posées', labelEn: 'Roofs installed' },
+                ],
+                [
+                  { value: '15+', labelFr: 'Réhabilitations', labelEn: 'Rehabilitations' },
+                  { value: '48h', labelFr: 'Diagnostic rapide', labelEn: 'Fast diagnosis' },
+                ],
+              ][index] || [];
+
+              const stories = [
+                language === 'fr'
+                  ? "Du dessin technique au levage de la dernière poutre, nous concevons des structures qui défient le temps et les charges les plus exigeantes."
+                  : 'From technical drawing to lifting the last beam, we design structures that defy time and the most demanding loads.',
+                language === 'fr'
+                  ? "Des fermes industrielles aux charpentes commerciales, chaque assemblage est calculé, soudé et protégé pour durer des décennies."
+                  : 'From industrial trusses to commercial frameworks, every assembly is calculated, welded and protected to last for decades.',
+                language === 'fr'
+                  ? "Portes, fenêtres, garde-corps : un atelier où précision et esthétique se rencontrent pour signer chacune de vos ouvertures."
+                  : 'Doors, windows, railings: a workshop where precision and aesthetics meet to sign every opening.',
+                language === 'fr'
+                  ? "Grande portée, montage rapide, espace optimisé. Nos hangars accueillent vos opérations sans compromis sur la solidité."
+                  : 'Large span, fast assembly, optimized space. Our warehouses accommodate your operations with no compromise on strength.',
+                language === 'fr'
+                  ? "Bac acier, panneaux sandwich, isolation thermique : votre bâtiment reste sec, frais et performant toute l'année."
+                  : 'Steel decking, sandwich panels, thermal insulation: your building stays dry, cool and efficient all year round.',
+                language === 'fr'
+                  ? "Vos structures vieillissent ? Nous les diagnostiquons, renforçons et étendons pour leur offrir une seconde vie."
+                  : 'Aging structures? We diagnose, reinforce and extend them to give them a second life.',
+              ][index];
+
+              return (
+                <div
+                  key={index}
+                  className={`grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 items-center animate-fade-in ${
+                    reversed ? 'lg:[&>*:first-child]:order-2' : ''
+                  }`}
+                  style={{ animationDelay: `${index * 80}ms` }}
+                >
+                  {/* Image side */}
+                  <div className="group relative">
+                    <div className="relative rounded-3xl overflow-hidden shadow-elevated aspect-[4/3] bg-muted">
+                      <img
+                        src={service.images[0]}
+                        alt={service.title}
+                        loading="lazy"
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      {/* Gradient overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500" />
+                      {/* Floating icon badge */}
+                      <div className="absolute top-4 left-4 md:top-6 md:left-6 h-12 w-12 md:h-14 md:w-14 rounded-2xl bg-primary/95 backdrop-blur-sm flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                        <service.icon className="h-6 w-6 md:h-7 md:w-7 text-primary-foreground" />
+                      </div>
+                      {/* Number marker */}
+                      <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-5xl md:text-7xl font-extrabold text-white/90 leading-none drop-shadow-lg">
+                        0{index + 1}
+                      </div>
+                    </div>
+                    {/* Decorative accent */}
+                    <div className={`hidden lg:block absolute -z-10 w-full h-full rounded-3xl bg-primary/10 ${reversed ? '-right-4 -bottom-4' : '-left-4 -bottom-4'} top-4`} />
                   </div>
-                  <h3 className="text-lg md:text-xl font-semibold text-foreground mb-2 md:mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm md:text-base text-muted-foreground mb-3 md:mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <Button 
-                    variant="link" 
-                    className="p-0 h-auto text-primary font-semibold text-sm md:text-base"
-                    onClick={() => setSelectedService(service)}
-                  >
-                    {t('services.learnmore')} →
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+
+                  {/* Content side */}
+                  <div className="space-y-4 md:space-y-6">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full">
+                      <span className="text-primary font-semibold text-xs uppercase tracking-wider">
+                        {language === 'fr' ? `Service 0${index + 1}` : `Service 0${index + 1}`}
+                      </span>
+                    </div>
+
+                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-tight">
+                      {service.title}
+                    </h3>
+
+                    <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                      {service.description}
+                    </p>
+
+                    {/* Storytelling line */}
+                    <p className="text-sm md:text-base text-foreground/80 italic border-l-4 border-primary pl-4 py-1">
+                      "{stories}"
+                    </p>
+
+                    {/* Stats */}
+                    <div className="grid grid-cols-2 gap-3 md:gap-4 pt-2">
+                      {stats.map((stat, sIdx) => (
+                        <div
+                          key={sIdx}
+                          className="rounded-2xl border border-border bg-card/60 backdrop-blur-sm p-4 md:p-5 hover:border-primary/50 hover:shadow-soft transition-all duration-300 hover:-translate-y-1"
+                        >
+                          <div className="text-2xl md:text-3xl font-extrabold text-primary mb-1">
+                            {stat.value}
+                          </div>
+                          <div className="text-xs md:text-sm text-muted-foreground leading-tight">
+                            {language === 'fr' ? stat.labelFr : stat.labelEn}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* CTAs */}
+                    <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                      <Button
+                        onClick={() => setSelectedService(service)}
+                        className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold group/btn"
+                      >
+                        {language === 'fr' ? 'Voir le détail' : 'See details'}
+                        <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                      </Button>
+                      <Link to="/contact">
+                        <Button variant="outline" className="w-full sm:w-auto border-primary text-primary hover:bg-primary/10">
+                          {language === 'fr' ? 'Demander un devis' : 'Request a quote'}
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
