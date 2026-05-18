@@ -199,15 +199,18 @@ const HomePage = () => {
       />
       {/* Hero Section with Video Background — pulled up under transparent header */}
       <section className="relative -mt-16 md:-mt-20 min-h-[88vh] md:min-h-[92vh] flex items-center overflow-hidden">
-        {/* Background video */}
+        {/* Background video (muted) */}
         <video
           className="absolute inset-0 w-full h-full object-cover"
           src={heroVideo}
           autoPlay
           muted
+          defaultMuted
           loop
           playsInline
+          preload="auto"
           aria-hidden="true"
+          ref={(el) => { if (el) { el.muted = true; el.volume = 0; } }}
         />
 
         {/* Dark overlay for legibility */}
